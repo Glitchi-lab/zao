@@ -1,0 +1,18 @@
+<svg viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.000000" height="25.000000" fill="none">
+	<defs>
+		<linearGradient id="paint_linear_0" x1="5.70014858" x2="19.0501366" y1="19.793499" y2="6.44347954" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(53,73,255)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(135,66,238)" offset="0.507523" stop-opacity="1" />
+			<stop stop-color="rgb(221,66,238)" offset="1" stop-opacity="1" />
+		</linearGradient>
+		<linearGradient id="paint_linear_1" x1="5.69975519" x2="19.0497456" y1="19.7932949" y2="6.44327164" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(53,73,255)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(135,66,238)" offset="0.507523" stop-opacity="1" />
+			<stop stop-color="rgb(221,66,238)" offset="1" stop-opacity="1" />
+		</linearGradient>
+	</defs>
+	<rect id="sferum" width="24.000000" height="25.000000" x="0.000000" y="0.000000" />
+	<path id="Вектор 142" d="M13.8038 14.3028C17.7862 10.3204 19.4004 5.47785 17.4092 3.48667C15.418 1.49548 10.5754 3.10966 6.59301 7.09202C2.61063 11.0744 0.996453 15.9169 2.98764 17.9081C4.97884 19.8993 9.82138 18.2851 13.8038 14.3028Z" fill="rgb(125,250,227)" fill-rule="nonzero" />
+	<path id="Вектор 143" d="M2.98687 3.48659C-0.995623 7.46906 -0.995623 13.9255 2.98687 17.908C1.0205 15.9417 2.56937 11.1941 6.44659 7.24048C6.49418 7.19001 6.54321 7.14098 6.59225 7.09194C6.64127 7.04292 6.69032 6.99387 6.74079 6.94629C10.693 3.07053 15.442 1.52023 17.4083 3.48659C13.4258 -0.49589 6.96865 -0.49517 2.98687 3.48659Z" fill="url(#paint_linear_0)" fill-rule="nonzero" />
+	<path id="Вектор 144" d="M6.59151 21.5129C10.574 25.4954 17.0305 25.4954 21.013 21.5129C24.9947 17.5312 24.9955 11.074 21.013 7.09151C20.5919 6.6704 20.0431 6.4101 19.4006 6.30121C19.043 6.2392 18.6558 6.22406 18.2448 6.25434C15.92 6.42308 12.8648 8.0289 10.1968 10.6969C7.52819 13.3656 5.92307 16.42 5.75434 18.7448C5.72406 19.1558 5.7392 19.543 5.80121 19.9006C5.9101 20.5431 6.1704 21.0918 6.59151 21.5129Z" fill="url(#paint_linear_1)" fill-rule="nonzero" />
+</svg>

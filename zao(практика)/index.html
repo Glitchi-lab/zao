@@ -1,0 +1,1732 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заостровская СШ</title>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Font "Inter" -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind output -->
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+
+<body class="m-0 p-0 bg-bg font-sans text-text antialiased">
+    <!-- Header Navigation -->
+    <header id="header" class="reveal-header fixed top-6 left-0 right-0 z-50 mx-auto">
+        <!-- Pc menu -->
+        <div class="px-5 lg:px-17.5">
+            <div
+                class="w-full px-5 shadow-soft rounded-[12px] mx-auto flex justify-between items-center h-18 max-w-[1280px] border bg-white border-solid border-border">
+
+                <!-- 1. Block "Logo" -->
+                <a href="index.html#hero" alt="logo" class="shrink-0 flex items-center gap-5">
+                    <picture>
+                        <source class="w-9 h-9" srcset="assets/img/logo.webp" type="image/webp">
+                        <img class="w-9 h-9" src="assets/img/logo.png" alt="Лого">
+                    </picture>
+                    <span class="max-mr:hidden font-medium text-xl tracking-tight">Заостровская СШ</span>
+                </a>
+
+                <!-- 2. Block "Navigation" -->
+                <nav class="hidden lg:flex items-center space-x-10">
+                    <!-- Main -->
+                    <div class="group relative">
+                        <a href="index.html"
+                            class="nav-hover-link text-primary bg-bg-primary-light rounded-[8px] flex items-center gap-[6px] py-2.5 px-5 font-semibold whitespace-nowrap">
+                            Главная
+                            <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="shrink-0 transition-transform duration-300 group-hover:rotate-180">
+                                <path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <!-- Мега-меню Главной (ссылки на блоки) -->
+                        <div
+                            class="absolute left-1/2 top-full -translate-x-1/2 pt-2 w-[280px] opacity-0 pointer-events-none translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
+                            <div
+                                class="bg-white/95 backdrop-blur-md rounded-xl border border-border shadow-soft-lg p-4 flex flex-col gap-1">
+                                <a href="index.html#news-events"
+                                    class="p-2.5 text-sm font-medium text-text-muted hover:text-primary hover:bg-green-50/50 rounded-lg transition-all">Лента
+                                    новостей</a>
+                                <a href="index.html#staff"
+                                    class="p-2.5 text-sm font-medium text-text-muted hover:text-primary hover:bg-green-50/50 rounded-lg transition-all">Наши
+                                    сотрудники</a>
+                                <a href="index.html#faq"
+                                    class="p-2.5 text-sm font-medium text-text-muted hover:text-primary hover:bg-green-50/50 rounded-lg transition-all">Часто
+                                    задаваемые вопросы</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About us -->
+                    <div class="group relative">
+                        <a href="about.html"
+                            class="nav-hover-link text-text-muted hover:text-text flex items-center gap-[6px] font-medium transition-colors py-4 whitespace-nowrap">
+                            О нас
+                            <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="shrink-0 transition-transform duration-300 group-hover:rotate-180">
+                                <path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+
+                        <!-- Mega-menu (Commercial) -->
+                        <div
+                            class="absolute left-1/2 top-full -translate-x-1/2 pt-2 w-[520px] opacity-0 pointer-events-none translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
+                            <div
+                                class="bg-white/95 backdrop-blur-md rounded-2xl border border-border shadow-soft-lg p-6 grid grid-cols-2 gap-6">
+                                <!-- Left column: Documentation -->
+                                <div class="flex flex-col border-r border-gray-100 pr-4 gap-1">
+                                    <h4 class="font-bold text-xs text-text-muted tracking-wider uppercase px-2.5 mb-2">
+                                        Официальные документы</h4>
+                                    <a href="docs-general.html"
+                                        class="p-2 rounded-lg hover:bg-green-50/50 text-sm font-medium text-text hover:text-primary transition-all">Общие
+                                        документы школы</a>
+                                    <a href="docs-rules.html"
+                                        class="p-2 rounded-lg hover:bg-green-50/50 text-sm font-medium text-text hover:text-primary transition-all">Школьные
+                                        правила и памятки</a>
+                                </div>
+
+                                <!-- Right Column: Information Pages -->
+                                <div class="flex flex-col gap-1">
+                                    <h4 class="font-bold text-xs text-text-muted tracking-wider uppercase px-2.5 mb-2">
+                                        Информация</h4>
+                                    <a href="history.html"
+                                        class="p-2 rounded-lg hover:bg-green-50/50 text-sm font-medium text-text hover:text-primary transition-all">История
+                                        школы</a>
+                                    <a href="vacancies.html"
+                                        class="p-2 rounded-lg hover:bg-green-50/50 text-sm font-medium text-text hover:text-primary transition-all">Вакансии
+                                        для учителей</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- For applicants -->
+                    <div class="group relative">
+                        <a href="#"
+                            class="nav-hover-link text-text-muted hover:text-text flex items-center gap-[6px] font-medium transition-colors py-4 whitespace-nowrap">
+                            Поступающим
+                            <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="shrink-0 transition-transform duration-300 group-hover:rotate-180">
+                                <path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <!-- Mega-menu -->
+                        <div
+                            class="absolute left-1/2 top-full -translate-x-1/2 pt-2 w-[460px] opacity-0 pointer-events-none translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
+                            <div
+                                class="bg-white/95 backdrop-blur-md rounded-2xl border border-border shadow-soft-lg p-5 flex flex-col gap-4">
+                                <div class="flex flex-col gap-1">
+                                    <a href="rules.html"
+                                        class="group/item flex flex-col p-2.5 rounded-xl hover:bg-green-50/50 transition-colors">
+                                        <span
+                                            class="font-semibold text-text text-sm group-hover/item:text-primary transition-colors">Правила
+                                            приема</span>
+                                        <span class="text-xs text-text-muted mt-0.5">Порядок зачисления, льготы и сроки
+                                            подачи заявлений</span>
+                                    </a>
+                                    <a href="documents.html"
+                                        class="group/item flex flex-col p-2.5 rounded-xl hover:bg-green-50/50 transition-colors">
+                                        <span
+                                            class="font-semibold text-text text-sm group-hover/item:text-primary transition-colors">Необходимые
+                                            документы</span>
+                                        <span class="text-xs text-text-muted mt-0.5">Паспорт, Свидетельство, прописка,
+                                            СНИЛС, мед. карта</span>
+                                    </a>
+                                </div>
+                                <!-- Admissions Committee Information Block -->
+                                <div class="p-4 bg-gray-50/50 border border-gray-100 rounded-xl">
+                                    <span
+                                        class="font-semibold text-text text-xs tracking-wider uppercase block text-text-muted">Приемная
+                                        комиссия</span>
+                                    <span class="text-sm font-medium text-text block mt-1.5">Ответственный за прием •
+                                        Кабинет №12</span>
+                                    <span class="text-xs text-text-muted block mt-0.5">Телефон: +7 (XXX)
+                                        XXX-XX-XX</span>
+                                    <span class="text-xs text-text-muted block">График работы: Пн-Пт с 9:00 до
+                                        16:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cafeteria -->
+                    <a href="cafeteria.html"
+                        class="text-text-muted hover:text-text font-medium transition-colors whitespace-nowrap">Столовая</a>
+                </nav>
+
+                <!-- 3. Block "Buttons" -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button data-modal-target="modal-feedback"
+                        class="w-8 h-8 bg-bg-primary-light rounded-lg flex justify-center items-center button-hover hover:bg-bg-primary-light-hover">
+                        <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="14.000000" height="14.000000" fill="none"
+                            customFrame="#000000">
+                            <path id="question"
+                                d="M12.6 0L1.4 0C0.63 0 0.00699999 0.63 0.00699999 1.4L0 14L2.8 11.2L12.6 11.2C13.37 11.2 14 10.57 14 9.8L14 1.4C14 0.63 13.37 0 12.6 0ZM7.7 8.4L6.3 8.4L6.3 7L7.7 7L7.7 8.4ZM7.7 5.6L6.3 5.6L6.3 2.8L7.7 2.8L7.7 5.6Z"
+                                fill="var(--color-svg-primary
+                                )" fill-rule="evenodd" />
+                        </svg>
+
+                    </button>
+                    <button data-modal-target="modal-theme-constructor"
+                        class="w-8 h-8 bg-bg-primary-light rounded-lg flex justify-center items-center button-hover hover:bg-bg-primary-light-hover">
+                        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000" fill="none">
+                            <rect id="gavel" width="20.000000" height="20.000000" x="0.000000" y="0.000000"
+                                fill="rgb(255,255,255)" fill-opacity="0" />
+                            <path id="矢量 133"
+                                d="M6.73333 4.36816L4.375 6.72383L16.1534 18.5155L18.5117 16.1598L6.73333 4.36816Z"
+                                fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                            <path id="矢量 134"
+                                d="M10.2619 0.832031L7.90527 3.18936L12.6199 7.9027L14.9766 5.54536L10.2619 0.832031Z"
+                                fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                            <path id="矢量 135"
+                                d="M2.77105 8.32422C2.77105 8.32422 1.98041 11.7034 2.50026 12.9169C2.5249 12.9745 3.12124 13.651 3.1773 13.6788C3.22377 13.7019 3.27573 13.7257 3.33381 13.7502C4.54295 14.26 7.48505 13.0382 7.48505 13.0382L2.77105 8.32422Z"
+                                fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                            <path id="矢量 136" d="M2.12207 0L0 2.12167L5.55556 7.67723L7.67763 5.55555L2.12207 0Z"
+                                fill="var(--color-svg-primary)" fill-rule="evenodd"
+                                transform="matrix(0,1,-1,0,11.8438,4.1665)" />
+                        </svg>
+
+                    </button>
+                    <button data-modal-target="modal-accessibility"
+                        class="w-8 h-8 bg-primary rounded-lg flex justify-center items-center transition-colors button-hover hover:bg-primary-hover">
+                        <svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="14.000000" fill="none"
+                            customFrame="#000000">
+                            <path id="eye"
+                                d="M10 0C5.45455 0 1.57273 2.90267 0 7C1.57273 11.0973 5.45455 14 10 14C14.5455 14 18.4273 11.0973 20 7C18.4273 2.90267 14.5455 0 10 0ZM10 11.6667C7.49091 11.6667 5.45455 9.576 5.45455 7C5.45455 4.424 7.49091 2.33333 10 2.33333C12.5091 2.33333 14.5455 4.424 14.5455 7C14.5455 9.576 12.5091 11.6667 10 11.6667ZM10 4.2C8.49091 4.2 7.27273 5.45067 7.27273 7C7.27273 8.54933 8.49091 9.8 10 9.8C11.5091 9.8 12.7273 8.54933 12.7273 7C12.7273 5.45067 11.5091 4.2 10 4.2Z"
+                                fill="var(--color-svg-white)" fill-rule="evenodd" />
+                        </svg>
+
+                    </button>
+                </div>
+
+                <!-- Mobile menu -->
+                <div class="lg:hidden flex items-center">
+                    <button id="burger-btn" class="p-2"><i class="fa-solid fa-bars text-2xl"></i></button>
+                </div>
+
+
+
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU (CURTAIN) -->
+    <div id="mobile-drawer"
+        class="fixed inset-0 z-100 opacity-0 pointer-events-none transition-all duration-300 ease-in-out lg:hidden">
+        <div id="drawer-overlay" class="absolute inset-0 bg-text/40 backdrop-blur-sm"></div>
+
+        <div
+            class="absolute right-0 top-0 bottom-0 w-full max-w-[360px] bg-white shadow-2xl flex flex-col translate-x-full transition-transform duration-300 ease-out p-6 overflow-y-auto hide-scroll">
+
+            <!-- Header -->
+            <div class="flex items-center justify-between pb-6 border-b border-gray-100">
+                <span class="font-bold text-xl text-text">Меню школы</span>
+                <button id="drawer-close"
+                    class="w-8 h-8 flex items-center justify-center text-text-muted hover:text-text rounded-lg bg-gray-50 focus:outline-none">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Links -->
+            <nav class="flex flex-col gap-2 mt-6">
+
+                <!-- Main link -->
+                <a href="index.html"
+                    class="mobile-link py-3 px-2 font-semibold text-text border-b border-gray-50 flex items-center justify-between">
+                    Главная
+                </a>
+
+                <!-- Nested list: About us -->
+                <div class="mobile-dropdown group/mob">
+                    <button
+                        class="mobile-dropdown-btn w-full py-3 px-2 font-semibold text-text border-b border-gray-50 flex items-center justify-between text-left focus:outline-none">
+                        <span>О нас</span>
+                        <i
+                            class="fa-solid fa-chevron-down text-xs text-text-muted transition-transform duration-200"></i>
+                    </button>
+
+                    <!-- Hidden container -->
+                    <div
+                        class="mobile-dropdown-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50/50 rounded-xl mt-1">
+                        <div class="flex flex-col p-2 gap-1 text-sm">
+                            <a href="docs-general.html"
+                                class="mobile-link p-2.5 font-medium text-text-muted hover:text-primary">Общие
+                                документы школы</a>
+                            <a href="docs-rules.html"
+                                class="mobile-link p-2.5 font-medium text-text-muted hover:text-primary">Школьные
+                                правила и памятки</a>
+                            <a href="history.html"
+                                class="mobile-link p-2.5 font-medium text-text-muted hover:text-primary">История
+                                школы</a>
+                            <a href="vacancies.html"
+                                class="mobile-link p-2.5 font-medium text-text-muted hover:text-primary">Вакансии
+                                для учителей</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nested list: Applicants -->
+                <div class="mobile-dropdown group/mob">
+                    <button
+                        class="mobile-dropdown-btn w-full py-3 px-2 font-semibold text-text border-b border-gray-50 flex items-center justify-between text-left focus:outline-none">
+                        <span>Поступающим</span>
+                        <i
+                            class="fa-solid fa-chevron-down text-xs text-text-muted transition-transform duration-200"></i>
+                    </button>
+                    <div
+                        class="mobile-dropdown-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50/50 rounded-xl mt-1">
+                        <div class="flex flex-col p-2 gap-1 text-sm">
+                            <a href="rules.html"
+                                class="mobile-link p-2.5 font-medium text-text-muted hover:text-primary">Правила
+                                приема</a>
+                            <a href="documents.html"
+                                class="mobile-link p-2.5 font-medium text-text-muted hover:text-primary">Необходимые
+                                документы</a>
+
+                            <!-- Info card -->
+                            <div class="p-3 bg-white border border-gray-100 rounded-lg mt-2 text-xs text-text-muted">
+                                <span class="font-bold text-text block uppercase tracking-wider text-[10px]">Приемная
+                                    комиссия</span>
+                                <span class="block mt-1">Кабинет №12 • Тел: +7 (XXX) XXX-XX-XX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anchor links -->
+                <a href="index.html#staff"
+                    class="mobile-link py-3 px-2 font-semibold text-text border-b border-gray-50">Сотрудники</a>
+                <a href="index.html#news-events"
+                    class="mobile-link py-3 px-2 font-semibold text-text border-b border-gray-50">Новости</a>
+                <a href="index.html#faq"
+                    class="mobile-link py-3 px-2 font-semibold text-text border-b border-gray-50">FAQ</a>
+                <a href="cafeteria.html"
+                    class="mobile-link py-3 px-2 font-semibold text-text border-b border-gray-50">Столовая</a>
+            </nav>
+
+        </div>
+    </div>
+
+    <!-- Panel (Social icons + Communication) -->
+    <div>
+        <!-- PC -->
+        <div id="pc-panel" class="reveal reveal-right fixed top-0 bottom-0 right-0 max-xl:hidden z-49" data-delay="500">
+            <div class="flex flex-col h-screen items-center justify-center">
+                <!-- Social icons -->
+                <div class="flex items-center gap-2 translate-[39px] mb-[70px]">
+                    <!-- Text -->
+                    <p id="socialText" class="[writing-mode:vertical-lr] rotate-180 text-sm font-medium">
+                        Соц сети
+                    </p>
+
+                    <!-- Block "Icons" -->
+                    <div>
+                        <div id="socialDropdown"
+                            class="absolute right-[37px] bottom-0 flex gap-3 justify-center w-[180px] bg-white border-l-3 border-primary rounded-l-[30px] rounded-tr-[10px] shadow-xl p-3 transition-all duration-300  opacity-0 text-left">
+                            <a href="#"
+                                class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                                <svg viewBox="0 0 20 19.9316" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="19.931641"
+                                    fill="none" customFrame="#000000">
+                                    <path id="max"
+                                        d="M9.65302 0.0140611C3.69538 0.325366 -0.237341 4.9978 0.0111322 10.8897C0.119661 13.4687 1.15639 15.6878 1.40201 18.1354C1.46484 18.7695 1.28206 19.552 2.01319 19.829C2.91284 20.1689 4.29229 19.5977 5.04628 19.0751C5.30332 18.9008 5.54893 18.6981 5.73743 18.4467C6.51712 18.9637 7.25683 19.4635 8.18503 19.6862C12.272 20.6659 16.7502 18.4239 18.7408 14.8225C22.4822 8.05658 17.4242 -0.391492 9.65302 0.0140611ZM7.33965 14.1342C7.01692 14.3855 6.70562 14.7282 6.34862 14.9253C5.83168 15.2023 5.67174 14.9139 5.47753 14.4569C4.86635 13.0032 4.79209 10.527 5.14909 9.00478C5.6289 6.93417 7.23112 5.11204 9.43311 4.91783C11.6608 4.72076 13.7285 5.85174 14.6625 7.89379C16.7302 12.4377 11.438 16.9245 7.33965 14.137L7.33965 14.1342Z"
+                                        fill="var(--color-svg-primary)" fill-rule="nonzero" />
+                                </svg>
+
+                            </a>
+
+                            <a href="#"
+                                class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="tg"
+                                        d="M10 0C4.47714 0 0 4.47714 0 10C0 15.5229 4.47714 20 10 20C15.5229 20 20 15.5229 20 10C20 4.47714 15.5229 0 10 0ZM14.635 6.80071C14.4843 8.38214 13.8336 12.2193 13.5021 13.99C13.3621 14.7393 13.0857 14.9907 12.8186 15.015C12.2379 15.0686 11.7971 14.6314 11.2343 14.2629C10.3543 13.6857 9.85714 13.3264 9.00286 12.7636C8.01571 12.1129 8.65571 11.755 9.21857 11.1707C9.36571 11.0179 11.9243 8.69071 11.9743 8.47928C11.9807 8.45286 11.9864 8.35429 11.9279 8.30214C11.8693 8.25 11.7829 8.26786 11.7207 8.28214C11.6321 8.30214 10.2264 9.23143 7.50285 11.07C7.10357 11.3443 6.74214 11.4779 6.41857 11.4707C6.06143 11.4629 5.375 11.2686 4.86428 11.1029C4.23785 10.8993 3.74 10.7914 3.78357 10.4457C3.80643 10.2657 4.05428 10.0814 4.52785 9.89357C7.44285 8.62357 9.38714 7.78643 10.3593 7.38143C13.1364 6.22643 13.7136 6.02572 14.0893 6.01929C14.1721 6.01786 14.3571 6.03857 14.4771 6.13572C14.5786 6.21786 14.6064 6.32857 14.6193 6.40643C14.6329 6.48429 14.6493 6.66143 14.6357 6.8L14.635 6.80071Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+
+
+                            </a>
+
+                            <a href="#"
+                                class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="vk"
+                                        d="M18.6 1.4C17.1864 0 14.9264 0 10.4 0L9.6 0C5.08 0 2.82 0 1.4 1.4C0 2.81357 0 5.07357 0 9.6L0 10.4C0 14.92 0 17.18 1.4 18.6C2.81357 20 5.07357 20 9.6 20L10.4 20C14.92 20 17.18 20 18.6 18.6C20 17.1864 20 14.9264 20 10.4L20 9.6C20 5.08 20 2.82 18.6 1.4L18.6 1.4ZM14.3536 14.4064C13.8471 12.8264 12.58 11.6 10.9071 11.4329L10.9071 14.4064L10.6407 14.4064C6.08071 14.4064 3.48071 11.2864 3.37429 6.08643L5.66786 6.08643C5.74143 9.9 7.42143 11.5129 8.75429 11.8464L8.75429 6.08643L10.9079 6.08643L10.9079 9.37286C12.2214 9.23286 13.6079 7.73286 14.0743 6.07929L16.2207 6.07929C15.8671 7.80929 14.8093 9.31429 13.3007 10.2329C14.985 11.0714 16.23 12.59 16.7207 14.4064L14.3543 14.4064L14.3536 14.4064Z"
+                                        fill="var(--color-svg-primary)" fill-rule="nonzero" />
+                                </svg>
+
+                            </a>
+                        </div>
+
+                        <div id="socialPanel"
+                            class="px-4 py-4.5 w-[80px] h-[166px] bg-white border-l-[3px] border-primary rounded-[30px] flex flex-col gap-2 pointer-events-none">
+                            <a href="#"
+                                class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                                <svg viewBox="0 0 20 19.9316" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="19.931641"
+                                    fill="none" customFrame="#000000">
+                                    <path id="max"
+                                        d="M9.65302 0.0140611C3.69538 0.325366 -0.237341 4.9978 0.0111322 10.8897C0.119661 13.4687 1.15639 15.6878 1.40201 18.1354C1.46484 18.7695 1.28206 19.552 2.01319 19.829C2.91284 20.1689 4.29229 19.5977 5.04628 19.0751C5.30332 18.9008 5.54893 18.6981 5.73743 18.4467C6.51712 18.9637 7.25683 19.4635 8.18503 19.6862C12.272 20.6659 16.7502 18.4239 18.7408 14.8225C22.4822 8.05658 17.4242 -0.391492 9.65302 0.0140611ZM7.33965 14.1342C7.01692 14.3855 6.70562 14.7282 6.34862 14.9253C5.83168 15.2023 5.67174 14.9139 5.47753 14.4569C4.86635 13.0032 4.79209 10.527 5.14909 9.00478C5.6289 6.93417 7.23112 5.11204 9.43311 4.91783C11.6608 4.72076 13.7285 5.85174 14.6625 7.89379C16.7302 12.4377 11.438 16.9245 7.33965 14.137L7.33965 14.1342Z"
+                                        fill="var(--color-svg-primary)" fill-rule="nonzero" />
+                                </svg>
+
+                            </a>
+
+                            <a href="#"
+                                class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="tg"
+                                        d="M10 0C4.47714 0 0 4.47714 0 10C0 15.5229 4.47714 20 10 20C15.5229 20 20 15.5229 20 10C20 4.47714 15.5229 0 10 0ZM14.635 6.80071C14.4843 8.38214 13.8336 12.2193 13.5021 13.99C13.3621 14.7393 13.0857 14.9907 12.8186 15.015C12.2379 15.0686 11.7971 14.6314 11.2343 14.2629C10.3543 13.6857 9.85714 13.3264 9.00286 12.7636C8.01571 12.1129 8.65571 11.755 9.21857 11.1707C9.36571 11.0179 11.9243 8.69071 11.9743 8.47928C11.9807 8.45286 11.9864 8.35429 11.9279 8.30214C11.8693 8.25 11.7829 8.26786 11.7207 8.28214C11.6321 8.30214 10.2264 9.23143 7.50285 11.07C7.10357 11.3443 6.74214 11.4779 6.41857 11.4707C6.06143 11.4629 5.375 11.2686 4.86428 11.1029C4.23785 10.8993 3.74 10.7914 3.78357 10.4457C3.80643 10.2657 4.05428 10.0814 4.52785 9.89357C7.44285 8.62357 9.38714 7.78643 10.3593 7.38143C13.1364 6.22643 13.7136 6.02572 14.0893 6.01929C14.1721 6.01786 14.3571 6.03857 14.4771 6.13572C14.5786 6.21786 14.6064 6.32857 14.6193 6.40643C14.6329 6.48429 14.6493 6.66143 14.6357 6.8L14.635 6.80071Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+
+
+                            </a>
+
+                            <a href="#"
+                                class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="vk"
+                                        d="M18.6 1.4C17.1864 0 14.9264 0 10.4 0L9.6 0C5.08 0 2.82 0 1.4 1.4C0 2.81357 0 5.07357 0 9.6L0 10.4C0 14.92 0 17.18 1.4 18.6C2.81357 20 5.07357 20 9.6 20L10.4 20C14.92 20 17.18 20 18.6 18.6C20 17.1864 20 14.9264 20 10.4L20 9.6C20 5.08 20 2.82 18.6 1.4L18.6 1.4ZM14.3536 14.4064C13.8471 12.8264 12.58 11.6 10.9071 11.4329L10.9071 14.4064L10.6407 14.4064C6.08071 14.4064 3.48071 11.2864 3.37429 6.08643L5.66786 6.08643C5.74143 9.9 7.42143 11.5129 8.75429 11.8464L8.75429 6.08643L10.9079 6.08643L10.9079 9.37286C12.2214 9.23286 13.6079 7.73286 14.0743 6.07929L16.2207 6.07929C15.8671 7.80929 14.8093 9.31429 13.3007 10.2329C14.985 11.0714 16.23 12.59 16.7207 14.4064L14.3543 14.4064L14.3536 14.4064Z"
+                                        fill="var(--color-svg-primary)" fill-rule="nonzero" />
+                                </svg>
+
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <button id="mainToggleBtn"
+                    class="toggleBtn p-3.25 flex justify-center items-center bg-primary rounded-xl button-hover hover:bg-primary-hover">
+                    <svg id="arrowSvg" class="duration-300 rotate-180 group-active:rotate-0"
+                        viewBox="0 0 14.6094 14.6094" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="14.609375" height="14.609375" fill="none"
+                        customFrame="#000000">
+                        <path id="arrow__right--white"
+                            d="M1.78203 0C1.25747 0 0.832219 0.425247 0.832219 0.949815C0.832219 1.47438 1.25747 1.89963 1.78203 1.89963L7.0915 1.89963L0.669665 8.32102C0.299823 8.69084 0.299813 9.29045 0.669643 9.66028C1.03945 10.0301 1.63903 10.0301 2.00886 9.66031L8.43073 3.23887L8.43073 8.54833C8.43073 9.0729 8.85598 9.49815 9.38055 9.49815C9.90512 9.49815 10.3304 9.0729 10.3304 8.54833L10.3304 1.22557C10.3304 0.548705 9.78166 0 9.1048 0L1.78203 0Z"
+                            fill="var(--color-svg-white)" fill-rule="evenodd"
+                            transform="matrix(0.707107,0.707107,-0.707107,0.707107,7.30469,0)" />
+                    </svg>
+
+                </button>
+
+                <!-- Communication -->
+                <div class="flex items-center gap-2 -translate-[-39px]">
+                    <!-- Text -->
+                    <p id="contactsText" class="[writing-mode:vertical-lr] rotate-180 text-sm font-medium">
+                        Связаться
+                    </p>
+
+                    <!-- Block -->
+                    <div>
+                        <!-- Неразвернутый -->
+                        <div id="contactsPanel"
+                            class="px-4 py-4.5 w-[80px] h-[166px] bg-white border-l-[3px] border-primary rounded-[30px] flex flex-col justify-center gap-2 shadow-soft">
+
+                            <a href="#"
+                                class="bg-bg-primary-light border-l-1 border-primary rounded-2xl w-8 h-8 flex items-center justify-center">
+                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="12.000000" height="12.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="tel"
+                                        d="M11.3333 8.33333C10.5 8.33333 9.7 8.2 8.95333 7.95333C8.72 7.88 8.46 7.93333 8.27333 8.11333L6.80667 9.58C4.92 8.62 3.37333 7.08 2.41333 5.19333L3.88 3.72C4.06667 3.54 4.12 3.28 4.04667 3.04667C3.8 2.3 3.66667 1.5 3.66667 0.666667C3.66667 0.3 3.36667 0 3 0L0.666667 0C0.3 0 0 0.3 0 0.666667C0 6.92667 5.07333 12 11.3333 12C11.7 12 12 11.7 12 11.3333L12 9C12 8.63333 11.7 8.33333 11.3333 8.33333Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+                            </a>
+
+                            <a href="#"
+                                class="bg-bg-primary-light border-l-1 border-primary rounded-2xl w-8 h-8 flex items-center justify-center">
+                                <svg viewBox="0 0 12.5 10" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="12.500000" height="10.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="email"
+                                        d="M11.25 0L1.25 0C0.5625 0 0.00624999 0.5625 0.00624999 1.25L0 8.75C0 9.4375 0.5625 10 1.25 10L11.25 10C11.9375 10 12.5 9.4375 12.5 8.75L12.5 1.25C12.5 0.5625 11.9375 0 11.25 0ZM11.25 2.5L6.25 5.625L1.25 2.5L1.25 1.25L6.25 4.375L11.25 1.25L11.25 2.5Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+                            </a>
+
+                            <a href="#"
+                                class="bg-bg-primary-light border-l-1 border-primary rounded-2xl w-8 h-8 flex items-center justify-center">
+                                <svg viewBox="0 0 9.7998 14" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="9.799805" height="14.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="location"
+                                        d="M4.9 0C2.191 0 0 2.191 0 4.9C0 8.575 4.9 14 4.9 14C4.9 14 9.8 8.575 9.8 4.9C9.8 2.191 7.609 0 4.9 0ZM4.9 6.65C3.934 6.65 3.15 5.866 3.15 4.9C3.15 3.934 3.934 3.15 4.9 3.15C5.866 3.15 6.65 3.934 6.65 4.9C6.65 5.866 5.866 6.65 4.9 6.65Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- ВЫЕЗЖАЮЩАЯ КАРТОЧКА С КОНТАКТАМИ (Привязана к контейнеру контактов) -->
+                        <div id="contactsDropdown"
+                            class="absolute right-[-5px] top-0 w-[330px] bg-white border-l-3 border-primary rounded-l-[30px] rounded-tr-[10px] shadow-xl p-6 transition-all duration-300 pointer-events-none opacity-0 text-left pointer-events-none">
+                            <h3 class="text-base font-bold text-gray-900 mb-4">Наши контакты</h3>
+
+                            <div class="space-y-4">
+                                <!-- Телефон -->
+                                <div class="flex items-start gap-3">
+                                    <div
+                                        class="bg-bg-primary-light border-l border-primary rounded-full p-1.75 flex items-center justify-center mt-0.5">
+                                        <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none">
+                                            <path
+                                                d="M11.3333 8.33333C10.5 8.33333 9.7 8.2 8.95333 7.95333C8.72 7.88 8.46 7.93333 8.27333 8.11333L6.80667 9.58C4.92 8.62 3.37333 7.08 2.41333 5.19333L3.88 3.72C4.06667 3.54 4.12 3.28 4.04667 3.04667C3.8 2.3 3.66667 1.5 3.66667 0.666667C3.66667 0.3 3.36667 0 3 0L0.666667 0C0.3 0 0 0.3 0 0.666667C0 6.92667 5.07333 12 11.3333 12C11.7 12 12 11.7 12 11.3333L12 9C12 8.63333 11.7 8.33333 11.3333 8.33333Z"
+                                                fill="var(--color-svg-primary)" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-text-light font-regular">Телефон</p>
+                                        <a href="tel:+79119021222"
+                                            class="text-sm font-regular text-gray-800 hover:text-primary transition-colors">+7(911)
+                                            902-12-22</a>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="flex items-start gap-3">
+                                    <div
+                                        class="bg-bg-primary-light border-l border-primary rounded-full p-1.75 flex items-center justify-center mt-0.5">
+                                        <svg class="w-3 h-3" viewBox="0 0 12.5 10" fill="none">
+                                            <path
+                                                d="M11.25 0L1.25 0C0.5625 0 0.00624999 0.5625 0.00624999 1.25L0 8.75C0 9.4375 0.5625 10 1.25 10L11.25 10C11.9375 10 12.5 9.4375 12.5 8.75L12.5 1.25C12.5 0.5625 11.9375 0 11.25 0ZM11.25 2.5L6.25 5.625L1.25 2.5L1.25 1.25L6.25 4.375L11.25 1.25L11.25 2.5Z"
+                                                fill="var(--color-svg-primary)" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-text-light font-regular">Email</p>
+                                        <a href="mailto:mail@zaostrovie-school.ru"
+                                            class="text-sm font-regular text-gray-800 hover:text-primary transition-colors break-all">mail@zaostrovie-school.ru</a>
+                                    </div>
+                                </div>
+
+                                <!-- Адрес -->
+                                <div class="flex items-start gap-3">
+                                    <div
+                                        class="bg-bg-primary-light border-l border-primary rounded-full py-1.5 px-2 flex items-center justify-center mt-0.5">
+                                        <svg class="w-2.5 h-3.5" viewBox="0 0 9.7998 14" fill="none">
+                                            <path
+                                                d="M4.9 0C2.191 0 0 2.191 0 4.9C0 8.575 4.9 14 4.9 14C4.9 14 9.8 8.575 9.8 4.9C9.8 2.191 7.609 0 4.9 0ZM4.9 6.65C3.934 6.65 3.15 5.866 3.15 4.9C3.15 3.934 3.934 3.15 4.9 3.15C5.866 3.15 6.65 3.934 6.65 4.9"
+                                                fill="var(--color-svg-primary)" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-text-light font-regular">Адрес</p>
+                                        <p class="text-sm font-regular text-gray-800 leading-tight">д. Рикасово, д.
+                                            26.<br>Приморский р-он, Арх.
+                                            обл.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile -->
+        <div id="mobile-panel" class="reveal reveal-right xl:hidden fixed bottom-25 right-0 -translate-[18px] z-49"
+            data-delay="500">
+            <div class="flex flex-col gap-4">
+
+                <!-- Social icons -->
+                <div
+                    class="flex flex-col justify-center items-center gap-1 bg-bg/60 backdrop-blur-md px-2 py-1.5 rounded-xl border border-primary/40 shadow-xs hover-pulse-glow select-none">
+                    <a href="#footer"
+                        class="w-9.5 h-9.5 flex justify-center items-center bg-white border-l-[3px] border-primary rounded-[30px] shadow-soft">
+                        <svg class="rotate-x-180 mt-1" draggable="false" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="var(--color-svg-primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+
+                    </a>
+                    <span class="shrink-0 text-xs text-slate-800 font-medium">Соц сети</span>
+                </div>
+
+                <!-- Communication -->
+                <div
+                    class="flex flex-col justify-center items-center gap-1 bg-bg/60 backdrop-blur-md px-2 py-1.5 rounded-xl border border-primary/40 shadow-xs hover-pulse-glow select-none">
+                    <button
+                        class="w-9.5 h-9.5 flex justify-center items-center bg-white border-l-[3px] border-primary rounded-[30px] shadow-soft">
+                        ℹ️
+                    </button>
+                    <span class="shrink-0 text-xs text-slate-800 font-medium">Связь</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Background images -->
+    <div class="h-333 absolute inset-0 overflow-x-hidden pointer-events-none -z-50 select-none">
+
+        <!-- Левый эллипс -->
+        <div class="absolute left-0 top-0 -translate-x-1/2">
+            <img aria-hidden="true" src="assets/img/hero/ellipse.webp"
+                class="w-70 h-70 mt-26 mr:mt-12 mr:w-100 mr:h-100 sm:mt-0 sm:w-120 sm:h-120 md:w-180 md:h-180 lg:w-255 lg:h-255 "
+                alt="">
+        </div>
+
+        <!-- Правый эллипс -->
+        <div class="absolute right-0 top-0 translate-x-1/2">
+            <img aria-hidden="true" src="assets/img/hero/ellipse.webp"
+                class="w-70 h-70 mt-26 mr:mt-12 mr:w-100 mr:h-100 sm:mt-0 sm:w-120 sm:h-120 md:w-180 md:h-180 lg:w-255 lg:h-255 "
+                alt="">
+        </div>
+
+        <!-- Контейнер с лестницей -->
+        <div class="reveal reveal-scale hidden md:block shrink-0 absolute left-1/2 md:top-[616px] lg:top-[683px] -translate-x-1/2 w-[1420px] h-[312px] bg-auto bg-no-repeat bg-center"
+            style="background-image: url('assets/img/hero/bg-ladder.png');">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Hero Section with Quick Access -->
+        <section id="hero" class="relative pt-40 pb-16 lg:pt-48 lg:pb-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <h1 class="reveal text-5xl lg:text-7xl font-bold tracking-tight mb-6 text-text">
+                    Твой путь к успеху <br>
+                    <span class="text-primary">начинается здесь.</span>
+                </h1>
+                <p class="reveal text-xl text-text-light max-w-[515px] mx-auto mb-12" data-delay="200">
+                    Качественное образование, цифровая среда и поддержка инициатив в самом сердце Заостровья. Учимся для
+                    жизни!
+                </p>
+
+                <!-- Quick Access Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-16 text-left">
+                    <!-- Card 1 -->
+                    <div class="reveal bg-white rounded-2xl p-8 shadow-soft border border-border hover:shadow-hover transition-all duration-300 group"
+                        data-delay="400">
+                        <div
+                            class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+                            <img src="assets/img/hero/sferum.svg" alt="sferum">
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Платформа Сферум</h3>
+                        <p class="text-text-light mb-6 text-sm">Общайтесь с учителями и
+                            одноклассниками через наш защищенный коммуникационный центр. </p>
+                        <button
+                            class="w-full bg-white border border-border text-text py-3 rounded-xl font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2">
+                            Перейти в Сферум
+                            <svg viewBox="0 0 14.0029 14" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="14.002930" height="14.000000"
+                                fill="none" customFrame="#000000">
+                                <path id="Вектор 134"
+                                    d="M9.625 0C9.27227 0 8.95234 0.213281 8.81563 0.541406C8.67891 0.869531 8.75547 1.24414 9.0043 1.4957L10.1363 2.625L5.50703 7.25703C5.16523 7.59883 5.16523 8.15391 5.50703 8.4957C5.84883 8.8375 6.40391 8.8375 6.7457 8.4957L11.375 3.86367L12.507 4.9957C12.7586 5.24727 13.1332 5.32109 13.4613 5.18438C13.7895 5.04766 14.0027 4.73047 14.0027 4.375L14.0027 0.875C14.0027 0.391016 13.6117 0 13.1277 0L9.625 0ZM2.1875 0.875C0.978906 0.875 0 1.85391 0 3.0625L0 11.8125C0 13.0211 0.978906 14 2.1875 14L10.9375 14C12.1461 14 13.125 13.0211 13.125 11.8125L13.125 8.75C13.125 8.26602 12.734 7.875 12.25 7.875C11.766 7.875 11.375 8.26602 11.375 8.75L11.375 11.8125C11.375 12.0531 11.1781 12.25 10.9375 12.25L2.1875 12.25C1.94687 12.25 1.75 12.0531 1.75 11.8125L1.75 3.0625C1.75 2.82187 1.94687 2.625 2.1875 2.625L5.25 2.625C5.73398 2.625 6.125 2.23398 6.125 1.75C6.125 1.26602 5.73398 0.875 5.25 0.875L2.1875 0.875Z"
+                                    fill="currentColor" fill-rule="nonzero" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="reveal bg-white rounded-2xl p-8 shadow-soft border border-border hover:shadow-hover transition-all duration-300 group"
+                        data-delay="600">
+                        <div
+                            class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+                            <img src="assets/img/hero/sferum.svg" alt="sferum">
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Платформа Сферум</h3>
+                        <p class="text-text-light mb-6 text-sm">Общайтесь с учителями и
+                            одноклассниками через наш защищенный коммуникационный центр. </p>
+                        <button
+                            class="w-full bg-white border border-border text-text py-3 rounded-xl font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2">
+                            Перейти в Сферум
+                            <svg viewBox="0 0 14.0029 14" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="14.002930" height="14.000000"
+                                fill="none" customFrame="#000000">
+                                <path id="Вектор 134"
+                                    d="M9.625 0C9.27227 0 8.95234 0.213281 8.81563 0.541406C8.67891 0.869531 8.75547 1.24414 9.0043 1.4957L10.1363 2.625L5.50703 7.25703C5.16523 7.59883 5.16523 8.15391 5.50703 8.4957C5.84883 8.8375 6.40391 8.8375 6.7457 8.4957L11.375 3.86367L12.507 4.9957C12.7586 5.24727 13.1332 5.32109 13.4613 5.18438C13.7895 5.04766 14.0027 4.73047 14.0027 4.375L14.0027 0.875C14.0027 0.391016 13.6117 0 13.1277 0L9.625 0ZM2.1875 0.875C0.978906 0.875 0 1.85391 0 3.0625L0 11.8125C0 13.0211 0.978906 14 2.1875 14L10.9375 14C12.1461 14 13.125 13.0211 13.125 11.8125L13.125 8.75C13.125 8.26602 12.734 7.875 12.25 7.875C11.766 7.875 11.375 8.26602 11.375 8.75L11.375 11.8125C11.375 12.0531 11.1781 12.25 10.9375 12.25L2.1875 12.25C1.94687 12.25 1.75 12.0531 1.75 11.8125L1.75 3.0625C1.75 2.82187 1.94687 2.625 2.1875 2.625L5.25 2.625C5.73398 2.625 6.125 2.23398 6.125 1.75C6.125 1.26602 5.73398 0.875 5.25 0.875L2.1875 0.875Z"
+                                    fill="currentColor" fill-rule="nonzero" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="reveal bg-white rounded-2xl p-8 shadow-soft border border-border hover:shadow-hover transition-all duration-300 group"
+                        data-delay="800">
+                        <div
+                            class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+                            <img src="assets/img/hero/sferum.svg" alt="sferum">
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Платформа Сферум</h3>
+                        <p class="text-text-light mb-6 text-sm">Общайтесь с учителями и
+                            одноклассниками через наш защищенный коммуникационный центр. </p>
+                        <button
+                            class="w-full bg-white border border-border text-text py-3 rounded-xl font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2">
+                            Перейти в Сферум
+                            <svg viewBox="0 0 14.0029 14" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="14.002930" height="14.000000"
+                                fill="none" customFrame="#000000">
+                                <path id="Вектор 134"
+                                    d="M9.625 0C9.27227 0 8.95234 0.213281 8.81563 0.541406C8.67891 0.869531 8.75547 1.24414 9.0043 1.4957L10.1363 2.625L5.50703 7.25703C5.16523 7.59883 5.16523 8.15391 5.50703 8.4957C5.84883 8.8375 6.40391 8.8375 6.7457 8.4957L11.375 3.86367L12.507 4.9957C12.7586 5.24727 13.1332 5.32109 13.4613 5.18438C13.7895 5.04766 14.0027 4.73047 14.0027 4.375L14.0027 0.875C14.0027 0.391016 13.6117 0 13.1277 0L9.625 0ZM2.1875 0.875C0.978906 0.875 0 1.85391 0 3.0625L0 11.8125C0 13.0211 0.978906 14 2.1875 14L10.9375 14C12.1461 14 13.125 13.0211 13.125 11.8125L13.125 8.75C13.125 8.26602 12.734 7.875 12.25 7.875C11.766 7.875 11.375 8.26602 11.375 8.75L11.375 11.8125C11.375 12.0531 11.1781 12.25 10.9375 12.25L2.1875 12.25C1.94687 12.25 1.75 12.0531 1.75 11.8125L1.75 3.0625C1.75 2.82187 1.94687 2.625 2.1875 2.625L5.25 2.625C5.73398 2.625 6.125 2.23398 6.125 1.75C6.125 1.26602 5.73398 0.875 5.25 0.875L2.1875 0.875Z"
+                                    fill="currentColor" fill-rule="nonzero" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Associations -->
+        <section id="associations" class="relative">
+            <div
+                class="min-h-25 py-6 px-6 bg-bg-green flex flex-col gap-8 w-full items-center justify-center lg:flex-row lg:gap-22.5 lg:py-4">
+                <!-- Logo 1 -->
+                <a href="https://zaostrovie-school.ru/obratnaa-svaz-kontakty-socialnye-seti"
+                    class="reveal transition-all duration-500 hover:scale-110 group">
+                    <img src="assets/img/associations/association-1.svg"
+                        class="h-16 w-auto grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                        alt="Точка роста">
+                </a>
+
+                <!-- Logo 2 (delay 150мс) -->
+                <a href="https://yunarmy.ru/" class="reveal transition-all duration-500 hover:scale-110 group"
+                    data-delay="150">
+                    <img src="assets/img/associations/association-2.svg"
+                        class="h-16 w-auto grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                        alt="Юнармия">
+                </a>
+
+                <!-- Logo 3 (delay 300мс) -->
+                <a href="https://www.igps.ru/kpsk" class="reveal transition-all duration-500 hover:scale-110 group"
+                    data-delay="300">
+                    <img src="assets/img/associations/association-3.svg"
+                        class="h-16 w-auto grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                        alt="Кадетский пожарно-спасательный корпус">
+                </a>
+            </div>
+        </section>
+
+        <!-- News & Events Section -->
+        <section id="news-events" class="anchor-top py-17.5 bg-[#FEFFFE]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Header -->
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                    <!-- Заголовок -->
+                    <div>
+                        <h2 class="reveal text-3xl lg:text-4xl font-bold mb-4">Последние обновления
+                        </h2>
+                        <p class="reveal text-text-light" data-delay="100">Будьте в курсе школьных новостей и
+                            предстоящих событий.</p>
+                    </div>
+
+                    <!-- Фильтр + поиск -->
+                    <div class="reveal flex flex-col sm:flex-row gap-4 w-full md:w-auto" data-delay="200">
+                        <!-- Segmented Control -->
+                        <div class="flex bg-gray-100 p-1 rounded-xl">
+                            <button data-filter="all"
+                                class="filter-btn px-6 py-2 bg-white shadow-sm rounded-lg text-sm font-medium text-text transition-all duration-200">Все</button>
+
+                            <button data-filter="news"
+                                class="filter-btn px-6 py-2 rounded-lg text-sm font-medium text-text-light hover:text-text transition-all duration-200">Новости</button>
+
+                            <button data-filter="events"
+                                class="filter-btn px-6 py-2 rounded-lg text-sm font-medium text-text-light hover:text-text transition-all duration-200">События</button>
+                        </div>
+
+                        <!-- Search -->
+                        <div class="relative">
+                            <input type="text" placeholder="Обновления поиска..."
+                                class="relative pl-10 pr-4 py-2 border border-border rounded-xl focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary w-full sm:w-64">
+
+                            <svg class="w-4 absolute top-3.5 left-3.5" viewBox="0 0 15.999 16.0024"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="15.999023" height="16.002441" fill="none" customFrame="#000000">
+                                <path id="search"
+                                    d="M13 6.5C13 7.93437 12.5344 9.25937 11.75 10.3344L15.7063 14.2937C16.0969 14.6844 16.0969 15.3187 15.7063 15.7094C15.3156 16.1 14.6813 16.1 14.2906 15.7094L10.3344 11.75C9.25938 12.5375 7.93438 13 6.5 13C2.90937 13 0 10.0906 0 6.5C0 2.90938 2.90937 0 6.5 0C10.0906 0 13 2.90937 13 6.5ZM6.5 11C7.45031 11 8.37622 10.6992 9.14503 10.1406C9.91385 9.582 10.4861 8.79437 10.7798 7.89058C11.0734 6.98678 11.0734 6.01322 10.7798 5.10942C10.4861 4.20563 9.91385 3.418 9.14503 2.85942C8.37622 2.30085 7.45031 2 6.5 2C5.54969 2 4.62378 2.30085 3.85497 2.85942C3.08615 3.418 2.51391 4.20563 2.22025 5.10942C1.92658 6.01322 1.92658 6.98678 2.22025 7.89058C2.51391 8.79437 3.08615 9.582 3.85497 10.1406C4.62378 10.6992 5.54969 11 6.5 11Z"
+                                    fill="currentColor" fill-rule="nonzero" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- (1) News Card 1 -->
+                    <div class="card-item reveal group bg-bg rounded-2xl overflow-hidden border border-border hover:shadow-hover transition-all duration-300 flex flex-col"
+                        data-category="news" data-delay="250">
+                        <div class="h-48 overflow-hidden relative">
+                            <picture>
+                                <source src="assets/img/events/card-1.webp" type="image/webp">
+
+                                <img class="w-full h-full object-cover transition-transform duration-500"
+                                    src="assets/img/events/card-1.jpg" alt="Ледокол знаний">
+                            </picture>
+
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary">
+                                Новости</div>
+                        </div>
+
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="flex items-center gap-2 text-sm text-text-light mb-3">
+                                <svg viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="12.000000" height="13.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="date"
+                                        d="M10.8 1.18182L10.2 1.18182L10.2 0L9 0L9 1.18182L3 1.18182L3 0L1.8 0L1.8 1.18182L1.2 1.18182C0.54 1.18182 0 1.71364 0 2.36364L0 11.8182C0 12.4682 0.54 13 1.2 13L10.8 13C11.46 13 12 12.4682 12 11.8182L12 2.36364C12 1.71364 11.46 1.18182 10.8 1.18182ZM10.8 11.8182L1.2 11.8182L1.2 4.13636L10.8 4.13636L10.8 11.8182Z"
+                                        fill="currentColor" fill-rule="evenodd" />
+                                </svg>
+                                <span>Май 6, 2026 • 18:00</span>
+                            </div>
+                            <div class="before-card-line">
+                                <p class="font-normal text-sm flex-1 line-clamp-6">
+                                    Уважаемые жители Приморского округа!<br><br>
+                                    Госкорпорация «Росатом» объявляет о начале конкурсного отбора на седьмой сезон
+                                    международного научно-просветительского проекта «Ледокол знаний» 🚢...
+                                </p>
+                            </div>
+                            <a href="#"
+                                class="text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all">Посмотреть
+                                детали
+
+                                <svg viewBox="0 0 15.5566 15.5562" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="15.556641" height="15.556152"
+                                    fill="none" customFrame="#000000">
+                                    <path id="arrow-right"
+                                        d="M4.4 0C3.99499 0 3.66667 0.328325 3.66667 0.733333C3.66667 1.13834 3.99499 1.46667 4.4 1.46667L8.49933 1.46667L0.517 9.449C0.231469 9.73453 0.231469 10.1975 0.517 10.483C0.802531 10.7685 1.26547 10.7685 1.551 10.483L9.53333 2.50067L9.53333 6.6C9.53333 7.00501 9.86166 7.33333 10.2667 7.33333C10.6717 7.33333 11 7.00501 11 6.6L11 0.946236C11 0.423645 10.5764 0 10.0538 0L4.4 0Z"
+                                        fill="currentColor" fill-rule="evenodd"
+                                        transform="matrix(0.707107,0.707107,-0.707107,0.707107,7.77832,0)" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- (2) Event Card 1 -->
+                    <div class="card-item reveal group bg-bg rounded-2xl overflow-hidden border border-border hover:shadow-hover transition-all duration-300 flex flex-col"
+                        data-category="events" data-delay="400">
+                        <div class="h-48 overflow-hidden relative">
+                            <picture>
+                                <source src="assets/img/events/image 154.webp" type="image/webp">
+                                <img class="w-full h-full object-cover transition-transform duration-500"
+                                    src="assets/img/events/image 154.jpg" alt="">
+                            </picture>
+
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-orange-500">
+                                События</div>
+                        </div>
+
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="flex gap-3.5">
+                                <div class="flex items-center gap-2 text-sm text-text-light mb-3" title="Дата">
+                                    <svg viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="12.000000" height="13.000000"
+                                        fill="none" customFrame="#000000">
+                                        <path id="date"
+                                            d="M10.8 1.18182L10.2 1.18182L10.2 0L9 0L9 1.18182L3 1.18182L3 0L1.8 0L1.8 1.18182L1.2 1.18182C0.54 1.18182 0 1.71364 0 2.36364L0 11.8182C0 12.4682 0.54 13 1.2 13L10.8 13C11.46 13 12 12.4682 12 11.8182L12 2.36364C12 1.71364 11.46 1.18182 10.8 1.18182ZM10.8 11.8182L1.2 11.8182L1.2 4.13636L10.8 4.13636L10.8 11.8182Z"
+                                            fill="currentColor" fill-rule="evenodd" />
+                                    </svg>
+
+                                    <span>Май 6, 2026 • 18:00</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-sm text-text-light mb-3"
+                                    title="Время проведения">
+                                    <img class="max-h-3.5" src="assets/img/events/time-icon.svg" alt="">
+                                    <span>14 мая 13:00 <br>- 18 июня 18:00</span>
+
+                                </div>
+                            </div>
+                            <div class="before-card-line">
+                                <p class="font-normal text-sm flex-1 line-clamp-6">
+                                    Прием заявок: с 1 мая по 1 октября 2025 года до 18:00 на Международный молодежный
+                                    конкурс социальной антикоррупционной рекламы «Вместе против коррупции!».
+
+                                    Проводится Межгосударственным советом по ...
+                                </p>
+                            </div>
+                            <a href="#"
+                                class="text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all">Посмотреть
+                                детали
+                                <svg viewBox="0 0 15.5566 15.5562" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="15.556641" height="15.556152"
+                                    fill="none" customFrame="#000000">
+                                    <path id="arrow-right"
+                                        d="M4.4 0C3.99499 0 3.66667 0.328325 3.66667 0.733333C3.66667 1.13834 3.99499 1.46667 4.4 1.46667L8.49933 1.46667L0.517 9.449C0.231469 9.73453 0.231469 10.1975 0.517 10.483C0.802531 10.7685 1.26547 10.7685 1.551 10.483L9.53333 2.50067L9.53333 6.6C9.53333 7.00501 9.86166 7.33333 10.2667 7.33333C10.6717 7.33333 11 7.00501 11 6.6L11 0.946236C11 0.423645 10.5764 0 10.0538 0L4.4 0Z"
+                                        fill="currentColor" fill-rule="evenodd"
+                                        transform="matrix(0.707107,0.707107,-0.707107,0.707107,7.77832,0)" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- (3) News Card 2 -->
+                    <div class="card-item reveal group bg-bg rounded-2xl overflow-hidden border border-border hover:shadow-hover transition-all duration-300 flex flex-col"
+                        data-category="news" data-delay="550">
+                        <div class="h-48 overflow-hidden relative">
+                            <picture>
+                                <source src="assets/img/events/card-1.webp" type="image/webp">
+
+                                <img class="w-full h-full object-cover transition-transform duration-500"
+                                    src="assets/img/events/card-1.jpg" alt="">
+                            </picture>
+
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary">
+                                Новости</div>
+                        </div>
+
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="flex items-center gap-2 text-sm text-text-light mb-3">
+                                <svg viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="12.000000" height="13.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="date"
+                                        d="M10.8 1.18182L10.2 1.18182L10.2 0L9 0L9 1.18182L3 1.18182L3 0L1.8 0L1.8 1.18182L1.2 1.18182C0.54 1.18182 0 1.71364 0 2.36364L0 11.8182C0 12.4682 0.54 13 1.2 13L10.8 13C11.46 13 12 12.4682 12 11.8182L12 2.36364C12 1.71364 11.46 1.18182 10.8 1.18182ZM10.8 11.8182L1.2 11.8182L1.2 4.13636L10.8 4.13636L10.8 11.8182Z"
+                                        fill="currentColor" fill-rule="evenodd" />
+                                </svg>
+                                <span>Май 6, 2026 • 18:00</span>
+                            </div>
+                            <div class="before-card-line">
+                                <p class="font-normal text-sm flex-1 line-clamp-6">
+                                    Уважаемые жители Приморского округа!<br><br>
+                                    Госкорпорация «Росатом» объявляет о начале конкурсного отбора на седьмой сезон
+                                    международного научно-просветительского проекта «Ледокол знаний» 🚢...
+                                </p>
+                            </div>
+                            <a href="#"
+                                class="text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all">Посмотреть
+                                детали
+                                <svg viewBox="0 0 15.5566 15.5562" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="15.556641" height="15.556152"
+                                    fill="none" customFrame="#000000">
+                                    <path id="arrow-right"
+                                        d="M4.4 0C3.99499 0 3.66667 0.328325 3.66667 0.733333C3.66667 1.13834 3.99499 1.46667 4.4 1.46667L8.49933 1.46667L0.517 9.449C0.231469 9.73453 0.231469 10.1975 0.517 10.483C0.802531 10.7685 1.26547 10.7685 1.551 10.483L9.53333 2.50067L9.53333 6.6C9.53333 7.00501 9.86166 7.33333 10.2667 7.33333C10.6717 7.33333 11 7.00501 11 6.6L11 0.946236C11 0.423645 10.5764 0 10.0538 0L4.4 0Z"
+                                        fill="currentColor" fill-rule="evenodd"
+                                        transform="matrix(0.707107,0.707107,-0.707107,0.707107,7.77832,0)" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Button "View All Updates" -->
+                <div class="reveal mt-12 text-center" data-delay="650">
+                    <button
+                        class="bg-white border border-border text-text px-8 py-3 rounded-xl hover:bg-gray-50 transition-colors font-medium shadow-sm">Посмотреть
+                        все обновления</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Staff Section -->
+        <section id="staff"
+            class="my-20 max-w-7xl mx-auto space-y-8 bg-surface rounded-3xl p-8 border border-border shadow-soft">
+            <div class="px-4 sm:px-6 lg:px-8">
+                <!-- Text -->
+                <div class="flex justify-between items-end mb-8">
+                    <div>
+                        <h2 class="reveal text-3xl font-bold text-text mb-2">Познакомтесь с нашим
+                            составом</h2>
+                        <p class="reveal text-text-muted" data-delay="100">Наш образовательный путь сопровождают
+                            преданные своему делу профессионалы.</p>
+                    </div>
+                    <a href="#"
+                        class="reveal reveal-right hidden sm:flex items-center gap-2 text-primary font-medium hover:text-primary-hover"
+                        data-delay="700">
+                        Полный каталог
+                        <svg viewBox="0 0 15.5566 15.5562" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="15.556641" height="15.556152" fill="none"
+                            customFrame="#000000">
+                            <path id="arrow-right"
+                                d="M4.4 0C3.99499 0 3.66667 0.328325 3.66667 0.733333C3.66667 1.13834 3.99499 1.46667 4.4 1.46667L8.49933 1.46667L0.517 9.449C0.231469 9.73453 0.231469 10.1975 0.517 10.483C0.802531 10.7685 1.26547 10.7685 1.551 10.483L9.53333 2.50067L9.53333 6.6C9.53333 7.00501 9.86166 7.33333 10.2667 7.33333C10.6717 7.33333 11 7.00501 11 6.6L11 0.946236C11 0.423645 10.5764 0 10.0538 0L4.4 0Z"
+                                fill="currentColor" fill-rule="evenodd"
+                                transform="matrix(0.707107,0.707107,-0.707107,0.707107,7.77832,0)" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Staff Card 1 -->
+                    <div class="reveal group bg-bg rounded-2xl p-4 border border-border hover:border-primary/30 transition-colors text-center"
+                        data-delay="200">
+                        <div class="reveal reveal-scale w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-4 border-white shadow-sm"
+                            data-delay="300">
+                            <img src="assets/img/staff/ls.jpg" alt="Principal" class="w-full h-full object-cover">
+                        </div>
+
+                        <h3 class="text-lg font-bold text-text">Коновалова Лидия Сергеевна</h3>
+                        <p class="text-sm text-primary font-medium mb-4">Директор</p>
+
+                        <div class="flex justify-center gap-2 border-t border-border pt-4">
+                            <a href="mailto:director@zaostrovie-school.ru"
+                                class="w-8 h-8 rounded-full bg-surface text-text-muted hover:text-primary hover:shadow-sm transition-all flex items-center justify-center"
+                                title="Email">
+                                <svg viewBox="0 0 12.5 10" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="12.500000" height="10.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="email"
+                                        d="M11.25 0L1.25 0C0.5625 0 0.00624999 0.5625 0.00624999 1.25L0 8.75C0 9.4375 0.5625 10 1.25 10L11.25 10C11.9375 10 12.5 9.4375 12.5 8.75L12.5 1.25C12.5 0.5625 11.9375 0 11.25 0ZM11.25 2.5L6.25 5.625L1.25 2.5L1.25 1.25L6.25 4.375L11.25 1.25L11.25 2.5Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href=""
+                                class="w-8 h-8 rounded-full bg-surface text-text-muted hover:text-primary hover:shadow-sm transition-all flex items-center justify-center"
+                                title="Профиль">
+                                <svg viewBox="0 0 10 12" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="10.000000" height="12.000000"
+                                    fill="none" customFrame="#000000">
+                                    <g id="profile">
+                                        <circle id="Эллипс 26" cx="4.99978352" cy="3.11111116" r="3.1111114"
+                                            fill="var(--color-svg-primary)" />
+                                        <path id="Прямоугольник 54"
+                                            d="M1.02184 6.58022L1.02212 6.57996C3.28382 4.54473 6.71691 4.54488 8.97843 6.5803C9.62869 7.16555 10 7.99929 10 8.87414L10 10.6295C10 11.3864 9.38641 12 8.6295 12L1.37039 12C0.613543 12 0 11.3865 0 10.6296L0 8.87439C0 7.99939 0.371413 7.16551 1.02184 6.58022Z"
+                                            fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                    </g>
+                                </svg>
+
+                            </a>
+                            <a href="tel:+7(8182)25-42-01"
+                                class="w-8 h-8 rounded-full bg-surface text-text-muted hover:text-primary hover:shadow-sm transition-all flex items-center justify-center"
+                                title="Телефон">
+                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="12.000000" height="12.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="tel"
+                                        d="M11.3333 8.33333C10.5 8.33333 9.7 8.2 8.95333 7.95333C8.72 7.88 8.46 7.93333 8.27333 8.11333L6.80667 9.58C4.92 8.62 3.37333 7.08 2.41333 5.19333L3.88 3.72C4.06667 3.54 4.12 3.28 4.04667 3.04667C3.8 2.3 3.66667 1.5 3.66667 0.666667C3.66667 0.3 3.36667 0 3 0L0.666667 0C0.3 0 0 0.3 0 0.666667C0 6.92667 5.07333 12 11.3333 12C11.7 12 12 11.7 12 11.3333L12 9C12 8.63333 11.7 8.33333 11.3333 8.33333Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Staff Card 2 -->
+                    <div class="reveal group bg-bg rounded-2xl p-4 border border-border hover:border-primary/30 transition-colors text-center"
+                        data-delay="400">
+                        <div class="reveal reveal-scale w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-4 border-white shadow-sm"
+                            data-delay="500">
+                            <img src="assets/img/staff/NeverovA.jpg" alt="Principal" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold text-text">Неверова Александра Васильевна</h3>
+                        <p class="text-sm text-primary font-medium mb-4">Зам. директора по ВР</p>
+                        <div class="flex justify-center gap-2 border-t border-border pt-4">
+                            <a href="mailto:vr@zaostrovie-school.ru"
+                                class="w-8 h-8 rounded-full bg-surface text-text-muted hover:text-primary hover:shadow-sm transition-all flex items-center justify-center"
+                                title="Email">
+                                <svg viewBox="0 0 12.5 10" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="12.500000" height="10.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="email"
+                                        d="M11.25 0L1.25 0C0.5625 0 0.00624999 0.5625 0.00624999 1.25L0 8.75C0 9.4375 0.5625 10 1.25 10L11.25 10C11.9375 10 12.5 9.4375 12.5 8.75L12.5 1.25C12.5 0.5625 11.9375 0 11.25 0ZM11.25 2.5L6.25 5.625L1.25 2.5L1.25 1.25L6.25 4.375L11.25 1.25L11.25 2.5Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href=""
+                                class="w-8 h-8 rounded-full bg-surface text-text-muted hover:text-primary hover:shadow-sm transition-all flex items-center justify-center"
+                                title="Профиль">
+                                <svg viewBox="0 0 10 12" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="10.000000" height="12.000000"
+                                    fill="none" customFrame="#000000">
+                                    <g id="profile">
+                                        <circle id="Эллипс 26" cx="4.99978352" cy="3.11111116" r="3.1111114"
+                                            fill="var(--color-svg-primary)" />
+                                        <path id="Прямоугольник 54"
+                                            d="M1.02184 6.58022L1.02212 6.57996C3.28382 4.54473 6.71691 4.54488 8.97843 6.5803C9.62869 7.16555 10 7.99929 10 8.87414L10 10.6295C10 11.3864 9.38641 12 8.6295 12L1.37039 12C0.613543 12 0 11.3865 0 10.6296L0 8.87439C0 7.99939 0.371413 7.16551 1.02184 6.58022Z"
+                                            fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="tel:+7(8182)25-42-01"
+                                class="w-8 h-8 rounded-full bg-surface text-text-muted hover:text-primary hover:shadow-sm transition-all flex items-center justify-center"
+                                title="Телефон">
+                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="12.000000" height="12.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="tel"
+                                        d="M11.3333 8.33333C10.5 8.33333 9.7 8.2 8.95333 7.95333C8.72 7.88 8.46 7.93333 8.27333 8.11333L6.80667 9.58C4.92 8.62 3.37333 7.08 2.41333 5.19333L3.88 3.72C4.06667 3.54 4.12 3.28 4.04667 3.04667C3.8 2.3 3.66667 1.5 3.66667 0.666667C3.66667 0.3 3.36667 0 3 0L0.666667 0C0.3 0 0 0.3 0 0.666667C0 6.92667 5.07333 12 11.3333 12C11.7 12 12 11.7 12 11.3333L12 9C12 8.63333 11.7 8.33333 11.3333 8.33333Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Staff Card 3 -->
+                    <div class="reveal group bg-bg rounded-2xl p-4 border border-border hover:border-primary/30 transition-colors text-center"
+                        data-delay="300">
+                        <div class="reveal reveal-scale w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-4 border-white shadow-sm"
+                            data-delay="400">
+                            <img src="assets/img/staff/belyaeva-oa.jpg" alt="Principal"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <h3 class="text-lg font-bold text-text">Беляева Ольга Анатольевна</h3>
+                        <p class="text-sm text-primary font-medium mb-4">Зам. директора по АХР</p>
+
+                        <div class="flex justify-center gap-2 border-t border-border pt-4">
+                            <a href="mailto:ac@zaostrovie-school.ru"
+                                class="w-8 h-8 rounded-full bg-surface text-text-muted hover:text-primary hover:shadow-sm transition-all flex items-center justify-center"
+                                title="Email">
+                                <svg viewBox="0 0 12.5 10" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="12.500000" height="10.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="email"
+                                        d="M11.25 0L1.25 0C0.5625 0 0.00624999 0.5625 0.00624999 1.25L0 8.75C0 9.4375 0.5625 10 1.25 10L11.25 10C11.9375 10 12.5 9.4375 12.5 8.75L12.5 1.25C12.5 0.5625 11.9375 0 11.25 0ZM11.25 2.5L6.25 5.625L1.25 2.5L1.25 1.25L6.25 4.375L11.25 1.25L11.25 2.5Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href=""
+                                class="w-8 h-8 rounded-full bg-surface text-text-muted hover:text-primary hover:shadow-sm transition-all flex items-center justify-center"
+                                title="Профиль">
+                                <svg viewBox="0 0 10 12" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="10.000000" height="12.000000"
+                                    fill="none" customFrame="#000000">
+                                    <g id="profile">
+                                        <circle id="Эллипс 26" cx="4.99978352" cy="3.11111116" r="3.1111114"
+                                            fill="var(--color-svg-primary)" />
+                                        <path id="Прямоугольник 54"
+                                            d="M1.02184 6.58022L1.02212 6.57996C3.28382 4.54473 6.71691 4.54488 8.97843 6.5803C9.62869 7.16555 10 7.99929 10 8.87414L10 10.6295C10 11.3864 9.38641 12 8.6295 12L1.37039 12C0.613543 12 0 11.3865 0 10.6296L0 8.87439C0 7.99939 0.371413 7.16551 1.02184 6.58022Z"
+                                            fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="tel:+7(8182)25-42-01"
+                                class="w-8 h-8 rounded-full bg-surface text-text-muted hover:text-primary hover:shadow-sm transition-all flex items-center justify-center"
+                                title="Телефон">
+                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="12.000000" height="12.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="tel"
+                                        d="M11.3333 8.33333C10.5 8.33333 9.7 8.2 8.95333 7.95333C8.72 7.88 8.46 7.93333 8.27333 8.11333L6.80667 9.58C4.92 8.62 3.37333 7.08 2.41333 5.19333L3.88 3.72C4.06667 3.54 4.12 3.28 4.04667 3.04667C3.8 2.3 3.66667 1.5 3.66667 0.666667C3.66667 0.3 3.36667 0 3 0L0.666667 0C0.3 0 0 0.3 0 0.666667C0 6.92667 5.07333 12 11.3333 12C11.7 12 12 11.7 12 11.3333L12 9C12 8.63333 11.7 8.33333 11.3333 8.33333Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Staff Card 4 -->
+                    <div class="reveal group bg-bg rounded-2xl p-4 border border-border hover:border-primary/30 transition-colors text-center"
+                        data-delay="600">
+                        <div class="reveal reveal-scale w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-4 border-white shadow-sm"
+                            data-delay="700">
+                            <img src="assets/img/staff/strelkova-on.jpg" alt="Principal"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold text-text">Стрелкова Ольга Николаевна</h3>
+                        <p class="text-sm text-primary font-medium mb-4">Главный бухгалтер</p>
+                        <div class="flex justify-center gap-2 border-t border-border pt-4">
+                            <a href="mailto:buh@zaostrovie-school.ru"
+                                class="w-8 h-8 rounded-full bg-surface text-text-muted hover:text-primary hover:shadow-sm transition-all flex items-center justify-center"
+                                title="Email">
+                                <svg viewBox="0 0 12.5 10" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="12.500000" height="10.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="email"
+                                        d="M11.25 0L1.25 0C0.5625 0 0.00624999 0.5625 0.00624999 1.25L0 8.75C0 9.4375 0.5625 10 1.25 10L11.25 10C11.9375 10 12.5 9.4375 12.5 8.75L12.5 1.25C12.5 0.5625 11.9375 0 11.25 0ZM11.25 2.5L6.25 5.625L1.25 2.5L1.25 1.25L6.25 4.375L11.25 1.25L11.25 2.5Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href=""
+                                class="w-8 h-8 rounded-full bg-surface text-text-muted hover:text-primary hover:shadow-sm transition-all flex items-center justify-center"
+                                title="Профиль">
+                                <svg viewBox="0 0 10 12" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="10.000000" height="12.000000"
+                                    fill="none" customFrame="#000000">
+                                    <g id="profile">
+                                        <circle id="Эллипс 26" cx="4.99978352" cy="3.11111116" r="3.1111114"
+                                            fill="var(--color-svg-primary)" />
+                                        <path id="Прямоугольник 54"
+                                            d="M1.02184 6.58022L1.02212 6.57996C3.28382 4.54473 6.71691 4.54488 8.97843 6.5803C9.62869 7.16555 10 7.99929 10 8.87414L10 10.6295C10 11.3864 9.38641 12 8.6295 12L1.37039 12C0.613543 12 0 11.3865 0 10.6296L0 8.87439C0 7.99939 0.371413 7.16551 1.02184 6.58022Z"
+                                            fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="tel:+7(8182)25-42-01"
+                                class="w-8 h-8 rounded-full bg-surface text-text-muted hover:text-primary hover:shadow-sm transition-all flex items-center justify-center"
+                                title="Телефон">
+                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="12.000000" height="12.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="tel"
+                                        d="M11.3333 8.33333C10.5 8.33333 9.7 8.2 8.95333 7.95333C8.72 7.88 8.46 7.93333 8.27333 8.11333L6.80667 9.58C4.92 8.62 3.37333 7.08 2.41333 5.19333L3.88 3.72C4.06667 3.54 4.12 3.28 4.04667 3.04667C3.8 2.3 3.66667 1.5 3.66667 0.666667C3.66667 0.3 3.36667 0 3 0L0.666667 0C0.3 0 0 0.3 0 0.666667C0 6.92667 5.07333 12 11.3333 12C11.7 12 12 11.7 12 11.3333L12 9C12 8.63333 11.7 8.33333 11.3333 8.33333Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="px-6 pt-20 pb-24 bg-[#FEFFFE]">
+            <div class="max-w-4xl mx-auto">
+                <!-- Text -->
+                <div class="text-center mb-16">
+                    <h2 class="reveal text-3xl lg:text-4xl font-bold mb-4">Часто задаваемые вопросы
+                    </h2>
+
+                    <p class="reveal text-text-light" data-delay="150">Здесь вы найдете быстрые ответы на часто
+                        задаваемые вопросы родителей и учеников.</p>
+                </div>
+
+                <!-- Accordions -->
+                <div class="space-y-4">
+                    <!-- Accordion Item 1 -->
+                    <div class="faq-item reveal border border-border rounded-2xl overflow-hidden bg-bg transition-all duration-300 hover:shadow-soft"
+                        data-delay="200">
+
+                        <!-- Question -->
+                        <button
+                            class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none font-semibold text-lg text-text gap-4"
+                            aria-expanded="false">
+                            <span>Как мне записать своего ребенка на предстоящий учебный год?</span>
+                            <svg class="faq-arrow shrink-0 transition-transform duration-300" width="15" height="9"
+                                viewBox="0 0 11 7" fill="none" aria-hidden="true" xmlns="w3.org">
+                                <path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+
+                        <!-- Answer -->
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pt-4 pb-6 text-text-light text-sm leading-relaxed border-t border-border">
+                                Родители и учащиеся могут войти в электронный дневник, используя свои учетные данные на
+                                едином региональном портале. Если вы являетесь новым родителем, пожалуйста, свяжитесь с
+                                административным офисом, чтобы получить свой первоначальный код доступа и инструкции по
+                                настройке.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div class="faq-item reveal border border-border rounded-2xl overflow-hidden bg-bg transition-all duration-300 hover:shadow-soft"
+                        data-delay="200">
+
+                        <!-- Question -->
+                        <button
+                            class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none font-semibold text-lg text-text gap-4"
+                            aria-expanded="false">
+                            <span>Как мне записать своего ребенка на предстоящий учебный год?</span>
+                            <svg class="faq-arrow shrink-0 transition-transform duration-300" width="15" height="9"
+                                viewBox="0 0 11 7" fill="none" aria-hidden="true" xmlns="w3.org">
+                                <path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+
+                        <!-- Answer -->
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pt-4 pb-6 text-text-light text-sm leading-relaxed border-t border-border">
+                                Родители и учащиеся могут войти в электронный дневник, используя свои учетные данные на
+                                едином региональном портале. Если вы являетесь новым родителем, пожалуйста, свяжитесь с
+                                административным офисом, чтобы получить свой первоначальный код доступа и инструкции по
+                                настройке.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 3 -->
+                    <div class="faq-item reveal border border-border rounded-2xl overflow-hidden bg-bg transition-all duration-300 hover:shadow-soft"
+                        data-delay="200">
+
+                        <!-- Question -->
+                        <button
+                            class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none font-semibold text-lg text-text gap-4"
+                            aria-expanded="false">
+                            <span>Как мне записать своего ребенка на предстоящий учебный год?</span>
+                            <svg class="faq-arrow shrink-0 transition-transform duration-300" width="15" height="9"
+                                viewBox="0 0 11 7" fill="none" aria-hidden="true" xmlns="w3.org">
+                                <path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+
+                        <!-- Answer -->
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pt-4 pb-6 text-text-light text-sm leading-relaxed border-t border-border">
+                                Родители и учащиеся могут войти в электронный дневник, используя свои учетные данные на
+                                едином региональном портале. Если вы являетесь новым родителем, пожалуйста, свяжитесь с
+                                административным офисом, чтобы получить свой первоначальный код доступа и инструкции по
+                                настройке.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 4 -->
+                    <div class="faq-item reveal border border-border rounded-2xl overflow-hidden bg-bg transition-all duration-300 hover:shadow-soft"
+                        data-delay="200">
+
+                        <!-- Question -->
+                        <button
+                            class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none font-semibold text-lg text-text gap-4"
+                            aria-expanded="false">
+                            <span>Как мне записать своего ребенка на предстоящий учебный год?</span>
+                            <svg class="faq-arrow shrink-0 transition-transform duration-300" width="15" height="9"
+                                viewBox="0 0 11 7" fill="none" aria-hidden="true" xmlns="w3.org">
+                                <path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+
+                        <!-- Answer -->
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pt-4 pb-6 text-text-light text-sm leading-relaxed border-t border-border">
+                                Родители и учащиеся могут войти в электронный дневник, используя свои учетные данные на
+                                едином региональном портале. Если вы являетесь новым родителем, пожалуйста, свяжитесь с
+                                административным офисом, чтобы получить свой первоначальный код доступа и инструкции по
+                                настройке.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Administration communication -->
+                <div class="reveal mt-10 text-center" data-delay="700">
+                    <p class="text-text-light text-sm">Остались вопросы? <a href="#"
+                            class="text-primary font-medium hover:underline">Свяжитесь с
+                            администрацией.</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-bg-container border-t border-border pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+
+                <!-- Information block -->
+                <div class="reveal col-span-1 md:col-span-1">
+                    <!-- Logo -->
+                    <a href="#" alt="logo" class="shrink-0 flex items-center gap-5 mb-6 ">
+                        <picture>
+                            <source class="w-6.5 h-6.5" src="assets/img/logo.webp" type="image/webp">
+                            <img class="w-6.5 h-6.5" src="assets/img/logo.png" alt="Лого">
+                        </picture>
+                        <span class="font-bold tracking-tight">Заостровская СШ</span>
+                    </a>
+
+                    <!-- Text block -->
+                    <p class="text-sm text-text-light mb-6">«Гордимся прошлым, верим<br>в
+                        будущее Заостровского края»</p>
+
+                    <!-- Social icons -->
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                            <svg viewBox="0 0 20 19.9316" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="19.931641"
+                                fill="none" customFrame="#000000">
+                                <path id="max"
+                                    d="M9.65302 0.0140611C3.69538 0.325366 -0.237341 4.9978 0.0111322 10.8897C0.119661 13.4687 1.15639 15.6878 1.40201 18.1354C1.46484 18.7695 1.28206 19.552 2.01319 19.829C2.91284 20.1689 4.29229 19.5977 5.04628 19.0751C5.30332 18.9008 5.54893 18.6981 5.73743 18.4467C6.51712 18.9637 7.25683 19.4635 8.18503 19.6862C12.272 20.6659 16.7502 18.4239 18.7408 14.8225C22.4822 8.05658 17.4242 -0.391492 9.65302 0.0140611ZM7.33965 14.1342C7.01692 14.3855 6.70562 14.7282 6.34862 14.9253C5.83168 15.2023 5.67174 14.9139 5.47753 14.4569C4.86635 13.0032 4.79209 10.527 5.14909 9.00478C5.6289 6.93417 7.23112 5.11204 9.43311 4.91783C11.6608 4.72076 13.7285 5.85174 14.6625 7.89379C16.7302 12.4377 11.438 16.9245 7.33965 14.137L7.33965 14.1342Z"
+                                    fill="var(--color-svg-primary)" fill-rule="nonzero" />
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000"
+                                fill="none" customFrame="#000000">
+                                <path id="tg"
+                                    d="M10 0C4.47714 0 0 4.47714 0 10C0 15.5229 4.47714 20 10 20C15.5229 20 20 15.5229 20 10C20 4.47714 15.5229 0 10 0ZM14.635 6.80071C14.4843 8.38214 13.8336 12.2193 13.5021 13.99C13.3621 14.7393 13.0857 14.9907 12.8186 15.015C12.2379 15.0686 11.7971 14.6314 11.2343 14.2629C10.3543 13.6857 9.85714 13.3264 9.00286 12.7636C8.01571 12.1129 8.65571 11.755 9.21857 11.1707C9.36571 11.0179 11.9243 8.69071 11.9743 8.47928C11.9807 8.45286 11.9864 8.35429 11.9279 8.30214C11.8693 8.25 11.7829 8.26786 11.7207 8.28214C11.6321 8.30214 10.2264 9.23143 7.50285 11.07C7.10357 11.3443 6.74214 11.4779 6.41857 11.4707C6.06143 11.4629 5.375 11.2686 4.86428 11.1029C4.23785 10.8993 3.74 10.7914 3.78357 10.4457C3.80643 10.2657 4.05428 10.0814 4.52785 9.89357C7.44285 8.62357 9.38714 7.78643 10.3593 7.38143C13.1364 6.22643 13.7136 6.02572 14.0893 6.01929C14.1721 6.01786 14.3571 6.03857 14.4771 6.13572C14.5786 6.21786 14.6064 6.32857 14.6193 6.40643C14.6329 6.48429 14.6493 6.66143 14.6357 6.8L14.635 6.80071Z"
+                                    fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000"
+                                fill="none" customFrame="#000000">
+                                <path id="vk"
+                                    d="M18.6 1.4C17.1864 0 14.9264 0 10.4 0L9.6 0C5.08 0 2.82 0 1.4 1.4C0 2.81357 0 5.07357 0 9.6L0 10.4C0 14.92 0 17.18 1.4 18.6C2.81357 20 5.07357 20 9.6 20L10.4 20C14.92 20 17.18 20 18.6 18.6C20 17.1864 20 14.9264 20 10.4L20 9.6C20 5.08 20 2.82 18.6 1.4L18.6 1.4ZM14.3536 14.4064C13.8471 12.8264 12.58 11.6 10.9071 11.4329L10.9071 14.4064L10.6407 14.4064C6.08071 14.4064 3.48071 11.2864 3.37429 6.08643L5.66786 6.08643C5.74143 9.9 7.42143 11.5129 8.75429 11.8464L8.75429 6.08643L10.9079 6.08643L10.9079 9.37286C12.2214 9.23286 13.6079 7.73286 14.0743 6.07929L16.2207 6.07929C15.8671 7.80929 14.8093 9.31429 13.3007 10.2329C14.985 11.0714 16.23 12.59 16.7207 14.4064L14.3543 14.4064L14.3536 14.4064Z"
+                                    fill="var(--color-svg-primary)" fill-rule="nonzero" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick links -->
+                <div class="reveal" data-delay="150">
+                    <h4 class="font-bold mb-6">Быстрые ссылки</h4>
+                    <ul class="space-y-3 text-sm text-text-light">
+                        <li><a href="#" class="hover:text-primary transition-colors">Поступающим</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Меню
+                                столовой</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Библиотека
+                                документов</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Справочник
+                                сотрудников</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="reveal" data-delay="300">
+                    <h4 class="font-bold mb-6">Ресурсы</h4>
+                    <ul class="space-y-3 text-sm text-text-light">
+                        <li><a href="#" class="hover:text-primary transition-colors">Электронный
+                                дневник</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Платформа
+                                Сферум</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Академический календарь</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Часто
+                                задаваемые вопросы</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="reveal" data-delay="450">
+                    <h4 class="font-bold mb-6">Рассылка</h4>
+
+                    <div class="flex flex-col gap-6">
+                        <p class="text-sm text-text-light">
+                            Подпишитесь, чтобы всегда быть в курсе событий первым!
+                        </p>
+
+                        <!-- Mail submission form -->
+                        <form class="reveal reveal-scale flex w-full max-w-[400px]" data-delay="450" action="/subscribe"
+                            method="POST">
+                            <div
+                                class="relative flex w-full border border-border rounded-xl focus-within:ring-2 focus-within:ring-primary transition-all">
+
+                                <input required name="email" type="email" placeholder="Ваш email"
+                                    class="w-full py-3 px-6 rounded-l-xl outline-none bg-transparent placeholder:text-gray-400">
+
+                                <button type="submit" aria-label="Подписаться"
+                                    class="w-14 shrink-0 flex items-center justify-center bg-primary rounded-xl transition-transform active:scale-95">
+                                    <img class="w-3.5" src="assets/img/arrow__right--white.svg" alt=""
+                                        aria-hidden="true">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright area -->
+            <div class="reveal border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+                data-delay="600">
+                <p class="text-sm text-text-light">© 2026 Заостровская СОШ. Все права защищены.
+                </p>
+                <div class="flex gap-6 text-sm text-text-light">
+                    <a href="#" class="hover:text-text">Политика конфиденциальности</a>
+                    <a href="#" class="hover:text-text">Условия предоставления услуг</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Button "Scroll to Top" -->
+    <button id="scroll-to-top"
+        class="fixed bottom-10 right-8 z-50 flex h-10 w-10 transform items-center justify-center rounded-full bg-primary text-white shadow-lg scale-0 opacity-0 hover:bg-primary-hover hover-pulse-glow"
+        aria-label="Наверх">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Базовая подложка модального окна -->
+    <div id="global-modal-overlay"
+        class="fixed inset-0 z-100 flex items-center justify-center bg-black/40 opacity-0 invisible transition-all duration-300 backdrop-blur-xs">
+
+        <!-- 1. Модальное окно: Версия для слабовидящих -->
+        <div id="modal-accessibility"
+            class="hidden relative w-full max-w-md bg-white rounded-2xl p-6 shadow-2xl transform scale-95 opacity-0 transition-all duration-300 mx-4">
+            <div class="flex justify-between items-center mb-5 border-b border-gray-100 pb-3">
+                <h3 class="text-lg font-bold text-gray-900 flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    Настройки доступности
+                </h3>
+                <button class="close-modal-btn text-gray-400 hover:text-gray-600 cursor-pointer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="space-y-5">
+                <!-- Размер шрифта -->
+                <div>
+                    <label class="text-xs font-bold text-gray-400 block mb-2 uppercase">Размер шрифта</label>
+                    <div class="grid grid-cols-3 gap-2" id="font-size-group">
+                        <button data-size="sm"
+                            class="active-acc-btn px-3 py-2 bg-gray-900 text-white rounded-xl text-sm font-medium cursor-pointer transition-all">Обычный</button>
+                        <button data-size="md"
+                            class="px-3 py-2 bg-gray-50 border border-gray-200 text-gray-700 rounded-xl text-sm font-medium hover:bg-gray-100 cursor-pointer transition-all">Средний</button>
+                        <button data-size="lg"
+                            class="px-3 py-2 bg-gray-50 border border-gray-200 text-gray-700 rounded-xl text-sm font-medium hover:bg-gray-100 cursor-pointer transition-all">Крупный</button>
+                    </div>
+                </div>
+
+                <!-- Интервал между строками -->
+                <div>
+                    <label class="text-xs font-bold text-gray-400 block mb-2 uppercase">Интервал текста</label>
+                    <div class="grid grid-cols-2 gap-2" id="spacing-group">
+                        <button data-spacing="normal"
+                            class="active-acc-btn px-3 py-2 bg-gray-900 text-white rounded-xl text-xs font-bold cursor-pointer transition-all">Обычный</button>
+                        <button data-spacing="lg"
+                            class="px-3 py-2 bg-gray-50 border border-gray-200 text-gray-700 rounded-xl text-xs font-bold hover:bg-gray-100 cursor-pointer transition-all">Увеличенный</button>
+                    </div>
+                </div>
+
+                <!-- Цветовая схема -->
+                <div>
+                    <label class="text-xs font-bold text-gray-400 block mb-2 uppercase">Цветовая схема</label>
+                    <div class="grid grid-cols-3 gap-2" id="theme-group">
+                        <button data-theme="default"
+                            class="active-acc-btn px-2 py-2 bg-white border border-gray-200 text-gray-800 rounded-xl text-xs font-bold cursor-pointer transition-all">Стандартная</button>
+                        <button data-theme="contrast"
+                            class="px-2 py-2 bg-white border border-black text-black rounded-xl text-xs font-bold hover:bg-gray-50 cursor-pointer transition-all">Черно-белая</button>
+                        <button data-theme="inverted"
+                            class="px-2 py-2 bg-black border border-yellow-400 text-yellow-400 rounded-xl text-xs font-bold hover:bg-gray-900 cursor-pointer transition-all">Инверсия</button>
+                    </div>
+                </div>
+
+                <!-- Изображения -->
+                <div>
+                    <label class="text-xs font-bold text-gray-400 block mb-2 uppercase">Изображения сайта</label>
+                    <div class="grid grid-cols-2 gap-2" id="images-group">
+                        <button data-images="show"
+                            class="active-acc-btn px-3 py-2 bg-gray-900 text-white rounded-xl text-xs font-bold cursor-pointer transition-all">Показывать</button>
+                        <button data-images="hide"
+                            class="px-3 py-2 bg-gray-50 border border-gray-200 text-gray-700 rounded-xl text-xs font-bold hover:bg-gray-100 cursor-pointer transition-all">Скрыть
+                            картинки</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Модальное окно: Обратная связь (Вопросы администрации) -->
+        <div id="modal-feedback"
+            class="hidden relative w-full max-w-md bg-white rounded-2xl p-6 shadow-2xl transform scale-95 opacity-0 transition-all duration-300 mx-4">
+            <div class="flex justify-between items-center mb-5 border-b border-gray-100 pb-3">
+                <h3 class="text-lg font-bold text-gray-900 flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Приемное обращение
+                </h3>
+                <button class="close-modal-btn text-gray-400 hover:text-gray-600 cursor-pointer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <form id="feedback-form" class="space-y-4">
+                <!-- ФИО -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-500 mb-1 uppercase tracking-wide">Ваше имя и
+                        фамилия</label>
+                    <input type="text" required placeholder="Иванов Иван"
+                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-primary transition-colors text-text">
+                </div>
+
+                <!-- Контакты -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 mb-1 uppercase tracking-wide">Электронная
+                            почта</label>
+                        <input type="email" required placeholder="example@mail.ru"
+                            class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-primary transition-colors text-text">
+                    </div>
+                    <div>
+                        <label
+                            class="block text-xs font-bold text-gray-500 mb-1 uppercase tracking-wide">Телефон</label>
+                        <input type="tel" placeholder="+7 (900) 000-00-00"
+                            class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-primary transition-colors text-text">
+                    </div>
+                </div>
+
+                <!-- Тема обращения (Селект) -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-500 mb-1 uppercase tracking-wide">Тема
+                        обращения</label>
+                    <select id="feedback-topic"
+                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-primary transition-colors text-text cursor-pointer">
+                        <option value="director">Вопрос администрации / Директору</option>
+                        <option value="cafeteria">Питание в столовой</option>
+                        <option value="tech">Проблема со Сферумом / Эл. дневником</option>
+                    </select>
+                </div>
+
+                <!-- Динамический блок 1: Столовая (скрыт по умолчанию) -->
+                <div id="dynamic-field-cafeteria"
+                    class="hidden bg-gray-50 p-3 rounded-xl border border-gray-100 space-y-2">
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" id="food-review-toggle"
+                            class="rounded border-gray-300 text-primary focus:ring-primary">
+                        <span class="text-xs font-medium text-gray-700">Оставить отзыв о конкретном блюде меню</span>
+                    </label>
+                    <input type="text" id="food-name-input" placeholder="Название блюда (например, Спагетти Болоньезе)"
+                        class="hidden w-full px-3 py-2 bg-white border border-gray-200 rounded-lg text-xs focus:outline-none focus:border-primary text-text">
+                </div>
+
+                <!-- Динамический блок 2: Техническая проблема (скрыт по умолчанию) -->
+                <div id="dynamic-field-tech" class="hidden bg-gray-50 p-3 rounded-xl border border-gray-100">
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Прикрепите скриншот ошибки (если
+                        есть):</label>
+                    <input type="file" accept="image/*"
+                        class="w-full text-xs text-gray-500 file:mr-4 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-primary file:text-white hover:file:bg-primary-hover file:cursor-pointer">
+                </div>
+
+                <!-- Текст сообщения -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-500 mb-1 uppercase tracking-wide">Текст
+                        сообщения</label>
+                    <textarea required rows="4" maxlength="500" id="feedback-message"
+                        placeholder="Введите ваше обращение сюда..."
+                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-primary transition-colors text-text resize-none"></textarea>
+                    <div class="text-right text-[10px] text-gray-400 mt-1">Максимум 500 символов</div>
+                </div>
+
+                <!-- Кнопка отправки -->
+                <button type="submit"
+                    class="w-full py-3 bg-primary text-white font-semibold text-sm rounded-xl hover:bg-primary-hover shadow-sm transition-all transform active:scale-[0.99] cursor-pointer">
+                    Отправить обращение
+                </button>
+            </form>
+
+            <!-- Состояние успешной отправки (скрыто по умолчанию) -->
+            <div id="feedback-success-state"
+                class="hidden flex-col items-center justify-center text-center py-6 transition-all duration-300 transform scale-95 opacity-0">
+                <div
+                    class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mb-4 text-green-600 shadow-sm border border-green-100">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Обращение отправлено!</h3>
+                <p class="text-sm text-gray-500 max-w-sm mb-1">Спасибо за ваше обращение. Оно успешно зарегистрировано в
+                    электронной приёмной администрации школы.</p>
+                <div
+                    class="inline-block bg-gray-50 border border-gray-100 px-4 py-1.5 rounded-xl text-xs font-bold text-gray-700 my-4">
+                    Номер вашей заявки: <span id="ticket-number" class="text-primary font-extrabold">#0000</span>
+                </div>
+                <p class="text-xs text-gray-400">Окно автоматически закроется через несколько секунд.</p>
+            </div>
+
+
+        </div>
+
+        <!-- 3. Модальное окно: Конструктор внешнего вида -->
+        <div id="modal-theme-constructor"
+            class="hidden relative w-full max-w-md bg-white rounded-2xl p-6 shadow-2xl transform scale-95 opacity-0 transition-all duration-300 mx-4">
+            <div class="flex justify-between items-center mb-5 border-b border-gray-100 pb-3">
+                <h3 class="text-lg font-bold text-gray-900 flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                        </path>
+                    </svg>
+                    Внешний вид сайта
+                </h3>
+                <button class="close-modal-btn text-gray-400 hover:text-gray-600 cursor-pointer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="space-y-5">
+                <!-- Выбор темы -->
+                <div>
+                    <label class="text-xs font-bold text-gray-400 block mb-2 uppercase tracking-wide">Основная
+                        тема</label>
+                    <div class="grid grid-cols-3 gap-2" id="site-theme-group">
+                        <button data-site-theme="light"
+                            class="active-theme-btn px-3 py-2 bg-gray-900 text-white rounded-xl text-xs font-semibold cursor-pointer transition-all">Светлая</button>
+                        <button data-site-theme="dark"
+                            class="px-3 py-2 bg-gray-50 border border-gray-200 text-gray-700 rounded-xl text-xs font-semibold hover:bg-gray-100 cursor-pointer transition-all">Тёмная</button>
+                        <button data-site-theme="sepia"
+                            class="px-3 py-2 bg-gray-50 border border-gray-200 text-gray-700 rounded-xl text-xs font-semibold hover:bg-gray-100 cursor-pointer transition-all">Сепия</button>
+                    </div>
+                </div>
+
+                <!-- Выбор шрифта -->
+                <div>
+                    <label class="text-xs font-bold text-gray-400 block mb-2 uppercase tracking-wide">Стиль
+                        шрифта</label>
+                    <div class="grid grid-cols-2 gap-2" id="site-font-group">
+                        <button data-site-font="sans"
+                            class="active-theme-btn px-3 py-2 bg-gray-900 text-white rounded-xl text-xs font-semibold cursor-pointer transition-all font-sans">
+                            Без засечек (Inter)
+                        </button>
+                        <button data-site-font="serif"
+                            class="px-3 py-2 bg-gray-50 border border-gray-200 text-gray-700 rounded-xl text-xs font-semibold hover:bg-gray-100 cursor-pointer transition-all font-serif">
+                            С засечками (Georgia)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Кнопка полного сброса кастомизации -->
+                <button id="reset-appearance-btn"
+                    class="w-full py-2.5 bg-gray-100 text-gray-700 font-medium text-xs rounded-xl hover:bg-gray-200 transition-colors cursor-pointer mt-2">
+                    Вернуть стандартный вид
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Script "Appearance" -->
+    <script src="js/Appearance.js"></script>
+
+    <!-- Script "Mobile Panel Disappears" -->
+    <script src="js/Mobile_Panel_Disappears.js"></script>
+
+    <!-- Script "Button scroll to top" -->
+    <script src="js/button-scroll-to-top.js"></script>
+
+    <!-- Script "Switch News" -->
+    <script src="js/Switch_News.js"></script>
+
+    <!-- Script "FAQ" -->
+    <script src="js/FAQ.js"></script>
+
+    <!-- Script "Mobile menu" -->
+    <script src="js/Mobile_menu.js"></script>
+
+    <!-- Script "modal-window" -->
+    <script src="js/modal-window.js"></script>
+
+    <!-- Script "toogle-btn" -->
+    <script src="js/toogle-btn.js"></script>
+</body>
+
+</html>
