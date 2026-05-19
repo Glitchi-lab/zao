@@ -168,60 +168,61 @@
                         class="text-text-muted hover:text-text font-medium transition-colors whitespace-nowrap">Столовая</a>
                 </nav>
 
-                <!-- 3. Block "Buttons" -->
-                <div class="hidden lg:flex items-center space-x-4">
-                    <button data-modal-target="modal-feedback"
-                        class="w-8 h-8 bg-bg-primary-light rounded-lg flex justify-center items-center button-hover hover:bg-bg-primary-light-hover">
-                        <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" width="14.000000" height="14.000000" fill="none"
-                            customFrame="#000000">
-                            <path id="question"
-                                d="M12.6 0L1.4 0C0.63 0 0.00699999 0.63 0.00699999 1.4L0 14L2.8 11.2L12.6 11.2C13.37 11.2 14 10.57 14 9.8L14 1.4C14 0.63 13.37 0 12.6 0ZM7.7 8.4L6.3 8.4L6.3 7L7.7 7L7.7 8.4ZM7.7 5.6L6.3 5.6L6.3 2.8L7.7 2.8L7.7 5.6Z"
-                                fill="var(--color-svg-primary
+                <div class="flex gap-3">
+                    <!-- 3. Block "Buttons" -->
+                    <div class="flex items-center space-x-4">
+                        <button data-modal-target="modal-feedback"
+                            class="w-8 h-8 bg-bg-primary-light rounded-lg flex justify-center items-center button-hover hover:bg-bg-primary-light-hover">
+                            <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="14.000000" height="14.000000"
+                                fill="none" customFrame="#000000">
+                                <path id="question"
+                                    d="M12.6 0L1.4 0C0.63 0 0.00699999 0.63 0.00699999 1.4L0 14L2.8 11.2L12.6 11.2C13.37 11.2 14 10.57 14 9.8L14 1.4C14 0.63 13.37 0 12.6 0ZM7.7 8.4L6.3 8.4L6.3 7L7.7 7L7.7 8.4ZM7.7 5.6L6.3 5.6L6.3 2.8L7.7 2.8L7.7 5.6Z"
+                                    fill="var(--color-svg-primary
                                 )" fill-rule="evenodd" />
-                        </svg>
+                            </svg>
 
-                    </button>
-                    <button data-modal-target="modal-theme-constructor"
-                        class="w-8 h-8 bg-bg-primary-light rounded-lg flex justify-center items-center button-hover hover:bg-bg-primary-light-hover">
-                        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000" fill="none">
-                            <rect id="gavel" width="20.000000" height="20.000000" x="0.000000" y="0.000000"
-                                fill="rgb(255,255,255)" fill-opacity="0" />
-                            <path id="矢量 133"
-                                d="M6.73333 4.36816L4.375 6.72383L16.1534 18.5155L18.5117 16.1598L6.73333 4.36816Z"
-                                fill="var(--color-svg-primary)" fill-rule="evenodd" />
-                            <path id="矢量 134"
-                                d="M10.2619 0.832031L7.90527 3.18936L12.6199 7.9027L14.9766 5.54536L10.2619 0.832031Z"
-                                fill="var(--color-svg-primary)" fill-rule="evenodd" />
-                            <path id="矢量 135"
-                                d="M2.77105 8.32422C2.77105 8.32422 1.98041 11.7034 2.50026 12.9169C2.5249 12.9745 3.12124 13.651 3.1773 13.6788C3.22377 13.7019 3.27573 13.7257 3.33381 13.7502C4.54295 14.26 7.48505 13.0382 7.48505 13.0382L2.77105 8.32422Z"
-                                fill="var(--color-svg-primary)" fill-rule="evenodd" />
-                            <path id="矢量 136" d="M2.12207 0L0 2.12167L5.55556 7.67723L7.67763 5.55555L2.12207 0Z"
-                                fill="var(--color-svg-primary)" fill-rule="evenodd"
-                                transform="matrix(0,1,-1,0,11.8438,4.1665)" />
-                        </svg>
+                        </button>
+                        <button data-modal-target="modal-theme-constructor"
+                            class="w-8 h-8 bg-bg-primary-light rounded-lg flex justify-center items-center button-hover hover:bg-bg-primary-light-hover">
+                            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000"
+                                fill="none">
+                                <rect id="gavel" width="20.000000" height="20.000000" x="0.000000" y="0.000000"
+                                    fill="rgb(255,255,255)" fill-opacity="0" />
+                                <path id="矢量 133"
+                                    d="M6.73333 4.36816L4.375 6.72383L16.1534 18.5155L18.5117 16.1598L6.73333 4.36816Z"
+                                    fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                <path id="矢量 134"
+                                    d="M10.2619 0.832031L7.90527 3.18936L12.6199 7.9027L14.9766 5.54536L10.2619 0.832031Z"
+                                    fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                <path id="矢量 135"
+                                    d="M2.77105 8.32422C2.77105 8.32422 1.98041 11.7034 2.50026 12.9169C2.5249 12.9745 3.12124 13.651 3.1773 13.6788C3.22377 13.7019 3.27573 13.7257 3.33381 13.7502C4.54295 14.26 7.48505 13.0382 7.48505 13.0382L2.77105 8.32422Z"
+                                    fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                <path id="矢量 136" d="M2.12207 0L0 2.12167L5.55556 7.67723L7.67763 5.55555L2.12207 0Z"
+                                    fill="var(--color-svg-primary)" fill-rule="evenodd"
+                                    transform="matrix(0,1,-1,0,11.8438,4.1665)" />
+                            </svg>
 
-                    </button>
-                    <button data-modal-target="modal-accessibility"
-                        class="w-8 h-8 bg-primary rounded-lg flex justify-center items-center transition-colors button-hover hover:bg-primary-hover">
-                        <svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="14.000000" fill="none"
-                            customFrame="#000000">
-                            <path id="eye"
-                                d="M10 0C5.45455 0 1.57273 2.90267 0 7C1.57273 11.0973 5.45455 14 10 14C14.5455 14 18.4273 11.0973 20 7C18.4273 2.90267 14.5455 0 10 0ZM10 11.6667C7.49091 11.6667 5.45455 9.576 5.45455 7C5.45455 4.424 7.49091 2.33333 10 2.33333C12.5091 2.33333 14.5455 4.424 14.5455 7C14.5455 9.576 12.5091 11.6667 10 11.6667ZM10 4.2C8.49091 4.2 7.27273 5.45067 7.27273 7C7.27273 8.54933 8.49091 9.8 10 9.8C11.5091 9.8 12.7273 8.54933 12.7273 7C12.7273 5.45067 11.5091 4.2 10 4.2Z"
-                                fill="var(--color-svg-white)" fill-rule="evenodd" />
-                        </svg>
+                        </button>
+                        <button data-modal-target="modal-accessibility"
+                            class="w-8 h-8 bg-primary rounded-lg flex justify-center items-center transition-colors button-hover hover:bg-primary-hover">
+                            <svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="14.000000"
+                                fill="none" customFrame="#000000">
+                                <path id="eye"
+                                    d="M10 0C5.45455 0 1.57273 2.90267 0 7C1.57273 11.0973 5.45455 14 10 14C14.5455 14 18.4273 11.0973 20 7C18.4273 2.90267 14.5455 0 10 0ZM10 11.6667C7.49091 11.6667 5.45455 9.576 5.45455 7C5.45455 4.424 7.49091 2.33333 10 2.33333C12.5091 2.33333 14.5455 4.424 14.5455 7C14.5455 9.576 12.5091 11.6667 10 11.6667ZM10 4.2C8.49091 4.2 7.27273 5.45067 7.27273 7C7.27273 8.54933 8.49091 9.8 10 9.8C11.5091 9.8 12.7273 8.54933 12.7273 7C12.7273 5.45067 11.5091 4.2 10 4.2Z"
+                                    fill="var(--color-svg-white)" fill-rule="evenodd" />
+                            </svg>
 
-                    </button>
+                        </button>
+                    </div>
+
+                    <!-- Mobile menu -->
+                    <div class="lg:hidden flex items-center">
+                        <button id="burger-btn" class="p-2"><i class="fa-solid fa-bars text-2xl"></i></button>
+                    </div>
                 </div>
-
-                <!-- Mobile menu -->
-                <div class="lg:hidden flex items-center">
-                    <button id="burger-btn" class="p-2"><i class="fa-solid fa-bars text-2xl"></i></button>
-                </div>
-
-
 
             </div>
         </div>
