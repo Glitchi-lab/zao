@@ -1,0 +1,1810 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Столовая</title>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Font "Inter" -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind output -->
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+
+<body class="m-0 p-0 bg-bg text-text antialiased">
+
+    <!-- Header Navigation -->
+    <header id="header" class="reveal-header fixed top-6 left-0 right-0 z-50 mx-auto">
+        <!-- Pc menu -->
+        <div class="px-5 lg:px-17.5">
+            <div
+                class="w-full px-5 shadow-soft rounded-[12px] mx-auto flex justify-between items-center h-18 max-w-[1280px] border bg-white border-solid border-border">
+
+                <!-- 1. Block "Logo" -->
+                <a href="index.html#hero" alt="logo" class="shrink-0 flex items-center gap-5">
+                    <picture>
+                        <source class="w-9 h-9" srcset="assets/img/logo.webp" type="image/webp">
+                        <img class="w-9 h-9" src="assets/img/logo.png" alt="Лого">
+                    </picture>
+                    <span class="max-mr:hidden font-medium text-xl tracking-tight">Заостровская СШ</span>
+                </a>
+
+                <!-- 2. Block "Navigation" -->
+                <nav class="hidden lg:flex items-center space-x-10">
+                    <!-- Main -->
+                    <div class="group relative">
+                        <a href="index.html"
+                            class="nav-hover-link text-primary bg-bg-primary-light rounded-[8px] flex items-center gap-[6px] py-2.5 px-5 font-semibold whitespace-nowrap">
+                            Главная
+                            <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="shrink-0 transition-transform duration-300 group-hover:rotate-180">
+                                <path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <!-- Мега-меню Главной (ссылки на блоки) -->
+                        <div
+                            class="absolute left-1/2 top-full -translate-x-1/2 pt-2 w-[280px] opacity-0 pointer-events-none translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
+                            <div
+                                class="bg-white/95 backdrop-blur-md rounded-xl border border-border shadow-soft-lg p-4 flex flex-col gap-1">
+                                <a href="index.html#news-events"
+                                    class="p-2.5 text-sm font-medium text-text-muted hover:text-primary hover:bg-green-50/50 rounded-lg transition-all">Лента
+                                    новостей</a>
+                                <a href="index.html#staff"
+                                    class="p-2.5 text-sm font-medium text-text-muted hover:text-primary hover:bg-green-50/50 rounded-lg transition-all">Наши
+                                    сотрудники</a>
+                                <a href="index.html#faq"
+                                    class="p-2.5 text-sm font-medium text-text-muted hover:text-primary hover:bg-green-50/50 rounded-lg transition-all">Часто
+                                    задаваемые вопросы</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About us -->
+                    <div class="group relative">
+                        <a href="about.html"
+                            class="nav-hover-link text-text-muted hover:text-text flex items-center gap-[6px] font-medium transition-colors py-4 whitespace-nowrap">
+                            О нас
+                            <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="shrink-0 transition-transform duration-300 group-hover:rotate-180">
+                                <path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+
+                        <!-- Mega-menu (Commercial) -->
+                        <div
+                            class="absolute left-1/2 top-full -translate-x-1/2 pt-2 w-[520px] opacity-0 pointer-events-none translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
+                            <div
+                                class="bg-white/95 backdrop-blur-md rounded-2xl border border-border shadow-soft-lg p-6 grid grid-cols-2 gap-6">
+                                <!-- Left column: Documentation -->
+                                <div class="flex flex-col border-r border-gray-100 pr-4 gap-1">
+                                    <h4 class="font-bold text-xs text-text-muted tracking-wider uppercase px-2.5 mb-2">
+                                        Официальные документы</h4>
+                                    <a href="docs-general.html"
+                                        class="p-2 rounded-lg hover:bg-green-50/50 text-sm font-medium text-text hover:text-primary transition-all">Общие
+                                        документы школы</a>
+                                    <a href="docs-rules.html"
+                                        class="p-2 rounded-lg hover:bg-green-50/50 text-sm font-medium text-text hover:text-primary transition-all">Школьные
+                                        правила и памятки</a>
+                                </div>
+
+                                <!-- Right Column: Information Pages -->
+                                <div class="flex flex-col gap-1">
+                                    <h4 class="font-bold text-xs text-text-muted tracking-wider uppercase px-2.5 mb-2">
+                                        Информация</h4>
+                                    <a href="history.html"
+                                        class="p-2 rounded-lg hover:bg-green-50/50 text-sm font-medium text-text hover:text-primary transition-all">История
+                                        школы</a>
+                                    <a href="vacancies.html"
+                                        class="p-2 rounded-lg hover:bg-green-50/50 text-sm font-medium text-text hover:text-primary transition-all">Вакансии
+                                        для учителей</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- For applicants -->
+                    <div class="group relative">
+                        <a href="#"
+                            class="nav-hover-link text-text-muted hover:text-text flex items-center gap-[6px] font-medium transition-colors py-4 whitespace-nowrap">
+                            Поступающим
+                            <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="shrink-0 transition-transform duration-300 group-hover:rotate-180">
+                                <path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <!-- Mega-menu -->
+                        <div
+                            class="absolute left-1/2 top-full -translate-x-1/2 pt-2 w-[460px] opacity-0 pointer-events-none translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
+                            <div
+                                class="bg-white/95 backdrop-blur-md rounded-2xl border border-border shadow-soft-lg p-5 flex flex-col gap-4">
+                                <div class="flex flex-col gap-1">
+                                    <a href="rules.html"
+                                        class="group/item flex flex-col p-2.5 rounded-xl hover:bg-green-50/50 transition-colors">
+                                        <span
+                                            class="font-semibold text-text text-sm group-hover/item:text-primary transition-colors">Правила
+                                            приема</span>
+                                        <span class="text-xs text-text-muted mt-0.5">Порядок зачисления, льготы и сроки
+                                            подачи заявлений</span>
+                                    </a>
+                                    <a href="documents.html"
+                                        class="group/item flex flex-col p-2.5 rounded-xl hover:bg-green-50/50 transition-colors">
+                                        <span
+                                            class="font-semibold text-text text-sm group-hover/item:text-primary transition-colors">Необходимые
+                                            документы</span>
+                                        <span class="text-xs text-text-muted mt-0.5">Паспорт, Свидетельство, прописка,
+                                            СНИЛС, мед. карта</span>
+                                    </a>
+                                </div>
+                                <!-- Admissions Committee Information Block -->
+                                <div class="p-4 bg-gray-50/50 border border-gray-100 rounded-xl">
+                                    <span
+                                        class="font-semibold text-text text-xs tracking-wider uppercase block text-text-muted">Приемная
+                                        комиссия</span>
+                                    <span class="text-sm font-medium text-text block mt-1.5">Ответственный за прием •
+                                        Кабинет №12</span>
+                                    <span class="text-xs text-text-muted block mt-0.5">Телефон: +7 (XXX)
+                                        XXX-XX-XX</span>
+                                    <span class="text-xs text-text-muted block">График работы: Пн-Пт с 9:00 до
+                                        16:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cafeteria -->
+                    <a href="cafeteria.html"
+                        class="text-text-muted hover:text-text font-medium transition-colors whitespace-nowrap">Столовая</a>
+                </nav>
+
+                <!-- 3. Block "Buttons" -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button data-modal-target="modal-feedback"
+                        class="w-8 h-8 bg-bg-primary-light rounded-lg flex justify-center items-center button-hover hover:bg-bg-primary-light-hover">
+                        <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="14.000000" height="14.000000" fill="none"
+                            customFrame="#000000">
+                            <path id="question"
+                                d="M12.6 0L1.4 0C0.63 0 0.00699999 0.63 0.00699999 1.4L0 14L2.8 11.2L12.6 11.2C13.37 11.2 14 10.57 14 9.8L14 1.4C14 0.63 13.37 0 12.6 0ZM7.7 8.4L6.3 8.4L6.3 7L7.7 7L7.7 8.4ZM7.7 5.6L6.3 5.6L6.3 2.8L7.7 2.8L7.7 5.6Z"
+                                fill="var(--color-svg-primary
+                                )" fill-rule="evenodd" />
+                        </svg>
+
+                    </button>
+                    <button data-modal-target="modal-theme-constructor"
+                        class="w-8 h-8 bg-bg-primary-light rounded-lg flex justify-center items-center button-hover hover:bg-bg-primary-light-hover">
+                        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000" fill="none">
+                            <rect id="gavel" width="20.000000" height="20.000000" x="0.000000" y="0.000000"
+                                fill="rgb(255,255,255)" fill-opacity="0" />
+                            <path id="矢量 133"
+                                d="M6.73333 4.36816L4.375 6.72383L16.1534 18.5155L18.5117 16.1598L6.73333 4.36816Z"
+                                fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                            <path id="矢量 134"
+                                d="M10.2619 0.832031L7.90527 3.18936L12.6199 7.9027L14.9766 5.54536L10.2619 0.832031Z"
+                                fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                            <path id="矢量 135"
+                                d="M2.77105 8.32422C2.77105 8.32422 1.98041 11.7034 2.50026 12.9169C2.5249 12.9745 3.12124 13.651 3.1773 13.6788C3.22377 13.7019 3.27573 13.7257 3.33381 13.7502C4.54295 14.26 7.48505 13.0382 7.48505 13.0382L2.77105 8.32422Z"
+                                fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                            <path id="矢量 136" d="M2.12207 0L0 2.12167L5.55556 7.67723L7.67763 5.55555L2.12207 0Z"
+                                fill="var(--color-svg-primary)" fill-rule="evenodd"
+                                transform="matrix(0,1,-1,0,11.8438,4.1665)" />
+                        </svg>
+
+                    </button>
+                    <button data-modal-target="modal-accessibility"
+                        class="w-8 h-8 bg-primary rounded-lg flex justify-center items-center transition-colors button-hover hover:bg-primary-hover">
+                        <svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="14.000000" fill="none"
+                            customFrame="#000000">
+                            <path id="eye"
+                                d="M10 0C5.45455 0 1.57273 2.90267 0 7C1.57273 11.0973 5.45455 14 10 14C14.5455 14 18.4273 11.0973 20 7C18.4273 2.90267 14.5455 0 10 0ZM10 11.6667C7.49091 11.6667 5.45455 9.576 5.45455 7C5.45455 4.424 7.49091 2.33333 10 2.33333C12.5091 2.33333 14.5455 4.424 14.5455 7C14.5455 9.576 12.5091 11.6667 10 11.6667ZM10 4.2C8.49091 4.2 7.27273 5.45067 7.27273 7C7.27273 8.54933 8.49091 9.8 10 9.8C11.5091 9.8 12.7273 8.54933 12.7273 7C12.7273 5.45067 11.5091 4.2 10 4.2Z"
+                                fill="var(--color-svg-white)" fill-rule="evenodd" />
+                        </svg>
+
+                    </button>
+                </div>
+
+                <!-- Mobile menu -->
+                <div class="lg:hidden flex items-center">
+                    <button id="burger-btn" class="p-2"><i class="fa-solid fa-bars text-2xl"></i></button>
+                </div>
+
+
+
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU (CURTAIN) -->
+    <div id="mobile-drawer"
+        class="fixed inset-0 z-100 opacity-0 pointer-events-none transition-all duration-300 ease-in-out lg:hidden">
+        <div id="drawer-overlay" class="absolute inset-0 bg-text/40 backdrop-blur-sm"></div>
+
+        <div
+            class="absolute right-0 top-0 bottom-0 w-full max-w-[360px] bg-white shadow-2xl flex flex-col translate-x-full transition-transform duration-300 ease-out p-6 overflow-y-auto hide-scroll">
+
+            <!-- Header -->
+            <div class="flex items-center justify-between pb-6 border-b border-gray-100">
+                <span class="font-bold text-xl text-text">Меню школы</span>
+                <button id="drawer-close"
+                    class="w-8 h-8 flex items-center justify-center text-text-muted hover:text-text rounded-lg bg-gray-50 focus:outline-none">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Links -->
+            <nav class="flex flex-col gap-2 mt-6">
+
+                <!-- Main link -->
+                <a href="index.html"
+                    class="mobile-link py-3 px-2 font-semibold text-text border-b border-gray-50 flex items-center justify-between">
+                    Главная
+                </a>
+
+                <!-- Nested list: About us -->
+                <div class="mobile-dropdown group/mob">
+                    <button
+                        class="mobile-dropdown-btn w-full py-3 px-2 font-semibold text-text border-b border-gray-50 flex items-center justify-between text-left focus:outline-none">
+                        <span>О нас</span>
+                        <i
+                            class="fa-solid fa-chevron-down text-xs text-text-muted transition-transform duration-200"></i>
+                    </button>
+
+                    <!-- Hidden container -->
+                    <div
+                        class="mobile-dropdown-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50/50 rounded-xl mt-1">
+                        <div class="flex flex-col p-2 gap-1 text-sm">
+                            <a href="docs-general.html"
+                                class="mobile-link p-2.5 font-medium text-text-muted hover:text-primary">Общие
+                                документы школы</a>
+                            <a href="docs-rules.html"
+                                class="mobile-link p-2.5 font-medium text-text-muted hover:text-primary">Школьные
+                                правила и памятки</a>
+                            <a href="history.html"
+                                class="mobile-link p-2.5 font-medium text-text-muted hover:text-primary">История
+                                школы</a>
+                            <a href="vacancies.html"
+                                class="mobile-link p-2.5 font-medium text-text-muted hover:text-primary">Вакансии
+                                для учителей</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nested list: Applicants -->
+                <div class="mobile-dropdown group/mob">
+                    <button
+                        class="mobile-dropdown-btn w-full py-3 px-2 font-semibold text-text border-b border-gray-50 flex items-center justify-between text-left focus:outline-none">
+                        <span>Поступающим</span>
+                        <i
+                            class="fa-solid fa-chevron-down text-xs text-text-muted transition-transform duration-200"></i>
+                    </button>
+                    <div
+                        class="mobile-dropdown-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-gray-50/50 rounded-xl mt-1">
+                        <div class="flex flex-col p-2 gap-1 text-sm">
+                            <a href="rules.html"
+                                class="mobile-link p-2.5 font-medium text-text-muted hover:text-primary">Правила
+                                приема</a>
+                            <a href="documents.html"
+                                class="mobile-link p-2.5 font-medium text-text-muted hover:text-primary">Необходимые
+                                документы</a>
+
+                            <!-- Info card -->
+                            <div class="p-3 bg-white border border-gray-100 rounded-lg mt-2 text-xs text-text-muted">
+                                <span class="font-bold text-text block uppercase tracking-wider text-[10px]">Приемная
+                                    комиссия</span>
+                                <span class="block mt-1">Кабинет №12 • Тел: +7 (XXX) XXX-XX-XX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anchor links -->
+                <a href="index.html#staff"
+                    class="mobile-link py-3 px-2 font-semibold text-text border-b border-gray-50">Сотрудники</a>
+                <a href="index.html#news-events"
+                    class="mobile-link py-3 px-2 font-semibold text-text border-b border-gray-50">Новости</a>
+                <a href="index.html#faq"
+                    class="mobile-link py-3 px-2 font-semibold text-text border-b border-gray-50">FAQ</a>
+                <a href="cafeteria.html"
+                    class="mobile-link py-3 px-2 font-semibold text-text border-b border-gray-50">Столовая</a>
+            </nav>
+
+        </div>
+    </div>
+
+    <!-- Panel (Social icons + Communication) -->
+    <div>
+        <!-- PC -->
+        <div id="pc-panel" class="reveal reveal-right fixed top-0 bottom-0 right-0 max-xl:hidden z-49" data-delay="500">
+            <div class="flex flex-col h-screen items-center justify-center">
+                <!-- Social icons -->
+                <div class="flex items-center gap-2 translate-[39px] mb-[70px]">
+                    <!-- Text -->
+                    <p id="socialText" class="[writing-mode:vertical-lr] rotate-180 text-sm font-medium">
+                        Соц сети
+                    </p>
+
+                    <!-- Block "Icons" -->
+                    <div>
+                        <div id="socialDropdown"
+                            class="absolute right-[37px] bottom-0 flex gap-3 justify-center w-[180px] bg-white border-l-3 border-primary rounded-l-[30px] rounded-tr-[10px] shadow-xl p-3 transition-all duration-300  opacity-0 text-left">
+                            <a href="#"
+                                class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                                <svg viewBox="0 0 20 19.9316" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="19.931641"
+                                    fill="none" customFrame="#000000">
+                                    <path id="max"
+                                        d="M9.65302 0.0140611C3.69538 0.325366 -0.237341 4.9978 0.0111322 10.8897C0.119661 13.4687 1.15639 15.6878 1.40201 18.1354C1.46484 18.7695 1.28206 19.552 2.01319 19.829C2.91284 20.1689 4.29229 19.5977 5.04628 19.0751C5.30332 18.9008 5.54893 18.6981 5.73743 18.4467C6.51712 18.9637 7.25683 19.4635 8.18503 19.6862C12.272 20.6659 16.7502 18.4239 18.7408 14.8225C22.4822 8.05658 17.4242 -0.391492 9.65302 0.0140611ZM7.33965 14.1342C7.01692 14.3855 6.70562 14.7282 6.34862 14.9253C5.83168 15.2023 5.67174 14.9139 5.47753 14.4569C4.86635 13.0032 4.79209 10.527 5.14909 9.00478C5.6289 6.93417 7.23112 5.11204 9.43311 4.91783C11.6608 4.72076 13.7285 5.85174 14.6625 7.89379C16.7302 12.4377 11.438 16.9245 7.33965 14.137L7.33965 14.1342Z"
+                                        fill="var(--color-svg-primary)" fill-rule="nonzero" />
+                                </svg>
+
+                            </a>
+
+                            <a href="#"
+                                class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="tg"
+                                        d="M10 0C4.47714 0 0 4.47714 0 10C0 15.5229 4.47714 20 10 20C15.5229 20 20 15.5229 20 10C20 4.47714 15.5229 0 10 0ZM14.635 6.80071C14.4843 8.38214 13.8336 12.2193 13.5021 13.99C13.3621 14.7393 13.0857 14.9907 12.8186 15.015C12.2379 15.0686 11.7971 14.6314 11.2343 14.2629C10.3543 13.6857 9.85714 13.3264 9.00286 12.7636C8.01571 12.1129 8.65571 11.755 9.21857 11.1707C9.36571 11.0179 11.9243 8.69071 11.9743 8.47928C11.9807 8.45286 11.9864 8.35429 11.9279 8.30214C11.8693 8.25 11.7829 8.26786 11.7207 8.28214C11.6321 8.30214 10.2264 9.23143 7.50285 11.07C7.10357 11.3443 6.74214 11.4779 6.41857 11.4707C6.06143 11.4629 5.375 11.2686 4.86428 11.1029C4.23785 10.8993 3.74 10.7914 3.78357 10.4457C3.80643 10.2657 4.05428 10.0814 4.52785 9.89357C7.44285 8.62357 9.38714 7.78643 10.3593 7.38143C13.1364 6.22643 13.7136 6.02572 14.0893 6.01929C14.1721 6.01786 14.3571 6.03857 14.4771 6.13572C14.5786 6.21786 14.6064 6.32857 14.6193 6.40643C14.6329 6.48429 14.6493 6.66143 14.6357 6.8L14.635 6.80071Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+
+
+                            </a>
+
+                            <a href="#"
+                                class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="vk"
+                                        d="M18.6 1.4C17.1864 0 14.9264 0 10.4 0L9.6 0C5.08 0 2.82 0 1.4 1.4C0 2.81357 0 5.07357 0 9.6L0 10.4C0 14.92 0 17.18 1.4 18.6C2.81357 20 5.07357 20 9.6 20L10.4 20C14.92 20 17.18 20 18.6 18.6C20 17.1864 20 14.9264 20 10.4L20 9.6C20 5.08 20 2.82 18.6 1.4L18.6 1.4ZM14.3536 14.4064C13.8471 12.8264 12.58 11.6 10.9071 11.4329L10.9071 14.4064L10.6407 14.4064C6.08071 14.4064 3.48071 11.2864 3.37429 6.08643L5.66786 6.08643C5.74143 9.9 7.42143 11.5129 8.75429 11.8464L8.75429 6.08643L10.9079 6.08643L10.9079 9.37286C12.2214 9.23286 13.6079 7.73286 14.0743 6.07929L16.2207 6.07929C15.8671 7.80929 14.8093 9.31429 13.3007 10.2329C14.985 11.0714 16.23 12.59 16.7207 14.4064L14.3543 14.4064L14.3536 14.4064Z"
+                                        fill="var(--color-svg-primary)" fill-rule="nonzero" />
+                                </svg>
+
+                            </a>
+                        </div>
+
+                        <div id="socialPanel"
+                            class="px-4 py-4.5 w-[80px] h-[166px] bg-white border-l-[3px] border-primary rounded-[30px] flex flex-col gap-2 pointer-events-none">
+                            <a href="#"
+                                class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                                <svg viewBox="0 0 20 19.9316" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="19.931641"
+                                    fill="none" customFrame="#000000">
+                                    <path id="max"
+                                        d="M9.65302 0.0140611C3.69538 0.325366 -0.237341 4.9978 0.0111322 10.8897C0.119661 13.4687 1.15639 15.6878 1.40201 18.1354C1.46484 18.7695 1.28206 19.552 2.01319 19.829C2.91284 20.1689 4.29229 19.5977 5.04628 19.0751C5.30332 18.9008 5.54893 18.6981 5.73743 18.4467C6.51712 18.9637 7.25683 19.4635 8.18503 19.6862C12.272 20.6659 16.7502 18.4239 18.7408 14.8225C22.4822 8.05658 17.4242 -0.391492 9.65302 0.0140611ZM7.33965 14.1342C7.01692 14.3855 6.70562 14.7282 6.34862 14.9253C5.83168 15.2023 5.67174 14.9139 5.47753 14.4569C4.86635 13.0032 4.79209 10.527 5.14909 9.00478C5.6289 6.93417 7.23112 5.11204 9.43311 4.91783C11.6608 4.72076 13.7285 5.85174 14.6625 7.89379C16.7302 12.4377 11.438 16.9245 7.33965 14.137L7.33965 14.1342Z"
+                                        fill="var(--color-svg-primary)" fill-rule="nonzero" />
+                                </svg>
+
+                            </a>
+
+                            <a href="#"
+                                class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="tg"
+                                        d="M10 0C4.47714 0 0 4.47714 0 10C0 15.5229 4.47714 20 10 20C15.5229 20 20 15.5229 20 10C20 4.47714 15.5229 0 10 0ZM14.635 6.80071C14.4843 8.38214 13.8336 12.2193 13.5021 13.99C13.3621 14.7393 13.0857 14.9907 12.8186 15.015C12.2379 15.0686 11.7971 14.6314 11.2343 14.2629C10.3543 13.6857 9.85714 13.3264 9.00286 12.7636C8.01571 12.1129 8.65571 11.755 9.21857 11.1707C9.36571 11.0179 11.9243 8.69071 11.9743 8.47928C11.9807 8.45286 11.9864 8.35429 11.9279 8.30214C11.8693 8.25 11.7829 8.26786 11.7207 8.28214C11.6321 8.30214 10.2264 9.23143 7.50285 11.07C7.10357 11.3443 6.74214 11.4779 6.41857 11.4707C6.06143 11.4629 5.375 11.2686 4.86428 11.1029C4.23785 10.8993 3.74 10.7914 3.78357 10.4457C3.80643 10.2657 4.05428 10.0814 4.52785 9.89357C7.44285 8.62357 9.38714 7.78643 10.3593 7.38143C13.1364 6.22643 13.7136 6.02572 14.0893 6.01929C14.1721 6.01786 14.3571 6.03857 14.4771 6.13572C14.5786 6.21786 14.6064 6.32857 14.6193 6.40643C14.6329 6.48429 14.6493 6.66143 14.6357 6.8L14.635 6.80071Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+
+
+                            </a>
+
+                            <a href="#"
+                                class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="vk"
+                                        d="M18.6 1.4C17.1864 0 14.9264 0 10.4 0L9.6 0C5.08 0 2.82 0 1.4 1.4C0 2.81357 0 5.07357 0 9.6L0 10.4C0 14.92 0 17.18 1.4 18.6C2.81357 20 5.07357 20 9.6 20L10.4 20C14.92 20 17.18 20 18.6 18.6C20 17.1864 20 14.9264 20 10.4L20 9.6C20 5.08 20 2.82 18.6 1.4L18.6 1.4ZM14.3536 14.4064C13.8471 12.8264 12.58 11.6 10.9071 11.4329L10.9071 14.4064L10.6407 14.4064C6.08071 14.4064 3.48071 11.2864 3.37429 6.08643L5.66786 6.08643C5.74143 9.9 7.42143 11.5129 8.75429 11.8464L8.75429 6.08643L10.9079 6.08643L10.9079 9.37286C12.2214 9.23286 13.6079 7.73286 14.0743 6.07929L16.2207 6.07929C15.8671 7.80929 14.8093 9.31429 13.3007 10.2329C14.985 11.0714 16.23 12.59 16.7207 14.4064L14.3543 14.4064L14.3536 14.4064Z"
+                                        fill="var(--color-svg-primary)" fill-rule="nonzero" />
+                                </svg>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="mainToggleBtn"
+                    class="toggleBtn p-3.25 flex justify-center items-center bg-primary rounded-xl button-hover hover:bg-primary-hover">
+                    <svg id="arrowSvg" class="duration-300 rotate-180 group-active:rotate-0"
+                        viewBox="0 0 14.6094 14.6094" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="14.609375" height="14.609375" fill="none"
+                        customFrame="#000000">
+                        <path id="arrow__right--white"
+                            d="M1.78203 0C1.25747 0 0.832219 0.425247 0.832219 0.949815C0.832219 1.47438 1.25747 1.89963 1.78203 1.89963L7.0915 1.89963L0.669665 8.32102C0.299823 8.69084 0.299813 9.29045 0.669643 9.66028C1.03945 10.0301 1.63903 10.0301 2.00886 9.66031L8.43073 3.23887L8.43073 8.54833C8.43073 9.0729 8.85598 9.49815 9.38055 9.49815C9.90512 9.49815 10.3304 9.0729 10.3304 8.54833L10.3304 1.22557C10.3304 0.548705 9.78166 0 9.1048 0L1.78203 0Z"
+                            fill="var(--color-svg-white)" fill-rule="evenodd"
+                            transform="matrix(0.707107,0.707107,-0.707107,0.707107,7.30469,0)" />
+                    </svg>
+
+                </button>
+
+                <!-- Communication -->
+                <div class="flex items-center gap-2 -translate-[-39px]">
+                    <!-- Text -->
+                    <p id="contactsText" class="[writing-mode:vertical-lr] rotate-180 text-sm font-medium">
+                        Связаться
+                    </p>
+
+                    <!-- Block -->
+                    <div>
+                        <!-- Неразвернутый -->
+                        <div id="contactsPanel"
+                            class="px-4 py-4.5 w-[80px] h-[166px] bg-white border-l-[3px] border-primary rounded-[30px] flex flex-col justify-center gap-2 shadow-soft">
+
+                            <a href="#"
+                                class="bg-bg-primary-light border-l-1 border-primary rounded-2xl w-8 h-8 flex items-center justify-center">
+                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="12.000000" height="12.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="tel"
+                                        d="M11.3333 8.33333C10.5 8.33333 9.7 8.2 8.95333 7.95333C8.72 7.88 8.46 7.93333 8.27333 8.11333L6.80667 9.58C4.92 8.62 3.37333 7.08 2.41333 5.19333L3.88 3.72C4.06667 3.54 4.12 3.28 4.04667 3.04667C3.8 2.3 3.66667 1.5 3.66667 0.666667C3.66667 0.3 3.36667 0 3 0L0.666667 0C0.3 0 0 0.3 0 0.666667C0 6.92667 5.07333 12 11.3333 12C11.7 12 12 11.7 12 11.3333L12 9C12 8.63333 11.7 8.33333 11.3333 8.33333Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+                            </a>
+
+                            <a href="#"
+                                class="bg-bg-primary-light border-l-1 border-primary rounded-2xl w-8 h-8 flex items-center justify-center">
+                                <svg viewBox="0 0 12.5 10" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="12.500000" height="10.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="email"
+                                        d="M11.25 0L1.25 0C0.5625 0 0.00624999 0.5625 0.00624999 1.25L0 8.75C0 9.4375 0.5625 10 1.25 10L11.25 10C11.9375 10 12.5 9.4375 12.5 8.75L12.5 1.25C12.5 0.5625 11.9375 0 11.25 0ZM11.25 2.5L6.25 5.625L1.25 2.5L1.25 1.25L6.25 4.375L11.25 1.25L11.25 2.5Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+                            </a>
+
+                            <a href="#"
+                                class="bg-bg-primary-light border-l-1 border-primary rounded-2xl w-8 h-8 flex items-center justify-center">
+                                <svg viewBox="0 0 9.7998 14" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="9.799805" height="14.000000"
+                                    fill="none" customFrame="#000000">
+                                    <path id="location"
+                                        d="M4.9 0C2.191 0 0 2.191 0 4.9C0 8.575 4.9 14 4.9 14C4.9 14 9.8 8.575 9.8 4.9C9.8 2.191 7.609 0 4.9 0ZM4.9 6.65C3.934 6.65 3.15 5.866 3.15 4.9C3.15 3.934 3.934 3.15 4.9 3.15C5.866 3.15 6.65 3.934 6.65 4.9C6.65 5.866 5.866 6.65 4.9 6.65Z"
+                                        fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- ВЫЕЗЖАЮЩАЯ КАРТОЧКА С КОНТАКТАМИ -->
+                        <div id="contactsDropdown"
+                            class="absolute right-[-5px] top-0 w-[330px] bg-white border-l-3 border-primary rounded-l-[30px] rounded-tr-[10px] shadow-xl p-6 transition-all duration-300 pointer-events-none opacity-0 text-left pointer-events-none">
+                            <h3 class="text-base font-bold text-gray-900 mb-4">Наши контакты</h3>
+
+                            <div class="space-y-4">
+                                <!-- Телефон -->
+                                <div class="flex items-start gap-3">
+                                    <div
+                                        class="bg-bg-primary-light border-l border-primary rounded-full p-1.75 flex items-center justify-center mt-0.5">
+                                        <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none">
+                                            <path
+                                                d="M11.3333 8.33333C10.5 8.33333 9.7 8.2 8.95333 7.95333C8.72 7.88 8.46 7.93333 8.27333 8.11333L6.80667 9.58C4.92 8.62 3.37333 7.08 2.41333 5.19333L3.88 3.72C4.06667 3.54 4.12 3.28 4.04667 3.04667C3.8 2.3 3.66667 1.5 3.66667 0.666667C3.66667 0.3 3.36667 0 3 0L0.666667 0C0.3 0 0 0.3 0 0.666667C0 6.92667 5.07333 12 11.3333 12C11.7 12 12 11.7 12 11.3333L12 9C12 8.63333 11.7 8.33333 11.3333 8.33333Z"
+                                                fill="var(--color-svg-primary)" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-text-light font-regular">Телефон</p>
+                                        <a href="tel:+79119021222"
+                                            class="text-sm font-regular text-gray-800 hover:text-primary transition-colors">+7(911)
+                                            902-12-22</a>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="flex items-start gap-3">
+                                    <div
+                                        class="bg-bg-primary-light border-l border-primary rounded-full p-1.75 flex items-center justify-center mt-0.5">
+                                        <svg class="w-3 h-3" viewBox="0 0 12.5 10" fill="none">
+                                            <path
+                                                d="M11.25 0L1.25 0C0.5625 0 0.00624999 0.5625 0.00624999 1.25L0 8.75C0 9.4375 0.5625 10 1.25 10L11.25 10C11.9375 10 12.5 9.4375 12.5 8.75L12.5 1.25C12.5 0.5625 11.9375 0 11.25 0ZM11.25 2.5L6.25 5.625L1.25 2.5L1.25 1.25L6.25 4.375L11.25 1.25L11.25 2.5Z"
+                                                fill="var(--color-svg-primary)" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-text-light font-regular">Email</p>
+                                        <a href="mailto:mail@zaostrovie-school.ru"
+                                            class="text-sm font-regular text-gray-800 hover:text-primary transition-colors break-all">mail@zaostrovie-school.ru</a>
+                                    </div>
+                                </div>
+
+                                <!-- Адрес -->
+                                <div class="flex items-start gap-3">
+                                    <div
+                                        class="bg-bg-primary-light border-l border-primary rounded-full py-1.5 px-2 flex items-center justify-center mt-0.5">
+                                        <svg class="w-2.5 h-3.5" viewBox="0 0 9.7998 14" fill="none">
+                                            <path
+                                                d="M4.9 0C2.191 0 0 2.191 0 4.9C0 8.575 4.9 14 4.9 14C4.9 14 9.8 8.575 9.8 4.9C9.8 2.191 7.609 0 4.9 0ZM4.9 6.65C3.934 6.65 3.15 5.866 3.15 4.9C3.15 3.934 3.934 3.15 4.9 3.15C5.866 3.15 6.65 3.934 6.65 4.9"
+                                                fill="var(--color-svg-primary)" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-text-light font-regular">Адрес</p>
+                                        <p class="text-sm font-regular text-gray-800 leading-tight">д. Рикасово, д.
+                                            26.<br>Приморский р-он, Арх.
+                                            обл.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile -->
+        <div id="mobile-panel" class="reveal reveal-right xl:hidden fixed bottom-25 right-0 -translate-[18px] z-49"
+            data-delay="500">
+            <div class="flex flex-col gap-4">
+
+                <!-- Social icons -->
+                <div
+                    class="flex flex-col justify-center items-center gap-1 bg-bg/60 backdrop-blur-md px-2 py-1.5 rounded-xl border border-primary/40 shadow-xs hover-pulse-glow select-none">
+                    <a href="#footer"
+                        class="w-9.5 h-9.5 flex justify-center items-center bg-white border-l-[3px] border-primary rounded-[30px] shadow-soft">
+                        <svg class="rotate-x-180 mt-1" draggable="false" width="22" height="22" viewBox="0 0 24 24"
+                            fill="none" stroke="var(--color-svg-primary)" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+
+                    </a>
+                    <span class="shrink-0 text-xs text-slate-800 font-medium">Соц сети</span>
+                </div>
+
+                <!-- Communication -->
+                <div
+                    class="toggleBtn flex flex-col justify-center items-center gap-1 bg-bg/60 backdrop-blur-md px-2 py-1.5 rounded-xl border border-primary/40 shadow-xs hover-pulse-glow select-none">
+                    <button
+                        class="w-9.5 h-9.5 flex justify-center items-center bg-white border-l-[3px] border-primary rounded-[30px] shadow-soft">
+                        🟢
+                    </button>
+                    <span class="shrink-0 text-xs text-slate-800 font-medium">Связь</span>
+                </div>
+
+                <!-- ВЫЕЗЖАЮЩАЯ КАРТОЧКА С КОНТАКТАМИ -->
+                <div id="contactsDropdownMobile"
+                    class="absolute right-[-5px] top-0 w-[330px] bg-white border-l-3 border-primary rounded-l-[30px] rounded-tr-[10px] shadow-xl p-6 transition-all duration-300 pointer-events-none opacity-0 text-left pointer-events-none">
+                    <h3 class="text-base font-bold text-gray-900 mb-4">Наши контакты</h3>
+
+                    <div class="space-y-4">
+                        <!-- Телефон -->
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="bg-bg-primary-light border-l border-primary rounded-full p-1.75 flex items-center justify-center mt-0.5">
+                                <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none">
+                                    <path
+                                        d="M11.3333 8.33333C10.5 8.33333 9.7 8.2 8.95333 7.95333C8.72 7.88 8.46 7.93333 8.27333 8.11333L6.80667 9.58C4.92 8.62 3.37333 7.08 2.41333 5.19333L3.88 3.72C4.06667 3.54 4.12 3.28 4.04667 3.04667C3.8 2.3 3.66667 1.5 3.66667 0.666667C3.66667 0.3 3.36667 0 3 0L0.666667 0C0.3 0 0 0.3 0 0.666667C0 6.92667 5.07333 12 11.3333 12C11.7 12 12 11.7 12 11.3333L12 9C12 8.63333 11.7 8.33333 11.3333 8.33333Z"
+                                        fill="var(--color-svg-primary)" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-text-light font-regular">Телефон</p>
+                                <a href="tel:+79119021222"
+                                    class="text-sm font-regular text-gray-800 hover:text-primary transition-colors">+7(911)
+                                    902-12-22</a>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="bg-bg-primary-light border-l border-primary rounded-full p-1.75 flex items-center justify-center mt-0.5">
+                                <svg class="w-3 h-3" viewBox="0 0 12.5 10" fill="none">
+                                    <path
+                                        d="M11.25 0L1.25 0C0.5625 0 0.00624999 0.5625 0.00624999 1.25L0 8.75C0 9.4375 0.5625 10 1.25 10L11.25 10C11.9375 10 12.5 9.4375 12.5 8.75L12.5 1.25C12.5 0.5625 11.9375 0 11.25 0ZM11.25 2.5L6.25 5.625L1.25 2.5L1.25 1.25L6.25 4.375L11.25 1.25L11.25 2.5Z"
+                                        fill="var(--color-svg-primary)" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-text-light font-regular">Email</p>
+                                <a href="mailto:mail@zaostrovie-school.ru"
+                                    class="text-sm font-regular text-gray-800 hover:text-primary transition-colors break-all">mail@zaostrovie-school.ru</a>
+                            </div>
+                        </div>
+
+                        <!-- Адрес -->
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="bg-bg-primary-light border-l border-primary rounded-full py-1.5 px-2 flex items-center justify-center mt-0.5">
+                                <svg class="w-2.5 h-3.5" viewBox="0 0 9.7998 14" fill="none">
+                                    <path
+                                        d="M4.9 0C2.191 0 0 2.191 0 4.9C0 8.575 4.9 14 4.9 14C4.9 14 9.8 8.575 9.8 4.9C9.8 2.191 7.609 0 4.9 0ZM4.9 6.65C3.934 6.65 3.15 5.866 3.15 4.9C3.15 3.934 3.934 3.15 4.9 3.15C5.866 3.15 6.65 3.934 6.65 4.9"
+                                        fill="var(--color-svg-primary)" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-text-light font-regular">Адрес</p>
+                                <p class="text-sm font-regular text-gray-800 leading-tight">д. Рикасово, д.
+                                    26.<br>Приморский р-он, Арх.
+                                    обл.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Main -->
+    <main id="main">
+        <!-- Daily Specials Hero -->
+        <section id="daily-specials-hero" class="relative pt-32 pb-8 bg-white border-b border-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+                    <!-- Text -->
+                    <div class="flex-1">
+                        <h1 class="reveal text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-text" data-delay="0">
+                            Сегодняшние <span class="text-primary"> специальные предложения
+                            </span>
+                        </h1>
+                        <p class="reveal text-lg text-text-light mb-6" data-delay="150">Для наших студентов ежедневно
+                            готовятся свежие, питательные блюда. </p>
+
+                        <!-- Tags -->
+                        <div class="flex flex-wrap items-center gap-2 sm:gap-4">
+                            <!-- Tag 1 -->
+                            <span
+                                class="reveal reveal-left inline-flex items-center gap-2 px-3 py-1 bg-green-50 text-primary rounded-full text-sm font-medium"
+                                data-delay="300">
+                                <i data-fa-i2svg="">
+                                    <svg class="w-3 h-3 svg-inline--fa fa-leaf" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="leaf" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                            d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5h88c8.8 0 16 7.2 16 16s-7.2 16-16 16H288 216s0 0 0 0c-16.6 0-32.7 1.9-48.2 5.4c-25.9 5.9-50 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440v16c0 13.3 10.7 24 24 24s24-10.7 24-24V440c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z">
+                                        </path>
+                                    </svg>
+                                </i>Местные продукты
+                            </span>
+
+                            <!-- Tag 2 -->
+                            <span
+                                class="reveal reveal-left inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-medium"
+                                data-delay="400">
+                                <i data-fa-i2svg="">
+                                    <svg class="w-3 h-3 svg-inline--fa fa-apple-whole" aria-hidden="true"
+                                        focusable="false" data-prefix="fas" data-icon="apple-whole" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                            d="M224 112c-8.8 0-16-7.2-16-16V80c0-44.2 35.8-80 80-80h16c8.8 0 16 7.2 16 16V32c0 44.2-35.8 80-80 80H224zM0 288c0-76.3 35.7-160 112-160c27.3 0 59.7 10.3 82.7 19.3c18.8 7.3 39.9 7.3 58.7 0c22.9-8.9 55.4-19.3 82.7-19.3c76.3 0 112 83.7 112 160c0 128-80 224-160 224c-16.5 0-38.1-6.6-51.5-11.3c-8.1-2.8-16.9-2.8-25 0c-13.4 4.7-35 11.3-51.5 11.3C80 512 0 416 0 288z">
+                                        </path>
+                                    </svg>
+                                </i>Сбалансированное питание
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Cards -->
+                    <div class="flex flex-wrap w-full gap-4 pb-4 lg:pb-0">
+                        <!-- Special Card 1 -->
+                        <div class="reveal reveal-right flex gap-4 p-4 min-w-[280px] bg-white rounded-2xl shadow-soft border border-border"
+                            data-delay="200">
+                            <div class="w-20 h-20 rounded-xl overflow-hidden shrink-0">
+                                <img class="w-full h-full object-cover"
+                                    src="assets/img/cafeteria/special-suggestions/salad.jpg"
+                                    alt="Полезный салат-боул с курицей-гриль, свежими овощами и киноа, яркое освещение, аппетитная подача.">
+                            </div>
+
+                            <div class="flex flex-col justify-center">
+                                <span class="text-xs font-bold text-primary uppercase tracking-wider mb-1">Выбор
+                                    шеф-повара </span>
+
+                                <h3 class="font-semibold text-text leading-tight mb-1">Киноа с
+                                    курицей-гриль </h3>
+
+                                <div class="flex items-center gap-2 text-sm text-text-light">
+                                    <span>4,50 руб. </span>
+                                    <span> • </span>
+                                    <span> 450 калорий </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Special Card 2 -->
+                        <div class="reveal reveal-right flex gap-4 p-4 min-w-[280px] bg-white rounded-2xl shadow-soft border border-border"
+                            data-delay="350">
+                            <div class="w-20 h-20 rounded-xl overflow-hidden shrink-0">
+                                <img class="w-full h-full object-cover"
+                                    src="assets/img/cafeteria/special-suggestions/tomato-soup.jpg"
+                                    alt="Сытный томатно-базиликовый суп с цельнозерновым сэндвичем с сыром на гриле, аппетитные фотографии еды.">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <span class="text-xs font-bold text-orange-500 uppercase tracking-wider mb-1">Комфорт
+                                    Классический </span>
+
+                                <h3 class="font-semibold text-text leading-tight mb-1">Томатный
+                                    суп с базиликом и сэндвич </h3>
+
+                                <div class="flex items-center gap-2 text-sm text-text-light">
+                                    <span>3,75 руб. </span>
+                                    <span> • </span>
+                                    <span> 380 калорий </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Special Card 3 -->
+                        <div class="reveal reveal-right flex gap-4 p-4 min-w-[280px] bg-white rounded-2xl shadow-soft border border-border"
+                            data-delay="500">
+                            <div class="w-20 h-20 rounded-xl overflow-hidden shrink-0">
+                                <img class="w-full h-full object-cover"
+                                    src="assets/img/cafeteria/special-suggestions/tomato-soup.jpg"
+                                    alt="Сытный томатно-базиликовый суп с цельнозерновым сэндвичем с сыром на гриле, аппетитные фотографии еды.">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <span class="text-xs font-bold text-orange-500 uppercase tracking-wider mb-1">Комфорт
+                                    Классический </span>
+
+                                <h3 class="font-semibold text-text leading-tight mb-1">Томатный
+                                    суп с базиликом и сэндвич </h3>
+
+                                <div class="flex items-center gap-2 text-sm text-text-light">
+                                    <span>3,75 руб. </span>
+                                    <span> • </span>
+                                    <span> 380 калорий </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Filter Toolbar -->
+        <section id="menu-toolbar"
+            class="relative z-40 isolate bg-white/95 backdrop-blur-md border-b border-border shadow-sm py-4">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Day Picker Tabs -->
+                <div class="flex flex-col sm:flex-row items-center justify-between mb-4 pb-4 border-b border-gray-100">
+                    <div id="days-filter-container"
+                        class="reveal reveal-header flex flex-wrap space-x-1 hide-scroll w-full lg:w-auto">
+                        <button data-day="all"
+                            class="day-btn px-5 py-2.5 rounded-xl font-medium text-sm transition-colors bg-primary text-white shadow-sm whitespace-nowrap cursor-pointer">
+                            Все дни
+                        </button>
+                        <button data-day="mon"
+                            class="day-btn px-5 py-2.5 rounded-xl font-medium text-sm transition-colors text-text-light hover:bg-gray-50 whitespace-nowrap cursor-pointer">
+                            Понедельник
+                        </button>
+                        <button data-day="tue"
+                            class="day-btn px-5 py-2.5 rounded-xl font-medium text-sm transition-colors text-text-light hover:bg-gray-50 whitespace-nowrap cursor-pointer">
+                            Вторник
+                        </button>
+                        <!-- Среду делаем изначально обычной кнопкой, так как при старте активен фильтр "Все дни" -->
+                        <button data-day="wed"
+                            class="day-btn px-5 py-2.5 rounded-xl font-medium text-sm transition-colors text-text-light hover:bg-gray-50 whitespace-nowrap cursor-pointer">
+                            Среда
+                        </button>
+                        <button data-day="thu"
+                            class="day-btn px-5 py-2.5 rounded-xl font-medium text-sm transition-colors text-text-light hover:bg-gray-50 whitespace-nowrap cursor-pointer">
+                            Четверг
+                        </button>
+                        <button data-day="fri"
+                            class="day-btn px-5 py-2.5 rounded-xl font-medium text-sm transition-colors text-text-light hover:bg-gray-50 whitespace-nowrap cursor-pointer">
+                            Пятница
+                        </button>
+                    </div>
+
+                    <!-- Сбросить фильтры -->
+                    <div class="reveal reveal-scale flex items-center gap-2" data-delay="300">
+                        <button id="global-reset-filters"
+                            class="text-sm font-medium text-primary hover:text-primary-hover transition-colors px-3 py-1.5 flex items-center gap-2 cursor-pointer">
+                            <i data-fa-i2svg="">
+                                <svg class="w-3 h-3 svg-inline--fa fa-arrow-rotate-right" aria-hidden="true"
+                                    focusable="false" data-prefix="fas" data-icon="arrow-rotate-right" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                        d="M386.3 160H336c-17.7 0-32 14.3-32 32s14.3 32 32 32H464c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v51.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0s-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3s163.8-62.5 226.3 0L386.3 160z">
+                                    </path>
+                                </svg>
+                            </i>Сбросить фильтры
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Multi-Filter Controls -->
+                <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
+
+                    <div class="relative w-full lg:w-auto flex gap-4 flex-col lg:flex-row">
+                        <!-- Search -->
+                        <div class="reveal reveal-left relative w-full lg:w-80 shrink-0" data-delay="100">
+                            <i class="w-4 h-4 absolute left-4 top-5.25 -translate-y-1/2 text-gray-400"
+                                data-fa-i2svg=""><svg class="svg-inline--fa fa-magnifying-glass" aria-hidden="true"
+                                    focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+                                    </path>
+                                </svg></i>
+                            <input id="search-input" type="text" placeholder="Поиск пунктов меню..."
+                                class="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-border rounded-xl text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-shadow">
+                        </div>
+
+                        <!-- Category Chips -->
+                        <div class="reveal reveal-left flex flex-wrap items-center gap-2 w-full lg:w-auto"
+                            data-delay="200">
+                            <div id="active-categories" class="flex flex-wrap items-center gap-2">
+                                <button data-cat="all"
+                                    class="px-4 py-2 rounded-xl text-sm font-medium bg-gray-900 text-white whitespace-nowrap cursor-pointer transition-all">
+                                    Все товары
+                                </button>
+                            </div>
+
+                            <button id="open-categories-modal"
+                                class="w-9 h-9 flex items-center justify-center rounded-full border border-gray-200 text-gray-500 hover:bg-gray-50 hover:border-gray-400 transition-colors cursor-pointer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Allergen & Price Filters -->
+                    <div class="reveal reveal-right flex flex-wrap items-center gap-4 w-full lg:w-auto"
+                        data-delay="250">
+                        <!-- Allergen Dropdown -->
+                        <div class="relative group z-30">
+                            <button
+                                class="px-4 py-2.5 bg-white border border-border rounded-xl text-sm font-medium text-text flex items-center gap-2 hover:bg-gray-50 transition-colors cursor-pointer">
+                                <i class="w-3 h-3 text-text-light" data-fa-i2svg="">
+                                    <svg class="svg-inline--fa fa-filter" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="filter" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path fill="currentColor"
+                                            d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z">
+                                        </path>
+                                    </svg>
+                                </i>
+                                Аллергены
+
+                                <i class="w-3 h-3 text-xs ml-1 transition-transform duration-300 group-hover:rotate-180"
+                                    data-fa-i2svg="">
+                                    <svg class="svg-inline--fa fa-chevron-down" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="chevron-down" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path fill="currentColor"
+                                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                                        </path>
+                                    </svg>
+                                </i>
+                            </button>
+
+                            <!-- Dropdown Menu -->
+                            <div
+                                class="absolute left-0 top-full mt-2 w-48 bg-white border border-border rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 before:absolute before:-top-2 before:left-0 before:h-2 before:w-full">
+                                <div class="p-2 space-y-1">
+                                    <label
+                                        class="flex items-center gap-2 p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+                                        <input type="checkbox" value="nuts"
+                                            class="allergen-checkbox rounded border-gray-300 text-primary focus:ring-primary">
+                                        <span class="text-sm">Без орехов </span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+                                        <input type="checkbox" value="dairy"
+                                            class="allergen-checkbox rounded border-gray-300 text-primary focus:ring-primary">
+                                        <span class="text-sm">Без молочных продуктов </span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+                                        <input type="checkbox" value="gluten"
+                                            class="allergen-checkbox rounded border-gray-300 text-primary focus:ring-primary">
+                                        <span class="text-sm">Не содержит глютен </span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+                                        <input type="checkbox" value="vegetarian"
+                                            class="allergen-checkbox rounded border-gray-300 text-primary focus:ring-primary">
+                                        <span class="text-sm">Вегетарианец </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Price Range Filter -->
+                        <div class="reveal reveal-right flex flex-col gap-1.5 bg-white border border-border px-4 py-3 rounded-xl w-full sm:w-auto min-w-[280px]"
+                            data-delay="250">
+                            <!-- Плашка со значением НАД ползунком -->
+                            <div class="flex justify-between items-center text-xs font-bold text-gray-400 mb-1">
+                                <span>Диапазон цены:</span>
+                                <span class="text-primary bg-primary/10 px-2 py-0.5 rounded-md"><span
+                                        id="current-min-label">0</span> - <span id="current-max-label">15</span>
+                                    руб.</span>
+                            </div>
+
+                            <!-- Контейнер двух ползунков, наложенных друг на друга -->
+                            <div class="relative w-full h-2 mb-3">
+                                <input id="price-slider-min" type="range" min="0" max="15" step="0.5" value="0"
+                                    class="absolute w-full h-1 bg-transparent appearance-none pointer-events-none accent-primary top-0 left-0">
+                                <input id="price-slider-max" type="range" min="0" max="15" step="0.5" value="15"
+                                    class="absolute w-full h-1 bg-gray-200 appearance-none pointer-events-none accent-primary top-0 left-0 rounded-lg">
+                            </div>
+
+                            <!-- Поля ввода цифр для изменения "От и До" ручным вводом -->
+                            <div class="flex items-center justify-between gap-2 text-xs">
+                                <div class="flex items-center gap-1">
+                                    <span class="text-gray-400">от</span>
+                                    <input id="price-input-min" type="number" min="0" max="15" step="0.5" value="0"
+                                        class="w-14 px-1.5 py-1 bg-gray-50 border border-gray-200 rounded-md font-medium text-center focus:outline-none focus:border-primary">
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="text-gray-400">до</span>
+                                    <input id="price-input-max" type="number" min="0" max="15" step="0.5" value="15"
+                                        class="w-14 px-1.5 py-1 bg-gray-50 border border-gray-200 rounded-md font-medium text-center focus:outline-none focus:border-primary">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Cafeteria Menu Grid -->
+        <section id="menu-grid" class="py-12 bg-bg min-h-[600px]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Menu Card 1 -->
+                    <div data-delay="0" data-category="lunch" data-price="4.50" data-allergens="gluten dairy"
+                        data-days="mon tue wed thu fri"
+                        class="reveal product-card-anim bg-white rounded-2xl shadow-soft border border-border overflow-hidden">
+                        <div class="flex flex-col h-full group">
+                            <div class="h-48 relative overflow-hidden">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="assets/img/cafeteria/cards/Spaghetti_Bolognese.jpg"
+                                    alt="Классические спагетти болоньезе с пармезаном и свежим базиликом сверху, светлая обстановка кафетерия.">
+                                <div
+                                    class="absolute top-4 left-4 bg-white/90 backdrop-blur text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                                    Обед
+                                </div>
+                                <div
+                                    class="absolute top-4 right-4 bg-gray-900 text-white font-bold px-3 py-1 rounded-full shadow-sm">
+                                    4,50 руб.
+                                </div>
+                            </div>
+
+                            <div class="p-6 flex-1 flex flex-col">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-xl font-bold text-text">Спагетти болоньезе </h3>
+                                </div>
+                                <p class="text-sm text-text-light mb-4 line-clamp-2">Классическая
+                                    итальянская паста с насыщенным, медленно приготовленным говяжьим рагу, посыпанная
+                                    тертым
+                                    пармезаном и свежей зеленью. </p>
+
+                                <div class="flex flex-wrap gap-2 mb-4 mt-auto">
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2 py-1 bg-yellow-50 text-yellow-700 rounded text-xs font-medium border border-yellow-100">
+                                        <i data-fa-i2svg=""><svg class="w-3 h-3 svg-inline--fa fa-wheat-awn"
+                                                aria-hidden="true" focusable="false" data-prefix="fas"
+                                                data-icon="wheat-awn" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512" data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M505 41c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L383 95c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l88-88zM305.5 27.3c-6.2-6.2-16.4-6.2-22.6 0L271.5 38.6c-37.5 37.5-37.5 98.3 0 135.8l10.4 10.4-30.5 30.5c-3.4-27.3-15.5-53.8-36.5-74.8l-11.3-11.3c-6.2-6.2-16.4-6.2-22.6 0l-11.3 11.3c-37.5 37.5-37.5 98.3 0 135.8l10.4 10.4-30.5 30.5c-3.4-27.3-15.5-53.8-36.5-74.8L101.8 231c-6.2-6.2-16.4-6.2-22.6 0L67.9 242.3c-37.5 37.5-37.5 98.3 0 135.8l10.4 10.4L9.4 457.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l68.9-68.9 12.2 12.2c37.5 37.5 98.3 37.5 135.8 0l11.3-11.3c6.2-6.2 6.2-16.4 0-22.6l-11.3-11.3c-21.8-21.8-49.6-34.1-78.1-36.9l31.9-31.9 12.2 12.2c37.5 37.5 98.3 37.5 135.8 0l11.3-11.3c6.2-6.2 6.2-16.4 0-22.6l-11.3-11.3c-21.8-21.8-49.6-34.1-78.1-36.9l31.9-31.9 12.2 12.2c37.5 37.5 98.3 37.5 135.8 0L486.5 231c6.2-6.2 6.2-16.4 0-22.6L475.2 197c-5.2-5.2-10.6-9.8-16.4-13.9L505 137c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-59.4 59.4c-20.6-4.4-42-3.7-62.3 2.1c6.1-21.3 6.6-43.8 1.4-65.3L409 41c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L329.1 52.9c-3.7-5-7.8-9.8-12.4-14.3L305.5 27.3z">
+                                                </path>
+                                            </svg></i>Содержит глютен.
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2 py-1 bg-blue-50 text-blue-700 rounded text-xs font-medium border border-blue-100">
+                                        <i data-fa-i2svg=""><svg class="w-3 h-3 svg-inline--fa fa-cow"
+                                                aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cow"
+                                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M96 224v32V416c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32V327.8c9.9 6.6 20.6 12 32 16.1V368c0 8.8 7.2 16 16 16s16-7.2 16-16V351.1c5.3 .6 10.6 .9 16 .9s10.7-.3 16-.9V368c0 8.8 7.2 16 16 16s16-7.2 16-16V343.8c11.4-4 22.1-9.4 32-16.1V416c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32V256l32 32v49.5c0 9.5 2.8 18.7 8.1 26.6L530 427c8.8 13.1 23.5 21 39.3 21c22.5 0 41.9-15.9 46.3-38l20.3-101.6c2.6-13-.3-26.5-8-37.3l-3.9-5.5V184c0-13.3-10.7-24-24-24s-24 10.7-24 24v14.4l-52.9-74.1C496 86.5 452.4 64 405.9 64H272 256 192 144C77.7 64 24 117.7 24 184v54C9.4 249.8 0 267.8 0 288v17.6c0 8 6.4 14.4 14.4 14.4C46.2 320 72 294.2 72 262.4V256 224 184c0-24.3 12.1-45.8 30.5-58.9C98.3 135.9 96 147.7 96 160v64zM560 336a16 16 0 1 1 32 0 16 16 0 1 1 -32 0zM166.6 166.6c-4.2-4.2-6.6-10-6.6-16c0-12.5 10.1-22.6 22.6-22.6H361.4c12.5 0 22.6 10.1 22.6 22.6c0 6-2.4 11.8-6.6 16l-23.4 23.4C332.2 211.8 302.7 224 272 224s-60.2-12.2-81.9-33.9l-23.4-23.4z">
+                                                </path>
+                                            </svg></i>Молочные продукты (сыр)
+                                    </span>
+                                </div>
+
+                                <!-- Expandable Details -->
+                                <details class="group/accordion border-t border-border pt-4 mt-2">
+                                    <summary
+                                        class="flex justify-between items-center font-medium cursor-pointer list-none text-sm text-text hover:text-primary transition-colors">
+                                        <span>Информация о питании и подробности </span>
+                                        <span class="transition group-open/accordion:rotate-180">
+                                            <i class="text-xs" data-fa-i2svg=""><svg
+                                                    class="w-3 h-3 svg-inline--fa fa-chevron-down" aria-hidden="true"
+                                                    focusable="false" data-prefix="fas" data-icon="chevron-down"
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                    data-fa-i2svg="">
+                                                    <path fill="currentColor"
+                                                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                                                    </path>
+                                                </svg></i>
+                                        </span>
+                                    </summary>
+                                    <div class="text-text-light text-sm mt-3 space-y-2 pb-2">
+                                        <div class="flex justify-between border-b border-gray-100 pb-1">
+                                            <span>Калорийность </span> <span class="font-medium text-text"> : 520 ккал
+                                            </span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-gray-100 pb-1">
+                                            <span>Белок </span> <span class="font-medium text-text"> 24 г </span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-gray-100 pb-1">
+                                            <span>Углеводы </span> <span class="font-medium text-text"> 65 г </span>
+                                        </div>
+                                        <div class="mt-3">
+                                            <span class="font-medium text-text block mb-1">Ингредиенты: </span>
+                                            <span class="text-xs"> макароны из твердых сортов
+                                                пшеницы, говяжий фарш, помидоры, лук, морковь, сельдерей, чеснок,
+                                                оливковое
+                                                масло, сыр пармезан, зелень. </span>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Card 2 -->
+                    <div data-delay="100" data-category="lunch" data-price="3.80" data-allergens="gluten"
+                        data-days="mon tue wed thu fri sat sun"
+                        class="reveal product-card-anim bg-white rounded-2xl shadow-soft border border-border overflow-hidden">
+
+                        <div class="flex flex-col h-full group">
+                            <div class="h-48 relative overflow-hidden">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="assets/img/cafeteria/cards/Mediterranean_Vegetable_Roll.jpg"
+                                    alt="Свежий овощной ролл с хумусом и шпинатом, разрезанный пополам, полезный вариант обеда.">
+                                <div
+                                    class="absolute top-4 left-4 bg-white/90 backdrop-blur text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                                    Обед
+                                </div>
+                                <div
+                                    class="absolute top-4 right-4 bg-gray-900 text-white font-bold px-3 py-1 rounded-full shadow-sm">
+                                    3,80 руб.
+                                </div>
+                            </div>
+
+                            <div class="p-6 flex-1 flex flex-col">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-xl font-bold text-text">Средиземноморский
+                                        овощной ролл </h3>
+                                </div>
+                                <p class="text-sm text-text-light mb-4 line-clamp-2">Цельнозерновая
+                                    тортилья, начиненная домашним хумусом, хрустящими огурцами, помидорами, шпинатом и
+                                    сыром
+                                    фета. </p>
+
+                                <div class="flex flex-wrap gap-2 mb-4 mt-auto">
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2 py-1 bg-green-50 text-green-700 rounded text-xs font-medium border border-green-100">
+                                        <i data-fa-i2svg=""><svg class="w-3 h-3 svg-inline--fa fa-leaf"
+                                                aria-hidden="true" focusable="false" data-prefix="fas" data-icon="leaf"
+                                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5h88c8.8 0 16 7.2 16 16s-7.2 16-16 16H288 216s0 0 0 0c-16.6 0-32.7 1.9-48.2 5.4c-25.9 5.9-50 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440v16c0 13.3 10.7 24 24 24s24-10.7 24-24V440c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z">
+                                                </path>
+                                            </svg></i>Вегетарианец
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2 py-1 bg-yellow-50 text-yellow-700 rounded text-xs font-medium border border-yellow-100">
+                                        <i data-fa-i2svg=""><svg class="w-3 h-3 svg-inline--fa fa-wheat-awn"
+                                                aria-hidden="true" focusable="false" data-prefix="fas"
+                                                data-icon="wheat-awn" role="img" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512" data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M505 41c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L383 95c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l88-88zM305.5 27.3c-6.2-6.2-16.4-6.2-22.6 0L271.5 38.6c-37.5 37.5-37.5 98.3 0 135.8l10.4 10.4-30.5 30.5c-3.4-27.3-15.5-53.8-36.5-74.8l-11.3-11.3c-6.2-6.2-16.4-6.2-22.6 0l-11.3 11.3c-37.5 37.5-37.5 98.3 0 135.8l10.4 10.4-30.5 30.5c-3.4-27.3-15.5-53.8-36.5-74.8L101.8 231c-6.2-6.2-16.4-6.2-22.6 0L67.9 242.3c-37.5 37.5-37.5 98.3 0 135.8l10.4 10.4L9.4 457.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l68.9-68.9 12.2 12.2c37.5 37.5 98.3 37.5 135.8 0l11.3-11.3c6.2-6.2 6.2-16.4 0-22.6l-11.3-11.3c-21.8-21.8-49.6-34.1-78.1-36.9l31.9-31.9 12.2 12.2c37.5 37.5 98.3 37.5 135.8 0l11.3-11.3c6.2-6.2 6.2-16.4 0-22.6l-11.3-11.3c-21.8-21.8-49.6-34.1-78.1-36.9l31.9-31.9 12.2 12.2c37.5 37.5 98.3 37.5 135.8 0L486.5 231c6.2-6.2 6.2-16.4 0-22.6L475.2 197c-5.2-5.2-10.6-9.8-16.4-13.9L505 137c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-59.4 59.4c-20.6-4.4-42-3.7-62.3 2.1c6.1-21.3 6.6-43.8 1.4-65.3L409 41c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L329.1 52.9c-3.7-5-7.8-9.8-12.4-14.3L305.5 27.3z">
+                                                </path>
+                                            </svg></i>Содержит глютен.
+                                    </span>
+                                </div>
+
+                                <!-- Expandable Details -->
+                                <details class="group/accordion border-t border-border pt-4 mt-2">
+                                    <summary
+                                        class="flex justify-between items-center font-medium cursor-pointer list-none text-sm text-text hover:text-primary transition-colors">
+                                        <span>Информация о питании и подробности </span>
+                                        <span class="transition group-open/accordion:rotate-180">
+                                            <i class="text-xs" data-fa-i2svg=""><svg
+                                                    class="w-3 h-3 svg-inline--fa fa-chevron-down" aria-hidden="true"
+                                                    focusable="false" data-prefix="fas" data-icon="chevron-down"
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                    data-fa-i2svg="">
+                                                    <path fill="currentColor"
+                                                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                                                    </path>
+                                                </svg></i>
+                                        </span>
+                                    </summary>
+                                    <div class="text-text-light text-sm mt-3 space-y-2 pb-2">
+                                        <div class="flex justify-between border-b border-gray-100 pb-1">
+                                            <span>Калорийность </span> <span class="font-medium text-text"> : 380 ккал
+                                            </span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-gray-100 pb-1">
+                                            <span>Белок </span> <span class="font-medium text-text"> 12 г </span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-gray-100 pb-1">
+                                            <span>Углеводы </span> <span class="font-medium text-text"> 48 г </span>
+                                        </div>
+                                        <div class="mt-3">
+                                            <span class="font-medium text-text block mb-1">Ингредиенты: </span>
+                                            <span class="text-xs"> цельнозерновая тортилья, нут,
+                                                тахини, огурец, помидоры черри, молодой шпинат, сыр фета, лимонный сок.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Menu Card 3 -->
+                    <div data-delay="200" data-category="lunch" data-price="5.50" data-allergens=""
+                        data-days="mon tue wed"
+                        class="reveal-item reveal product-card-anim bg-white rounded-2xl shadow-soft border border-border overflow-hidden">
+
+                        <div class="flex flex-col h-full group">
+                            <div class="h-48 relative overflow-hidden">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="assets/img/cafeteria/cards/salmon_fish.jpg"
+                                    alt="Филе лосося, запеченное с лимоном и травами, с брокколи на пару и коричневым рисом, школьный обед премиум-класса.">
+                                <div
+                                    class="absolute top-4 left-4 bg-white/90 backdrop-blur text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                                    Премиум-ланч
+                                </div>
+                                <div
+                                    class="absolute top-4 right-4 bg-gray-900 text-white font-bold px-3 py-1 rounded-full shadow-sm">
+                                    5,50 руб.
+                                </div>
+                            </div>
+
+                            <div class="p-6 flex-1 flex flex-col">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-xl font-bold text-text">Запеченный лосось с
+                                        лимоном и травами </h3>
+                                </div>
+                                <p class="text-sm text-text-light mb-4 line-clamp-2">Филе лосося,
+                                    запеченное в духовке и приправленное свежими травами и лимоном, подается с
+                                    коричневым
+                                    рисом и брокколи на пару. </p>
+
+                                <div class="flex flex-wrap gap-2 mb-4 mt-auto">
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2 py-1 bg-purple-50 text-purple-700 rounded text-xs font-medium border border-purple-100">
+                                        <i data-fa-i2svg=""><svg class="w-3 h-3 svg-inline--fa fa-fish"
+                                                aria-hidden="true" focusable="false" data-prefix="fas" data-icon="fish"
+                                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M180.5 141.5C219.7 108.5 272.6 80 336 80s116.3 28.5 155.5 61.5c39.1 33 66.9 72.4 81 99.8c4.7 9.2 4.7 20.1 0 29.3c-14.1 27.4-41.9 66.8-81 99.8C452.3 403.5 399.4 432 336 432s-116.3-28.5-155.5-61.5c-16.2-13.7-30.5-28.5-42.7-43.1L48.1 379.6c-12.5 7.3-28.4 5.3-38.7-4.9S-3 348.7 4.2 336.1L50 256 4.2 175.9c-7.2-12.6-5-28.4 5.3-38.6s26.1-12.2 38.7-4.9l89.7 52.3c12.2-14.6 26.5-29.4 42.7-43.1zM448 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z">
+                                                </path>
+                                            </svg></i>Морепродукты
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium border border-gray-200">
+                                        <i data-fa-i2svg=""><svg class="w-3 h-3 svg-inline--fa fa-check"
+                                                aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z">
+                                                </path>
+                                            </svg></i> Не содержит глютен
+                                    </span>
+                                </div>
+
+                                <!-- Expandable Details -->
+                                <details class="group/accordion border-t border-border pt-4 mt-2">
+                                    <summary
+                                        class="flex justify-between items-center font-medium cursor-pointer list-none text-sm text-text hover:text-primary transition-colors">
+                                        <span>Информация о питании и подробности </span>
+                                        <span class="transition group-open/accordion:rotate-180">
+                                            <i class="text-xs" data-fa-i2svg=""><svg
+                                                    class="w-3 h-3 svg-inline--fa fa-chevron-down" aria-hidden="true"
+                                                    focusable="false" data-prefix="fas" data-icon="chevron-down"
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                    data-fa-i2svg="">
+                                                    <path fill="currentColor"
+                                                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                                                    </path>
+                                                </svg></i>
+                                        </span>
+                                    </summary>
+                                    <div class="text-text-light text-sm mt-3 space-y-2 pb-2">
+                                        <div class="flex justify-between border-b border-gray-100 pb-1">
+                                            <span>Калорийность </span> <span class="font-medium text-text"> : 460 ккал
+                                            </span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-gray-100 pb-1">
+                                            <span>Белок </span> <span class="font-medium text-text"> 32 г </span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-gray-100 pb-1">
+                                            <span>Углеводы </span> <span class="font-medium text-text"> 42 г </span>
+                                        </div>
+                                        <div class="mt-3">
+                                            <span class="font-medium text-text block mb-1">Ингредиенты: </span>
+                                            <span class="text-xs"> атлантический лосось, коричневый
+                                                рис, брокколи, лимон, укроп, оливковое масло, соль, черный перец.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Menu Card 4 -->
+                    <div data-delay="300" data-category="drinks" data-price="2.00" data-allergens="" data-days="fri"
+                        class="reveal-item reveal product-card-anim bg-white rounded-2xl shadow-soft border border-border overflow-hidden">
+
+                        <div class="flex flex-col h-full group">
+                            <div class="h-48 relative overflow-hidden bg-gray-50 flex items-center justify-center">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src="assets/img/cafeteria/cards/refreshing_blend.jpg"
+                                    alt="Фруктовый салат с ягодами, дыней и виноградом в прозрачной посуде.">
+                                <div
+                                    class="absolute top-4 left-4 bg-white/90 backdrop-blur text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                                    Перекус
+                                </div>
+                                <div
+                                    class="absolute top-4 right-4 bg-gray-900 text-white font-bold px-3 py-1 rounded-full shadow-sm">
+                                    2,00 руб.
+                                </div>
+                            </div>
+
+                            <div class="p-6 flex-1 flex flex-col">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-xl font-bold text-text">Стакан сезонных фруктов
+                                    </h3>
+                                </div>
+                                <p class="text-sm text-text-light mb-4 line-clamp-2">Освежающая
+                                    смесь сезонных ягод, дыни и винограда. Готовится ежедневно из свежих продуктов. </p>
+
+                                <div class="flex flex-wrap gap-2 mb-4 mt-auto">
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2 py-1 bg-green-50 text-green-700 rounded text-xs font-medium border border-green-100">
+                                        <i data-fa-i2svg=""><svg class="w-3 h-3 svg-inline--fa fa-leaf"
+                                                aria-hidden="true" focusable="false" data-prefix="fas" data-icon="leaf"
+                                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5h88c8.8 0 16 7.2 16 16s-7.2 16-16 16H288 216s0 0 0 0c-16.6 0-32.7 1.9-48.2 5.4c-25.9 5.9-50 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440v16c0 13.3 10.7 24 24 24s24-10.7 24-24V440c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z">
+                                                </path>
+                                            </svg></i>Веганский
+                                    </span>
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium border border-gray-200">
+                                        <i data-fa-i2svg=""><svg class="w-3 h-3 svg-inline--fa fa-check"
+                                                aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check"
+                                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z">
+                                                </path>
+                                            </svg></i> Не содержит глютен
+                                    </span>
+                                </div>
+
+                                <!-- Expandable Details -->
+                                <details class="group/accordion border-t border-border pt-4 mt-2">
+                                    <summary
+                                        class="flex justify-between items-center font-medium cursor-pointer list-none text-sm text-text hover:text-primary transition-colors">
+                                        <span>Информация о питании и подробности </span>
+                                        <span class="transition group-open/accordion:rotate-180">
+                                            <i class="text-xs" data-fa-i2svg=""><svg
+                                                    class="w-3 h-3 svg-inline--fa fa-chevron-down" aria-hidden="true"
+                                                    focusable="false" data-prefix="fas" data-icon="chevron-down"
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                    data-fa-i2svg="">
+                                                    <path fill="currentColor"
+                                                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                                                    </path>
+                                                </svg></i>
+                                        </span>
+                                    </summary>
+                                    <div class="text-text-light text-sm mt-3 space-y-2 pb-2">
+                                        <div class="flex justify-between border-b border-gray-100 pb-1">
+                                            <span>Калорийность: </span> <span class="font-medium text-text"> 90 ккал
+                                            </span>
+                                        </div>
+                                        <div class="flex justify-between border-b border-gray-100 pb-1">
+                                            <span>Сахар </span> <span class="font-medium text-text"> 18 г (натуральный)
+                                            </span>
+                                        </div>
+                                        <div class="mt-3">
+                                            <span class="font-medium text-text block mb-1">Ингредиенты: </span>
+                                            <span class="text-xs"> клубника, черника, дыня, медовая
+                                                дыня, красный виноград. </span>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Empty / Loading State Example (Hidden by default, shown for demonstration) -->
+                <div id="no-products-state"
+                    class="hidden mt-12 bg-white rounded-2xl border border-dashed border-gray-300 p-12 flex flex-col items-center justify-center text-center">
+                    <div class="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="text-3xl text-gray-400" data-fa-i2svg=""><svg
+                                class="w-3 h-3 svg-inline--fa fa-plate-wheat" aria-hidden="true" focusable="false"
+                                data-prefix="fas" data-icon="plate-wheat" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                    d="M176 32c44.2 0 80 35.8 80 80v16c0 8.8-7.2 16-16 16c-44.2 0-80-35.8-80-80V48c0-8.8 7.2-16 16-16zM56 64h48c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24s10.7-24 24-24zM24 136H136c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 96c0-13.3 10.7-24 24-24h48c13.3 0 24 10.7 24 24s-10.7 24-24 24H56c-13.3 0-24-10.7-24-24zM272 48c0-8.8 7.2-16 16-16c44.2 0 80 35.8 80 80v16c0 8.8-7.2 16-16 16c-44.2 0-80-35.8-80-80V48zM400 32c44.2 0 80 35.8 80 80v16c0 8.8-7.2 16-16 16c-44.2 0-80-35.8-80-80V48c0-8.8 7.2-16 16-16zm80 160v16c0 44.2-35.8 80-80 80c-8.8 0-16-7.2-16-16V256c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16zM352 176c8.8 0 16 7.2 16 16v16c0 44.2-35.8 80-80 80c-8.8 0-16-7.2-16-16V256c0-44.2 35.8-80 80-80zm-96 16v16c0 44.2-35.8 80-80 80c-8.8 0-16-7.2-16-16V256c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16zM3.5 347.6C1.6 332.9 13 320 27.8 320H484.2c14.8 0 26.2 12.9 24.4 27.6C502.3 397.8 464.2 437 416 446v2c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32v-2c-48.2-9-86.3-48.2-92.5-98.4z">
+                                </path>
+                            </svg></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-text mb-2">Товары не найдены</h3>
+                    <p class="text-text-light max-w-sm mb-6">Мы не смогли найти никаких пунктов меню. Соответствует
+                        вашим текущим фильтрам. Попробуйте изменить параметры поиска или очистить фильтры. </p>
+
+                    <button id="clear-all-filters"
+                        class="bg-primary text-white px-6 py-2.5 rounded-xl font-medium hover:bg-primary-hover transition-colors shadow-sm cursor-pointer">
+                        Очистить все фильтры
+                    </button>
+                </div>
+
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-bg-container border-t border-border pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+
+                <!-- Information block -->
+                <div class="reveal col-span-1 md:col-span-1">
+                    <!-- Logo -->
+                    <a href="#" alt="logo" class="shrink-0 flex items-center gap-5 mb-6 ">
+                        <picture>
+                            <source class="w-6.5 h-6.5" src="assets/img/logo.webp" type="image/webp">
+                            <img class="w-6.5 h-6.5" src="assets/img/logo.png" alt="Лого">
+                        </picture>
+                        <span class="font-bold tracking-tight">Заостровская СШ</span>
+                    </a>
+
+                    <!-- Text block -->
+                    <p class="text-sm text-text-light mb-6">«Гордимся прошлым, верим<br>в
+                        будущее Заостровского края»</p>
+
+                    <!-- Social icons -->
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                            <svg viewBox="0 0 20 19.9316" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="19.931641"
+                                fill="none" customFrame="#000000">
+                                <path id="max"
+                                    d="M9.65302 0.0140611C3.69538 0.325366 -0.237341 4.9978 0.0111322 10.8897C0.119661 13.4687 1.15639 15.6878 1.40201 18.1354C1.46484 18.7695 1.28206 19.552 2.01319 19.829C2.91284 20.1689 4.29229 19.5977 5.04628 19.0751C5.30332 18.9008 5.54893 18.6981 5.73743 18.4467C6.51712 18.9637 7.25683 19.4635 8.18503 19.6862C12.272 20.6659 16.7502 18.4239 18.7408 14.8225C22.4822 8.05658 17.4242 -0.391492 9.65302 0.0140611ZM7.33965 14.1342C7.01692 14.3855 6.70562 14.7282 6.34862 14.9253C5.83168 15.2023 5.67174 14.9139 5.47753 14.4569C4.86635 13.0032 4.79209 10.527 5.14909 9.00478C5.6289 6.93417 7.23112 5.11204 9.43311 4.91783C11.6608 4.72076 13.7285 5.85174 14.6625 7.89379C16.7302 12.4377 11.438 16.9245 7.33965 14.137L7.33965 14.1342Z"
+                                    fill="var(--color-svg-primary)" fill-rule="nonzero" />
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000"
+                                fill="none" customFrame="#000000">
+                                <path id="tg"
+                                    d="M10 0C4.47714 0 0 4.47714 0 10C0 15.5229 4.47714 20 10 20C15.5229 20 20 15.5229 20 10C20 4.47714 15.5229 0 10 0ZM14.635 6.80071C14.4843 8.38214 13.8336 12.2193 13.5021 13.99C13.3621 14.7393 13.0857 14.9907 12.8186 15.015C12.2379 15.0686 11.7971 14.6314 11.2343 14.2629C10.3543 13.6857 9.85714 13.3264 9.00286 12.7636C8.01571 12.1129 8.65571 11.755 9.21857 11.1707C9.36571 11.0179 11.9243 8.69071 11.9743 8.47928C11.9807 8.45286 11.9864 8.35429 11.9279 8.30214C11.8693 8.25 11.7829 8.26786 11.7207 8.28214C11.6321 8.30214 10.2264 9.23143 7.50285 11.07C7.10357 11.3443 6.74214 11.4779 6.41857 11.4707C6.06143 11.4629 5.375 11.2686 4.86428 11.1029C4.23785 10.8993 3.74 10.7914 3.78357 10.4457C3.80643 10.2657 4.05428 10.0814 4.52785 9.89357C7.44285 8.62357 9.38714 7.78643 10.3593 7.38143C13.1364 6.22643 13.7136 6.02572 14.0893 6.01929C14.1721 6.01786 14.3571 6.03857 14.4771 6.13572C14.5786 6.21786 14.6064 6.32857 14.6193 6.40643C14.6329 6.48429 14.6493 6.66143 14.6357 6.8L14.635 6.80071Z"
+                                    fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
+                            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000"
+                                fill="none" customFrame="#000000">
+                                <path id="vk"
+                                    d="M18.6 1.4C17.1864 0 14.9264 0 10.4 0L9.6 0C5.08 0 2.82 0 1.4 1.4C0 2.81357 0 5.07357 0 9.6L0 10.4C0 14.92 0 17.18 1.4 18.6C2.81357 20 5.07357 20 9.6 20L10.4 20C14.92 20 17.18 20 18.6 18.6C20 17.1864 20 14.9264 20 10.4L20 9.6C20 5.08 20 2.82 18.6 1.4L18.6 1.4ZM14.3536 14.4064C13.8471 12.8264 12.58 11.6 10.9071 11.4329L10.9071 14.4064L10.6407 14.4064C6.08071 14.4064 3.48071 11.2864 3.37429 6.08643L5.66786 6.08643C5.74143 9.9 7.42143 11.5129 8.75429 11.8464L8.75429 6.08643L10.9079 6.08643L10.9079 9.37286C12.2214 9.23286 13.6079 7.73286 14.0743 6.07929L16.2207 6.07929C15.8671 7.80929 14.8093 9.31429 13.3007 10.2329C14.985 11.0714 16.23 12.59 16.7207 14.4064L14.3543 14.4064L14.3536 14.4064Z"
+                                    fill="var(--color-svg-primary)" fill-rule="nonzero" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick links -->
+                <div class="reveal" data-delay="150">
+                    <h4 class="font-bold mb-6">Быстрые ссылки</h4>
+                    <ul class="space-y-3 text-sm text-text-light">
+                        <li><a href="#" class="hover:text-primary transition-colors">Поступающим</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Меню
+                                столовой</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Библиотека
+                                документов</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Справочник
+                                сотрудников</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="reveal" data-delay="300">
+                    <h4 class="font-bold mb-6">Ресурсы</h4>
+                    <ul class="space-y-3 text-sm text-text-light">
+                        <li><a href="#" class="hover:text-primary transition-colors">Электронный
+                                дневник</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Платформа
+                                Сферум</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Академический календарь</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Часто
+                                задаваемые вопросы</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="reveal" data-delay="450">
+                    <h4 class="font-bold mb-6">Рассылка</h4>
+
+                    <div class="flex flex-col gap-6">
+                        <p class="text-sm text-text-light">
+                            Подпишитесь, чтобы всегда быть в курсе событий первым!
+                        </p>
+
+                        <!-- Mail submission form -->
+                        <form class="reveal reveal-scale flex w-full max-w-[400px]" data-delay="450" action="/subscribe"
+                            method="POST">
+                            <div
+                                class="relative flex w-full border border-border rounded-xl focus-within:ring-2 focus-within:ring-primary transition-all">
+
+                                <input required name="email" type="email" placeholder="Ваш email"
+                                    class="w-full py-3 px-6 rounded-l-xl outline-none bg-transparent placeholder:text-gray-400">
+
+                                <button type="submit" aria-label="Подписаться"
+                                    class="w-14 shrink-0 flex items-center justify-center bg-primary rounded-xl transition-transform active:scale-95">
+                                    <img class="w-3.5" src="assets/img/arrow__right--white.svg" alt=""
+                                        aria-hidden="true">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright area -->
+            <div class="reveal border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+                data-delay="600">
+                <p class="text-sm text-text-light">© 2026 Заостровская СОШ. Все права защищены.
+                </p>
+                <div class="flex gap-6 text-sm text-text-light">
+                    <a href="#" class="hover:text-text">Политика конфиденциальности</a>
+                    <a href="#" class="hover:text-text">Условия предоставления услуг</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Button "Scroll to Top" -->
+    <button id="scroll-to-top"
+        class="fixed bottom-10 right-8 z-50 flex h-10 w-10 transform items-center justify-center rounded-full bg-primary text-white shadow-lg scale-0 opacity-0 hover:bg-primary-hover hover-pulse-glow"
+        aria-label="Наверх">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Modal "chips" -->
+    <div id="categories-modal"
+        class="fixed inset-0 z-100 flex items-end justify-center bg-black/40 opacity-0 invisible transition-all duration-300">
+        <div id="modal-overlay" class="absolute inset-0"></div>
+        <div
+            class="relative w-full max-w-lg bg-white rounded-t-2xl p-6 shadow-2xl transform translate-y-full transition-transform duration-300 z-10">
+            <div class="w-12 h-1 bg-gray-200 rounded-full mx-auto mb-4"></div>
+            <div class="flex justify-between items-center mb-5">
+                <h3 class="text-lg font-bold text-gray-900">Выберите категории</h3>
+                <button id="close-categories-modal" class="text-gray-400 hover:text-gray-600 cursor-pointer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div id="modal-categories-list" class="flex flex-wrap gap-2 max-h-60 overflow-y-auto pb-4"></div>
+        </div>
+    </div>
+
+    <!-- Базовая подложка модального окна -->
+    <div id="global-modal-overlay"
+        class="fixed inset-0 z-100 flex items-center justify-center bg-black/40 opacity-0 invisible transition-all duration-300 backdrop-blur-xs">
+
+        <!-- 1. Модальное окно: Версия для слабовидящих -->
+        <div id="modal-accessibility"
+            class="hidden relative w-full max-w-md bg-white rounded-2xl p-6 shadow-2xl transform scale-95 opacity-0 transition-all duration-300 mx-4">
+            <div class="flex justify-between items-center mb-5 border-b border-gray-100 pb-3">
+                <h3 class="text-lg font-bold text-gray-900 flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    Настройки доступности
+                </h3>
+                <button class="close-modal-btn text-gray-400 hover:text-gray-600 cursor-pointer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="space-y-5">
+                <!-- Размер шрифта -->
+                <div>
+                    <label class="text-xs font-bold text-gray-400 block mb-2 uppercase">Размер шрифта</label>
+                    <div class="grid grid-cols-3 gap-2" id="font-size-group">
+                        <button data-size="sm"
+                            class="active-acc-btn px-3 py-2 bg-gray-900 text-white rounded-xl text-sm font-medium cursor-pointer transition-all">Обычный</button>
+                        <button data-size="md"
+                            class="px-3 py-2 bg-gray-50 border border-gray-200 text-gray-700 rounded-xl text-sm font-medium hover:bg-gray-100 cursor-pointer transition-all">Средний</button>
+                        <button data-size="lg"
+                            class="px-3 py-2 bg-gray-50 border border-gray-200 text-gray-700 rounded-xl text-sm font-medium hover:bg-gray-100 cursor-pointer transition-all">Крупный</button>
+                    </div>
+                </div>
+
+                <!-- Интервал между строками -->
+                <div>
+                    <label class="text-xs font-bold text-gray-400 block mb-2 uppercase">Интервал текста</label>
+                    <div class="grid grid-cols-2 gap-2" id="spacing-group">
+                        <button data-spacing="normal"
+                            class="active-acc-btn px-3 py-2 bg-gray-900 text-white rounded-xl text-xs font-bold cursor-pointer transition-all">Обычный</button>
+                        <button data-spacing="lg"
+                            class="px-3 py-2 bg-gray-50 border border-gray-200 text-gray-700 rounded-xl text-xs font-bold hover:bg-gray-100 cursor-pointer transition-all">Увеличенный</button>
+                    </div>
+                </div>
+
+                <!-- Цветовая схема -->
+                <div>
+                    <label class="text-xs font-bold text-gray-400 block mb-2 uppercase">Цветовая схема</label>
+                    <div class="grid grid-cols-3 gap-2" id="theme-group">
+                        <button data-theme="default"
+                            class="active-acc-btn px-2 py-2 bg-white border border-gray-200 text-gray-800 rounded-xl text-xs font-bold cursor-pointer transition-all">Стандартная</button>
+                        <button data-theme="contrast"
+                            class="px-2 py-2 bg-white border border-black text-black rounded-xl text-xs font-bold hover:bg-gray-50 cursor-pointer transition-all">Черно-белая</button>
+                        <button data-theme="inverted"
+                            class="px-2 py-2 bg-black border border-yellow-400 text-yellow-400 rounded-xl text-xs font-bold hover:bg-gray-900 cursor-pointer transition-all">Инверсия</button>
+                    </div>
+                </div>
+
+                <!-- Изображения -->
+                <div>
+                    <label class="text-xs font-bold text-gray-400 block mb-2 uppercase">Изображения сайта</label>
+                    <div class="grid grid-cols-2 gap-2" id="images-group">
+                        <button data-images="show"
+                            class="active-acc-btn px-3 py-2 bg-gray-900 text-white rounded-xl text-xs font-bold cursor-pointer transition-all">Показывать</button>
+                        <button data-images="hide"
+                            class="px-3 py-2 bg-gray-50 border border-gray-200 text-gray-700 rounded-xl text-xs font-bold hover:bg-gray-100 cursor-pointer transition-all">Скрыть
+                            картинки</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Модальное окно: Обратная связь (Вопросы администрации) -->
+        <div id="modal-feedback"
+            class="hidden relative w-full max-w-md bg-white rounded-2xl p-6 shadow-2xl transform scale-95 opacity-0 transition-all duration-300 mx-4">
+            <div class="flex justify-between items-center mb-5 border-b border-gray-100 pb-3">
+                <h3 class="text-lg font-bold text-gray-900 flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Приемное обращение
+                </h3>
+                <button class="close-modal-btn text-gray-400 hover:text-gray-600 cursor-pointer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <form id="feedback-form" class="space-y-4">
+                <!-- ФИО -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-500 mb-1 uppercase tracking-wide">Ваше имя и
+                        фамилия</label>
+                    <input type="text" required placeholder="Иванов Иван"
+                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-primary transition-colors text-text">
+                </div>
+
+                <!-- Контакты -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 mb-1 uppercase tracking-wide">Электронная
+                            почта</label>
+                        <input type="email" required placeholder="example@mail.ru"
+                            class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-primary transition-colors text-text">
+                    </div>
+                    <div>
+                        <label
+                            class="block text-xs font-bold text-gray-500 mb-1 uppercase tracking-wide">Телефон</label>
+                        <input type="tel" placeholder="+7 (900) 000-00-00"
+                            class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-primary transition-colors text-text">
+                    </div>
+                </div>
+
+                <!-- Тема обращения (Селект) -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-500 mb-1 uppercase tracking-wide">Тема
+                        обращения</label>
+                    <select id="feedback-topic"
+                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-primary transition-colors text-text cursor-pointer">
+                        <option value="director">Вопрос администрации / Директору</option>
+                        <option value="cafeteria">Питание в столовой</option>
+                        <option value="tech">Проблема со Сферумом / Эл. дневником</option>
+                    </select>
+                </div>
+
+                <!-- Динамический блок 1: Столовая (скрыт по умолчанию) -->
+                <div id="dynamic-field-cafeteria"
+                    class="hidden bg-gray-50 p-3 rounded-xl border border-gray-100 space-y-2">
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" id="food-review-toggle"
+                            class="rounded border-gray-300 text-primary focus:ring-primary">
+                        <span class="text-xs font-medium text-gray-700">Оставить отзыв о конкретном блюде меню</span>
+                    </label>
+                    <input type="text" id="food-name-input" placeholder="Название блюда (например, Спагетти Болоньезе)"
+                        class="hidden w-full px-3 py-2 bg-white border border-gray-200 rounded-lg text-xs focus:outline-none focus:border-primary text-text">
+                </div>
+
+                <!-- Динамический блок 2: Техническая проблема (скрыт по умолчанию) -->
+                <div id="dynamic-field-tech" class="hidden bg-gray-50 p-3 rounded-xl border border-gray-100">
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Прикрепите скриншот ошибки (если
+                        есть):</label>
+                    <input type="file" accept="image/*"
+                        class="w-full text-xs text-gray-500 file:mr-4 file:py-1.5 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-primary file:text-white hover:file:bg-primary-hover file:cursor-pointer">
+                </div>
+
+                <!-- Текст сообщения -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-500 mb-1 uppercase tracking-wide">Текст
+                        сообщения</label>
+                    <textarea required rows="4" maxlength="500" id="feedback-message"
+                        placeholder="Введите ваше обращение сюда..."
+                        class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-primary transition-colors text-text resize-none"></textarea>
+                    <div class="text-right text-[10px] text-gray-400 mt-1">Максимум 500 символов</div>
+                </div>
+
+                <!-- Кнопка отправки -->
+                <button type="submit"
+                    class="w-full py-3 bg-primary text-white font-semibold text-sm rounded-xl hover:bg-primary-hover shadow-sm transition-all transform active:scale-[0.99] cursor-pointer">
+                    Отправить обращение
+                </button>
+            </form>
+
+            <!-- Состояние успешной отправки (скрыто по умолчанию) -->
+            <div id="feedback-success-state"
+                class="hidden flex-col items-center justify-center text-center py-6 transition-all duration-300 transform scale-95 opacity-0">
+                <div
+                    class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mb-4 text-green-600 shadow-sm border border-green-100">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Обращение отправлено!</h3>
+                <p class="text-sm text-gray-500 max-w-sm mb-1">Спасибо за ваше обращение. Оно успешно зарегистрировано в
+                    электронной приёмной администрации школы.</p>
+                <div
+                    class="inline-block bg-gray-50 border border-gray-100 px-4 py-1.5 rounded-xl text-xs font-bold text-gray-700 my-4">
+                    Номер вашей заявки: <span id="ticket-number" class="text-primary font-extrabold">#0000</span>
+                </div>
+                <p class="text-xs text-gray-400">Окно автоматически закроется через несколько секунд.</p>
+            </div>
+
+
+        </div>
+
+        <!-- 3. Модальное окно: Конструктор внешнего вида -->
+        <div id="modal-theme-constructor"
+            class="hidden relative w-full max-w-md bg-white rounded-2xl p-6 shadow-2xl transform scale-95 opacity-0 transition-all duration-300 mx-4">
+            <div class="flex justify-between items-center mb-5 border-b border-gray-100 pb-3">
+                <h3 class="text-lg font-bold text-gray-900 flex items-center gap-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                        </path>
+                    </svg>
+                    Внешний вид сайта
+                </h3>
+                <button class="close-modal-btn text-gray-400 hover:text-gray-600 cursor-pointer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="space-y-5">
+                <!-- Выбор темы -->
+                <div>
+                    <label class="text-xs font-bold text-gray-400 block mb-2 uppercase tracking-wide">Основная
+                        тема</label>
+                    <div class="grid grid-cols-3 gap-2" id="site-theme-group">
+                        <button data-site-theme="light"
+                            class="active-theme-btn px-3 py-2 bg-gray-900 text-white rounded-xl text-xs font-semibold cursor-pointer transition-all">Светлая</button>
+                        <button data-site-theme="dark"
+                            class="px-3 py-2 bg-gray-50 border border-gray-200 text-gray-700 rounded-xl text-xs font-semibold hover:bg-gray-100 cursor-pointer transition-all">Тёмная</button>
+                        <button data-site-theme="sepia"
+                            class="px-3 py-2 bg-gray-50 border border-gray-200 text-gray-700 rounded-xl text-xs font-semibold hover:bg-gray-100 cursor-pointer transition-all">Сепия</button>
+                    </div>
+                </div>
+
+                <!-- Выбор шрифта -->
+                <div>
+                    <label class="text-xs font-bold text-gray-400 block mb-2 uppercase tracking-wide">Стиль
+                        шрифта</label>
+                    <div class="grid grid-cols-2 gap-2" id="site-font-group">
+                        <button data-site-font="sans"
+                            class="active-theme-btn px-3 py-2 bg-gray-900 text-white rounded-xl text-xs font-semibold cursor-pointer transition-all font-sans">
+                            Без засечек (Inter)
+                        </button>
+                        <button data-site-font="serif"
+                            class="px-3 py-2 bg-gray-50 border border-gray-200 text-gray-700 rounded-xl text-xs font-semibold hover:bg-gray-100 cursor-pointer transition-all font-serif">
+                            С засечками (Georgia)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Кнопка полного сброса кастомизации -->
+                <button id="reset-appearance-btn"
+                    class="w-full py-2.5 bg-gray-100 text-gray-700 font-medium text-xs rounded-xl hover:bg-gray-200 transition-colors cursor-pointer mt-2">
+                    Вернуть стандартный вид
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Script "Mobile Panel Disappears" -->
+    <script src="js/Mobile_Panel_Disappears.js"></script>
+
+    <!-- Script "Appearance" -->
+    <script src="js/Appearance.js"></script>
+
+    <!-- Script "Mobile menu" -->
+    <script src="js/Mobile_menu.js"></script>
+
+    <!-- Script "Cafeteria filters" -->
+    <script src="js/cafeteria_filters.js"></script>
+
+    <!-- Script "modal-window" -->
+    <script src="js/modal-window.js"></script>
+
+    <!-- Script "toogle-btn" -->
+    <script src="js/toogle-btn.js"></script>
+</body>
+
+</html>
