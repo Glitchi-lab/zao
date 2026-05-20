@@ -44,7 +44,7 @@
                     <!-- Main -->
                     <div class="group relative">
                         <a href="index.html"
-                            class="nav-hover-link text-primary bg-bg-primary-light rounded-[8px] flex items-center gap-[6px] py-2.5 px-5 font-semibold whitespace-nowrap">
+                            class="nav-hover-link text-text-muted hover:text-text font-medium flex items-center gap-[6px] whitespace-nowrap">
                             Главная
                             <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="shrink-0 transition-transform duration-300 group-hover:rotate-180">
@@ -54,7 +54,7 @@
                         </a>
                         <!-- Мега-меню Главной (ссылки на блоки) -->
                         <div
-                            class="absolute left-1/2 top-full -translate-x-1/2 pt-2 w-[280px] opacity-0 pointer-events-none translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
+                            class="absolute left-1/2 top-full -translate-x-1/2 pt-2 w-[280px] opacity-0 pointer-events-none translate-y-2 lg:group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
                             <div
                                 class="bg-white/95 backdrop-blur-md rounded-xl border border-border shadow-soft-lg p-4 flex flex-col gap-1">
                                 <a href="index.html#news-events"
@@ -84,7 +84,7 @@
 
                         <!-- Mega-menu (Commercial) -->
                         <div
-                            class="absolute left-1/2 top-full -translate-x-1/2 pt-2 w-[520px] opacity-0 pointer-events-none translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
+                            class="absolute left-1/2 top-full -translate-x-1/2 pt-2 w-[520px] opacity-0 pointer-events-none translate-y-2 lg:group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
                             <div
                                 class="bg-white/95 backdrop-blur-md rounded-2xl border border-border shadow-soft-lg p-6 grid grid-cols-2 gap-6">
                                 <!-- Left column: Documentation -->
@@ -127,7 +127,7 @@
                         </a>
                         <!-- Mega-menu -->
                         <div
-                            class="absolute left-1/2 top-full -translate-x-1/2 pt-2 w-[460px] opacity-0 pointer-events-none translate-y-2 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
+                            class="absolute left-1/2 top-full -translate-x-1/2 pt-2 w-[460px] opacity-0 pointer-events-none translate-y-2 lg:group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
                             <div
                                 class="bg-white/95 backdrop-blur-md rounded-2xl border border-border shadow-soft-lg p-5 flex flex-col gap-4">
                                 <div class="flex flex-col gap-1">
@@ -166,64 +166,64 @@
 
                     <!-- Cafeteria -->
                     <a href="cafeteria.html"
-                        class="text-text-muted hover:text-text font-medium transition-colors whitespace-nowrap">Столовая</a>
+                        class="text-primary bg-bg-primary-light rounded-[8px] py-2.5 px-5 font-semibold transition-colors whitespace-nowrap">Столовая</a>
                 </nav>
 
-                <!-- 3. Block "Buttons" -->
-                <div class="hidden lg:flex items-center space-x-4">
-                    <button data-modal-target="modal-feedback"
-                        class="w-8 h-8 bg-bg-primary-light rounded-lg flex justify-center items-center button-hover hover:bg-bg-primary-light-hover">
-                        <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" width="14.000000" height="14.000000" fill="none"
-                            customFrame="#000000">
-                            <path id="question"
-                                d="M12.6 0L1.4 0C0.63 0 0.00699999 0.63 0.00699999 1.4L0 14L2.8 11.2L12.6 11.2C13.37 11.2 14 10.57 14 9.8L14 1.4C14 0.63 13.37 0 12.6 0ZM7.7 8.4L6.3 8.4L6.3 7L7.7 7L7.7 8.4ZM7.7 5.6L6.3 5.6L6.3 2.8L7.7 2.8L7.7 5.6Z"
-                                fill="var(--color-svg-primary
+                <div class="flex gap-3">
+                    <!-- 3. Block "Buttons" -->
+                    <div class="flex items-center space-x-4">
+                        <button data-modal-target="modal-feedback"
+                            class="w-8 h-8 bg-bg-primary-light rounded-lg flex justify-center items-center button-hover hover:bg-bg-primary-light-hover">
+                            <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="14.000000" height="14.000000"
+                                fill="none" customFrame="#000000">
+                                <path id="question"
+                                    d="M12.6 0L1.4 0C0.63 0 0.00699999 0.63 0.00699999 1.4L0 14L2.8 11.2L12.6 11.2C13.37 11.2 14 10.57 14 9.8L14 1.4C14 0.63 13.37 0 12.6 0ZM7.7 8.4L6.3 8.4L6.3 7L7.7 7L7.7 8.4ZM7.7 5.6L6.3 5.6L6.3 2.8L7.7 2.8L7.7 5.6Z"
+                                    fill="var(--color-svg-primary
                                 )" fill-rule="evenodd" />
-                        </svg>
+                            </svg>
 
-                    </button>
-                    <button data-modal-target="modal-theme-constructor"
-                        class="w-8 h-8 bg-bg-primary-light rounded-lg flex justify-center items-center button-hover hover:bg-bg-primary-light-hover">
-                        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000" fill="none">
-                            <rect id="gavel" width="20.000000" height="20.000000" x="0.000000" y="0.000000"
-                                fill="rgb(255,255,255)" fill-opacity="0" />
-                            <path id="矢量 133"
-                                d="M6.73333 4.36816L4.375 6.72383L16.1534 18.5155L18.5117 16.1598L6.73333 4.36816Z"
-                                fill="var(--color-svg-primary)" fill-rule="evenodd" />
-                            <path id="矢量 134"
-                                d="M10.2619 0.832031L7.90527 3.18936L12.6199 7.9027L14.9766 5.54536L10.2619 0.832031Z"
-                                fill="var(--color-svg-primary)" fill-rule="evenodd" />
-                            <path id="矢量 135"
-                                d="M2.77105 8.32422C2.77105 8.32422 1.98041 11.7034 2.50026 12.9169C2.5249 12.9745 3.12124 13.651 3.1773 13.6788C3.22377 13.7019 3.27573 13.7257 3.33381 13.7502C4.54295 14.26 7.48505 13.0382 7.48505 13.0382L2.77105 8.32422Z"
-                                fill="var(--color-svg-primary)" fill-rule="evenodd" />
-                            <path id="矢量 136" d="M2.12207 0L0 2.12167L5.55556 7.67723L7.67763 5.55555L2.12207 0Z"
-                                fill="var(--color-svg-primary)" fill-rule="evenodd"
-                                transform="matrix(0,1,-1,0,11.8438,4.1665)" />
-                        </svg>
+                        </button>
+                        <button data-modal-target="modal-theme-constructor"
+                            class="w-8 h-8 bg-bg-primary-light rounded-lg flex justify-center items-center button-hover hover:bg-bg-primary-light-hover">
+                            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000"
+                                fill="none">
+                                <rect id="gavel" width="20.000000" height="20.000000" x="0.000000" y="0.000000"
+                                    fill="rgb(255,255,255)" fill-opacity="0" />
+                                <path id="矢量 133"
+                                    d="M6.73333 4.36816L4.375 6.72383L16.1534 18.5155L18.5117 16.1598L6.73333 4.36816Z"
+                                    fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                <path id="矢量 134"
+                                    d="M10.2619 0.832031L7.90527 3.18936L12.6199 7.9027L14.9766 5.54536L10.2619 0.832031Z"
+                                    fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                <path id="矢量 135"
+                                    d="M2.77105 8.32422C2.77105 8.32422 1.98041 11.7034 2.50026 12.9169C2.5249 12.9745 3.12124 13.651 3.1773 13.6788C3.22377 13.7019 3.27573 13.7257 3.33381 13.7502C4.54295 14.26 7.48505 13.0382 7.48505 13.0382L2.77105 8.32422Z"
+                                    fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                                <path id="矢量 136" d="M2.12207 0L0 2.12167L5.55556 7.67723L7.67763 5.55555L2.12207 0Z"
+                                    fill="var(--color-svg-primary)" fill-rule="evenodd"
+                                    transform="matrix(0,1,-1,0,11.8438,4.1665)" />
+                            </svg>
 
-                    </button>
-                    <button data-modal-target="modal-accessibility"
-                        class="w-8 h-8 bg-primary rounded-lg flex justify-center items-center transition-colors button-hover hover:bg-primary-hover">
-                        <svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="14.000000" fill="none"
-                            customFrame="#000000">
-                            <path id="eye"
-                                d="M10 0C5.45455 0 1.57273 2.90267 0 7C1.57273 11.0973 5.45455 14 10 14C14.5455 14 18.4273 11.0973 20 7C18.4273 2.90267 14.5455 0 10 0ZM10 11.6667C7.49091 11.6667 5.45455 9.576 5.45455 7C5.45455 4.424 7.49091 2.33333 10 2.33333C12.5091 2.33333 14.5455 4.424 14.5455 7C14.5455 9.576 12.5091 11.6667 10 11.6667ZM10 4.2C8.49091 4.2 7.27273 5.45067 7.27273 7C7.27273 8.54933 8.49091 9.8 10 9.8C11.5091 9.8 12.7273 8.54933 12.7273 7C12.7273 5.45067 11.5091 4.2 10 4.2Z"
-                                fill="var(--color-svg-white)" fill-rule="evenodd" />
-                        </svg>
+                        </button>
+                        <button data-modal-target="modal-accessibility"
+                            class="w-8 h-8 bg-primary rounded-lg flex justify-center items-center transition-colors button-hover hover:bg-primary-hover">
+                            <svg viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="14.000000"
+                                fill="none" customFrame="#000000">
+                                <path id="eye"
+                                    d="M10 0C5.45455 0 1.57273 2.90267 0 7C1.57273 11.0973 5.45455 14 10 14C14.5455 14 18.4273 11.0973 20 7C18.4273 2.90267 14.5455 0 10 0ZM10 11.6667C7.49091 11.6667 5.45455 9.576 5.45455 7C5.45455 4.424 7.49091 2.33333 10 2.33333C12.5091 2.33333 14.5455 4.424 14.5455 7C14.5455 9.576 12.5091 11.6667 10 11.6667ZM10 4.2C8.49091 4.2 7.27273 5.45067 7.27273 7C7.27273 8.54933 8.49091 9.8 10 9.8C11.5091 9.8 12.7273 8.54933 12.7273 7C12.7273 5.45067 11.5091 4.2 10 4.2Z"
+                                    fill="var(--color-svg-white)" fill-rule="evenodd" />
+                            </svg>
 
-                    </button>
+                        </button>
+                    </div>
+
+                    <!-- Mobile menu -->
+                    <div class="lg:hidden flex items-center">
+                        <button id="burger-btn" class="p-2"><i class="fa-solid fa-bars text-2xl"></i></button>
+                    </div>
                 </div>
-
-                <!-- Mobile menu -->
-                <div class="lg:hidden flex items-center">
-                    <button id="burger-btn" class="p-2"><i class="fa-solid fa-bars text-2xl"></i></button>
-                </div>
-
-
-
             </div>
         </div>
     </header>
@@ -380,7 +380,7 @@
                         </div>
 
                         <div id="socialPanel"
-                            class="px-4 py-4.5 w-[80px] h-[166px] bg-white border-l-[3px] border-primary rounded-[30px] flex flex-col gap-2 pointer-events-none">
+                            class="px-4 py-4.5 w-[80px] h-[166px] bg-white border-l-[3px] border-primary rounded-[30px] flex flex-col gap-2">
                             <a href="#"
                                 class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
                                 <svg viewBox="0 0 20 19.9316" xmlns="http://www.w3.org/2000/svg"
@@ -484,7 +484,7 @@
 
                         <!-- ВЫЕЗЖАЮЩАЯ КАРТОЧКА С КОНТАКТАМИ -->
                         <div id="contactsDropdown"
-                            class="absolute right-[-5px] top-0 w-[330px] bg-white border-l-3 border-primary rounded-l-[30px] rounded-tr-[10px] shadow-xl p-6 transition-all duration-300 pointer-events-none opacity-0 text-left pointer-events-none">
+                            class="absolute right-[-5px] top-0 w-[330px] bg-white border-l-3 border-primary rounded-l-[30px] rounded-tr-[10px] shadow-xl p-6 transition-all duration-300 opacity-0 text-left">
                             <h3 class="text-base font-bold text-gray-900 mb-4">Наши контакты</h3>
 
                             <div class="space-y-4">
@@ -555,33 +555,43 @@
             <div class="flex flex-col gap-4">
 
                 <!-- Social icons -->
-                <div
-                    class="flex flex-col justify-center items-center gap-1 bg-bg/60 backdrop-blur-md px-2 py-1.5 rounded-xl border border-primary/40 shadow-xs hover-pulse-glow select-none">
-                    <a href="#footer"
-                        class="w-9.5 h-9.5 flex justify-center items-center bg-white border-l-[3px] border-primary rounded-[30px] shadow-soft">
-                        <svg class="rotate-x-180 mt-1" draggable="false" width="22" height="22" viewBox="0 0 24 24"
-                            fill="none" stroke="var(--color-svg-primary)" stroke-width="3" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <polyline points="18 15 12 9 6 15"></polyline>
-                        </svg>
-
-                    </a>
-                    <span class="shrink-0 text-xs text-slate-800 font-medium">Соц сети</span>
-                </div>
+                <a href="#footer"
+                    class="relative z-10 w-9.5 h-9.5 flex justify-center items-center bg-white border-l-[3px] border-primary rounded-[30px] shadow-soft hover-pulse-glow">
+                    <svg class="rotate-180" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="var(--color-svg-primary)" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                </a>
 
                 <!-- Communication -->
-                <div
-                    class="toggleBtn flex flex-col justify-center items-center gap-1 bg-bg/60 backdrop-blur-md px-2 py-1.5 rounded-xl border border-primary/40 shadow-xs hover-pulse-glow select-none">
-                    <button
-                        class="w-9.5 h-9.5 flex justify-center items-center bg-white border-l-[3px] border-primary rounded-[30px] shadow-soft">
-                        🟢
-                    </button>
-                    <span class="shrink-0 text-xs text-slate-800 font-medium">Связь</span>
-                </div>
+                <button
+                    class="relative z-60 toggleBtn w-9.5 h-9.5 flex justify-center items-center bg-white border-l-[3px] border-primary rounded-[30px] shadow-soft hover-pulse-glow cursor-pointer">
+                    <svg class="icon-active" width="16" height="20" version="1.1" id="Capa_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                        <g>
+                            <path fill="var(--color-svg-primary)" fill-rule="evenodd" d="M62.162,0c6.696,0,10.043,4.567,10.043,9.789c0,6.522-5.814,12.555-13.391,12.555
+                                c-6.344,0-10.045-3.752-9.869-9.947C48.945,7.176,53.35,0,62.162,0z M41.543,100c-5.287,0-9.164-3.262-5.463-17.615l6.07-25.457
+                                c1.057-4.077,1.23-5.707,0-5.707c-1.588,0-8.451,2.816-12.51,5.59L27,52.406C39.863,41.48,54.662,35.072,61.004,35.072
+                                c5.285,0,6.168,6.361,3.525,16.148L57.58,77.98c-1.234,4.729-0.703,6.359,0.527,6.359c1.586,0,6.787-1.963,11.896-6.041L73,82.377
+                            C60.488,95.1,46.83,100,41.543,100z" />
+                        </g>
+                    </svg>
+
+                    <!-- close icon -->
+                    <svg class="icon-hidden hidden" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="14.000000" height="14.000000" fill="none"
+                        customFrame="#000000">
+                        <path id="close-icon"
+                            d="M11.5325 0L7 4.5325L2.4675 0L0 2.4675L4.5325 7L0 11.5325L2.4675 14L7 9.4675L11.5325 14L14 11.5325L9.4675 7L14 2.4675L11.5325 0Z"
+                            fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                    </svg>
+                </button>
 
                 <!-- ВЫЕЗЖАЮЩАЯ КАРТОЧКА С КОНТАКТАМИ -->
                 <div id="contactsDropdownMobile"
-                    class="absolute right-[-5px] top-0 w-[330px] bg-white border-l-3 border-primary rounded-l-[30px] rounded-tr-[10px] shadow-xl p-6 transition-all duration-300 pointer-events-none opacity-0 text-left pointer-events-none">
+                    class="absolute right-[-5px] top-0 w-[330px] bg-white border-l-3 border-primary rounded-l-[30px] rounded-tr-[10px] shadow-xl p-6 transition-all duration-300 opacity-0 text-left">
                     <h3 class="text-base font-bold text-gray-900 mb-4">Наши контакты</h3>
 
                     <div class="space-y-4">
@@ -867,7 +877,8 @@
                         data-delay="250">
                         <!-- Allergen Dropdown -->
                         <div class="relative group z-30">
-                            <button
+                            <!-- Кнопка Аллергены -->
+                            <button id="allergen-btn"
                                 class="px-4 py-2.5 bg-white border border-border rounded-xl text-sm font-medium text-text flex items-center gap-2 hover:bg-gray-50 transition-colors cursor-pointer">
                                 <i class="w-3 h-3 text-text-light" data-fa-i2svg="">
                                     <svg class="svg-inline--fa fa-filter" aria-hidden="true" focusable="false"
@@ -880,7 +891,8 @@
                                 </i>
                                 Аллергены
 
-                                <i class="w-3 h-3 text-xs ml-1 transition-transform duration-300 group-hover:rotate-180"
+                                <i id="allergen-chevron"
+                                    class="w-3 h-3 text-xs ml-1 transition-transform duration-300 group-hover:rotate-180"
                                     data-fa-i2svg="">
                                     <svg class="svg-inline--fa fa-chevron-down" aria-hidden="true" focusable="false"
                                         data-prefix="fas" data-icon="chevron-down" role="img"
@@ -893,8 +905,9 @@
                             </button>
 
                             <!-- Dropdown Menu -->
-                            <div
-                                class="absolute left-0 top-full mt-2 w-48 bg-white border border-border rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 before:absolute before:-top-2 before:left-0 before:h-2 before:w-full">
+                            <div id="allergen-dropdown"
+                                class="absolute left-0 top-full mt-2 w-48 bg-white border border-border rounded-xl shadow-lg opacity-0 invisible transition-all duration-200 z-50 before:absolute before:-top-2 before:left-0 before:h-2 before:w-full">
+
                                 <div class="p-2 space-y-1">
                                     <label
                                         class="flex items-center gap-2 p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
@@ -1793,6 +1806,9 @@
 
     <!-- Script "Appearance" -->
     <script src="js/Appearance.js"></script>
+
+    <!-- Script "Button scroll to top" -->
+    <script src="js/button-scroll-to-top.js"></script>
 
     <!-- Script "Mobile menu" -->
     <script src="js/Mobile_menu.js"></script>

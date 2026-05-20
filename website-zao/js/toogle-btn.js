@@ -1,56 +1,69 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Находим ВСЕ кнопки с классом .toggleBtn
     const toggleBtns = document.querySelectorAll('.toggleBtn');
 
-    const arrowSvg = document.getElementById('arrowSvg');
-    const socialDropdown = document.getElementById('socialDropdown');
-    const socialPanel = document.getElementById('socialPanel');
-    const contactsDropdown = document.getElementById('contactsDropdown');
-    const contactsDropdownMobile = document.getElementById('contactsDropdownMobile');
-    const contactsPanel = document.getElementById('contactsPanel');
-    const contactsText = document.getElementById('contactsText');
-    const socialText = document.getElementById('socialText');
+    // Собираем все анимируемые элементы в один объект для удобства проверки
+    const ui = {
+        arrow: document.getElementById('arrowSvg'),
+        socialDropdown: document.getElementById('socialDropdown'),
+        socialPanel: document.getElementById('socialPanel'),
+        contactsDropdown: document.getElementById('contactsDropdown'),
+        contactsDropdownMobile: document.getElementById('contactsDropdownMobile'),
+        contactsPanel: document.getElementById('contactsPanel'),
+        contactsText: document.getElementById('contactsText'),
+        socialText: document.getElementById('socialText')
+    };
 
-    // Проверяем, что кнопки найдены и остальные важные элементы существуют
-    if (toggleBtns.length > 0 && arrowSvg && socialDropdown && contactsDropdown) {
+    // Безопасная проверка: запускаем логику, только если абсолютно все элементы найдены в DOM
+    const allElementsExist = Object.values(ui).every(el => el !== null) && toggleBtns.length > 0;
 
-        // Перебираем каждую кнопку из найденных
+    if (allElementsExist) {
         toggleBtns.forEach(singleBtn => {
-
-            // Вешаем клик на ТЕКУЩУЮ кнопку в цикле
             singleBtn.addEventListener('click', () => {
 
-                // 1. Сдвигаем текст
-                contactsText.classList.toggle('-translate-x-[250px]');
-                contactsText.classList.toggle('translate-y-[40px]');
+                // 1. Анимация текстовых блоков
+                ui.contactsText.classList.toggle('-translate-x-[250px]');
+                ui.contactsText.classList.toggle('translate-y-[40px]');
 
-                socialText.classList.toggle('translate-x-[-140px]');
-                socialText.classList.toggle('translate-y-[50px]');
+                ui.socialText.classList.toggle('translate-x-[-140px]');
+                ui.socialText.classList.toggle('translate-y-[50px]');
 
-                // Проверяем и двигаем первую кнопку
-                if (toggleBtns[0]) {
-                    toggleBtns[0].classList.toggle('translate-x-[-154px]');
-                }
-
-                // Проверяем и двигаем вторую кнопку
+                // 2. Управление позицией самих переключателей (десктоп / мобилка)
+                if (toggleBtns[0]) toggleBtns[0].classList.toggle('translate-x-[-154px]');
                 if (toggleBtns[1]) {
-                    toggleBtns[1].classList.toggle('translate-y-[-230px]');
+                    toggleBtns[1].classList.toggle('translate-y-[-125px]');
+                    toggleBtns[1].classList.toggle('translate-x-[-243px]');
                 }
 
+                // 3. Поворот стрелки
+                ui.arrow.classList.toggle('rotate-y-180');
 
-                // 3. Переключаем разворот стрелки
-                arrowSvg.classList.toggle('rotate-y-180');
+                // 4. Переключение панелей
+                const panels = [
+                    ui.socialDropdown,
+                    ui.socialPanel,
+                    ui.contactsDropdown,
+                    ui.contactsPanel
+                ];
 
-                // 4. Переключаем видимость панели соцсетей
-                socialDropdown.classList.toggle('opacity-0');
-                socialPanel.classList.toggle('opacity-0');
+                panels.forEach(panel => {
+                    panel.classList.toggle('opacity-0');
+                });
 
-                // 5. Переключаем видимость панели контактов
-                contactsDropdown.classList.toggle('opacity-0');
-                contactsDropdownMobile.classList.toggle('opacity-0');
-                contactsDropdownMobile.classList.toggle('translate-x-[60px]');
-                contactsDropdownMobile.classList.toggle('translate-y-[-60px]');
-                contactsPanel.classList.toggle('opacity-0');
+                // 5. Особая анимация для мобильного меню контактов
+                ui.contactsDropdownMobile.classList.toggle('opacity-0');
+                ui.contactsDropdownMobile.classList.toggle('translate-x-[60px]');
+                ui.contactsDropdownMobile.classList.toggle('translate-y-[-60px]');
+
+                // 6. Смена svg при нажатии
+                if (singleBtn === toggleBtns[1]) {
+                    const firstSvg = singleBtn.querySelector('.icon-active');
+                    const secondSvg = singleBtn.querySelector('.icon-hidden');
+
+                    if (firstSvg && secondSvg) {
+                        firstSvg.classList.toggle('hidden');
+                        secondSvg.classList.toggle('hidden');
+                    }
+                }
             });
         });
     }

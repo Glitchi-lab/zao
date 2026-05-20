@@ -380,7 +380,7 @@
                         </div>
 
                         <div id="socialPanel"
-                            class="px-4 py-4.5 w-[80px] h-[166px] bg-white border-l-[3px] border-primary rounded-[30px] flex flex-col gap-2 pointer-events-none">
+                            class="px-4 py-4.5 w-[80px] h-[166px] bg-white border-l-[3px] border-primary rounded-[30px] flex flex-col gap-2">
                             <a href="#"
                                 class="bg-bg-primary-light rounded-xl w-9.5 h-9.5 flex items-center justify-center">
                                 <svg viewBox="0 0 20 19.9316" xmlns="http://www.w3.org/2000/svg"
@@ -484,7 +484,7 @@
 
                         <!-- ВЫЕЗЖАЮЩАЯ КАРТОЧКА С КОНТАКТАМИ -->
                         <div id="contactsDropdown"
-                            class="absolute right-[-5px] top-0 w-[330px] bg-white border-l-3 border-primary rounded-l-[30px] rounded-tr-[10px] shadow-xl p-6 transition-all duration-300 pointer-events-none opacity-0 text-left pointer-events-none">
+                            class="absolute right-[-5px] top-0 w-[330px] bg-white border-l-3 border-primary rounded-l-[30px] rounded-tr-[10px] shadow-xl p-6 transition-all duration-300 opacity-0 text-left">
                             <h3 class="text-base font-bold text-gray-900 mb-4">Наши контакты</h3>
 
                             <div class="space-y-4">
@@ -555,33 +555,43 @@
             <div class="flex flex-col gap-4">
 
                 <!-- Social icons -->
-                <div
-                    class="flex flex-col justify-center items-center gap-1 bg-bg/60 backdrop-blur-md px-2 py-1.5 rounded-xl border border-primary/40 shadow-xs hover-pulse-glow select-none">
-                    <a href="#footer"
-                        class="w-9.5 h-9.5 flex justify-center items-center bg-white border-l-[3px] border-primary rounded-[30px] shadow-soft">
-                        <svg class="rotate-x-180 mt-1" draggable="false" width="22" height="22" viewBox="0 0 24 24"
-                            fill="none" stroke="var(--color-svg-primary)" stroke-width="3" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <polyline points="18 15 12 9 6 15"></polyline>
-                        </svg>
-
-                    </a>
-                    <span class="shrink-0 text-xs text-slate-800 font-medium">Соц сети</span>
-                </div>
+                <a href="#footer"
+                    class="relative z-10 w-9.5 h-9.5 flex justify-center items-center bg-white border-l-[3px] border-primary rounded-[30px] shadow-soft hover-pulse-glow">
+                    <svg class="rotate-180" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="var(--color-svg-primary)" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                </a>
 
                 <!-- Communication -->
-                <div
-                    class="toggleBtn flex flex-col justify-center items-center gap-1 bg-bg/60 backdrop-blur-md px-2 py-1.5 rounded-xl border border-primary/40 shadow-xs hover-pulse-glow select-none">
-                    <button
-                        class="w-9.5 h-9.5 flex justify-center items-center bg-white border-l-[3px] border-primary rounded-[30px] shadow-soft">
-                        🟢
-                    </button>
-                    <span class="shrink-0 text-xs text-slate-800 font-medium">Связь</span>
-                </div>
+                <button
+                    class="relative z-60 toggleBtn w-9.5 h-9.5 flex justify-center items-center bg-white border-l-[3px] border-primary rounded-[30px] shadow-soft hover-pulse-glow cursor-pointer">
+                    <svg class="icon-active" width="16" height="20" version="1.1" id="Capa_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                        <g>
+                            <path fill="var(--color-svg-primary)" fill-rule="evenodd" d="M62.162,0c6.696,0,10.043,4.567,10.043,9.789c0,6.522-5.814,12.555-13.391,12.555
+                                c-6.344,0-10.045-3.752-9.869-9.947C48.945,7.176,53.35,0,62.162,0z M41.543,100c-5.287,0-9.164-3.262-5.463-17.615l6.07-25.457
+                                c1.057-4.077,1.23-5.707,0-5.707c-1.588,0-8.451,2.816-12.51,5.59L27,52.406C39.863,41.48,54.662,35.072,61.004,35.072
+                                c5.285,0,6.168,6.361,3.525,16.148L57.58,77.98c-1.234,4.729-0.703,6.359,0.527,6.359c1.586,0,6.787-1.963,11.896-6.041L73,82.377
+                            C60.488,95.1,46.83,100,41.543,100z" />
+                        </g>
+                    </svg>
+
+                    <!-- close icon -->
+                    <svg class="icon-hidden hidden" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="14.000000" height="14.000000" fill="none"
+                        customFrame="#000000">
+                        <path id="close-icon"
+                            d="M11.5325 0L7 4.5325L2.4675 0L0 2.4675L4.5325 7L0 11.5325L2.4675 14L7 9.4675L11.5325 14L14 11.5325L9.4675 7L14 2.4675L11.5325 0Z"
+                            fill="var(--color-svg-primary)" fill-rule="evenodd" />
+                    </svg>
+                </button>
 
                 <!-- ВЫЕЗЖАЮЩАЯ КАРТОЧКА С КОНТАКТАМИ -->
                 <div id="contactsDropdownMobile"
-                    class="absolute right-[-5px] top-0 w-[330px] bg-white border-l-3 border-primary rounded-l-[30px] rounded-tr-[10px] shadow-xl p-6 transition-all duration-300 pointer-events-none opacity-0 text-left pointer-events-none">
+                    class="absolute right-[-5px] top-0 w-[330px] bg-white border-l-3 border-primary rounded-l-[30px] rounded-tr-[10px] shadow-xl p-6 transition-all duration-300 opacity-0 text-left">
                     <h3 class="text-base font-bold text-gray-900 mb-4">Наши контакты</h3>
 
                     <div class="space-y-4">

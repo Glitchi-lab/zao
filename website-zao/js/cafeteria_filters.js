@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // DOM-элементы интерфейса
     const activeContainer = document.getElementById('active-categories');
     const modal = document.getElementById('categories-modal');
-    const modalContent = modal.querySelector('.relative');
+    const modalContent = modal ? modal.querySelector('.relative') : null;
     const modalList = document.getElementById('modal-categories-list');
     const openBtn = document.getElementById('open-categories-modal');
     const closeBtn = document.getElementById('close-categories-modal');
@@ -37,6 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dayButtons = document.querySelectorAll('.day-btn');
 
+    // Элементы меню аллергенов (Поиск строго по вашим новым ID)
+    const allergenButton = document.getElementById('allergen-btn');
+    const allergenDropdown = document.getElementById('allergen-dropdown');
+    const allergenChevron = document.getElementById('allergen-chevron');
+
     if (openBtn && closeBtn && overlay) {
         openBtn.addEventListener('click', openModal);
         closeBtn.addEventListener('click', closeModal);
@@ -45,13 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openModal() {
         renderModalCategories();
-        modal.classList.remove('opacity-0', 'invisible');
-        modalContent.classList.remove('translate-y-full');
+        if (modal) modal.classList.remove('opacity-0', 'invisible');
+        if (modalContent) modalContent.classList.remove('translate-y-full');
     }
 
     function closeModal() {
-        modal.classList.add('opacity-0', 'invisible');
-        modalContent.classList.add('translate-y-full');
+        if (modal) modal.classList.add('opacity-0', 'invisible');
+        if (modalContent) modalContent.classList.add('translate-y-full');
     }
 
     function renderModalCategories() {
@@ -149,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateMainPanel();
     }
 
-    // Клик по категории на панели
     function selectCategory(id) {
         if (id === 'all') {
             activeCategoryIds = ['all'];
@@ -171,8 +175,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Синхронизация двойного слайдера цены
+    // Логика двойного слайдера цены
     function syncPriceFilters(src) {
+        if (!sliderMin || !sliderMax) return;
         let minV = parseFloat(sliderMin.value);
         let maxV = parseFloat(sliderMax.value);
 
@@ -189,12 +194,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 minV = parseFloat(sliderMin.value);
                 maxV = parseFloat(sliderMax.value);
             }
-            inputMin.value = minV;
-            inputMax.value = maxV;
+            if (inputMin) inputMin.value = minV;
+            if (inputMax) inputMax.value = maxV;
         }
 
-        labelMin.textContent = minV;
-        labelMax.textContent = maxV;
+        if (labelMin) labelMin.textContent = minV;
+        if (labelMax) labelMax.textContent = maxV;
         filterProducts();
     }
 
@@ -208,7 +213,78 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchInput) searchInput.addEventListener('input', filterProducts);
     allergenCheckboxes.forEach(checkbox => checkbox.addEventListener('change', filterProducts));
 
-    // Главная функция комбинированной фильтрации каталога и запуска анимаций появления
+    // === ЛОГИКА ДЛЯ АЛЛЕРГЕНОВ (НАВЕДЕНИЕ НА ПК + КЛИК НА МОБИЛКАХ) ===
+    if (allergenButton && allergenDropdown) {
+        
+        // 1. Поведение при клике (для мобильных устройств и планшетов)
+        allergenButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // Предотвращаем срабатывание клика по документу
+            const isOpen = allergenDropdown.classList.contains('opacity-100');
+            
+            if (isOpen) {
+                closeAllergenDropdown();
+            } else {
+                openAllergenDropdown();
+            }
+        });
+
+        // Пк-наведение: мышка зашла на кнопку или меню
+        const handleMouseEnter = () => {
+            // Открываем только на экранах компьютеров (больше мобильного брейкпоинта 1024px)
+            if (window.innerWidth >= 1024) {
+                openAllergenDropdown();
+            }
+        };
+
+        // ПК-наведение: мышка ушла с кнопки или меню
+        const handleMouseLeave = (e) => {
+            if (window.innerWidth >= 1024) {
+                // Проверяем, ушла ли мышка действительно со ВСЕГО блока фильтра, а не просто перешла на меню
+                const container = allergenButton.closest('.relative');
+                if (container && !container.contains(e.relatedTarget)) {
+                    closeAllergenDropdown();
+                }
+            }
+        };
+
+        // Вешаем события мыши на саму кнопку и выпадающий список
+        allergenButton.addEventListener('mouseenter', handleMouseEnter);
+        allergenDropdown.addEventListener('mouseenter', handleMouseEnter);
+        
+        allergenButton.addEventListener('mouseleave', handleMouseLeave);
+        allergenDropdown.addEventListener('mouseleave', handleMouseLeave);
+
+        // Запрещаем закрывать меню, если кликают по чекбоксам внутри него
+        allergenDropdown.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    }
+
+    // Вспомогательные функции управления классами видимости
+    function openAllergenDropdown() {
+        if (allergenDropdown) {
+            allergenDropdown.classList.remove('opacity-0', 'invisible');
+            allergenDropdown.classList.add('opacity-100', 'visible');
+        }
+        if (allergenChevron) {
+            allergenChevron.style.transform = "rotate(180deg)";
+        }
+    }
+
+    function closeAllergenDropdown() {
+        if (allergenDropdown) {
+            allergenDropdown.classList.remove('opacity-100', 'visible');
+            allergenDropdown.classList.add('opacity-0', 'invisible');
+        }
+        if (allergenChevron) {
+            allergenChevron.style.transform = "rotate(0deg)";
+        }
+    }
+
+    // Закрытие выпадающего списка при клике в любую пустую область экрана (для мобилок)
+    document.addEventListener('click', closeAllergenDropdown);
+
+    // Главная функция комбинированной фильтрации каталога
     function filterProducts() {
         const cards = document.querySelectorAll('[data-category]');
         const noState = document.getElementById('no-products-state');
@@ -245,19 +321,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Триггер ваших CSS-анимаций (Гармонизация с reveal-item / reveal)
             if (matchesCategory && matchesSearch && matchesPrice && matchesAllergens && matchesDay) {
-                // Показываем карточку: убираем скрытие и принудительно вешаем класс active
                 card.classList.remove('is-hidden');
-                
-                // Микротаймаут гарантирует, что браузер успеет применить анимацию из точки смещения в 0
                 setTimeout(() => {
                     card.classList.add('active');
                 }, 10);
-                
                 visibleCount++;
             } else {
-                // Скрываем карточку: вешаем is-hidden и гасим состояние active
                 card.classList.remove('active');
                 card.classList.add('is-hidden');
             }
@@ -286,8 +356,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (sliderMin && sliderMax) {
             sliderMin.value = 0; sliderMax.value = 15;
-            inputMin.value = 0; inputMax.value = 15;
-            labelMin.textContent = 0; labelMax.textContent = 15;
+            if (inputMin) inputMin.value = 0;
+            if (inputMax) inputMax.value = 15;
+            if (labelMin) labelMin.textContent = 0;
+            if (labelMax) labelMax.textContent = 15;
         }
         
         updateMainPanel();
@@ -296,31 +368,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (clearFiltersBtn) clearFiltersBtn.addEventListener('click', resetAllFilters);
     if (globalResetBtn) globalResetBtn.addEventListener('click', resetAllFilters);
 
-    // Новая исправленная логика кнопки "Наверх" по ID вашего контейнера <main id="main">
-    if (scrollTopBtn && mainContent) {
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        window.addEventListener('scroll', () => {
-            const mainRect = mainContent.getBoundingClientRect();
-            // Появляется сразу, как только верхняя граница main заходит за верхний край экрана (скрылся хедер)
-            if (mainRect.top < 0) {
-                scrollTopBtn.classList.remove('scale-0', 'opacity-0');
-                scrollTopBtn.classList.add('scale-100', 'opacity-100');
-            } else {
-                scrollTopBtn.classList.remove('scale-100', 'opacity-100');
-                scrollTopBtn.classList.add('scale-0', 'opacity-0');
-            }
-        });
-    }
-
-    // Логика автоопределения дня недели на ПК
     function getCurrentDayId() {
         const daysMap = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
         const currentSystemDay = new Date().getDay(); 
         const systemDayId = daysMap[currentSystemDay];
-        
         if (systemDayId === 'sat' || systemDayId === 'sun') return 'all';
         return systemDayId;
     }
