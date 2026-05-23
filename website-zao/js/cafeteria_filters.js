@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dayButtons = document.querySelectorAll('.day-btn');
 
-    // Элементы меню аллергенов (Поиск строго по вашим новым ID)
+    // Элементы меню аллергенов
     const allergenButton = document.getElementById('allergen-btn');
     const allergenDropdown = document.getElementById('allergen-dropdown');
     const allergenChevron = document.getElementById('allergen-chevron');
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Пк-наведение: мышка зашла на кнопку или меню
         const handleMouseEnter = () => {
-            // Открываем только на экранах компьютеров (больше мобильного брейкпоинта 1024px)
+            // Открываем только на экранах компьютеров
             if (window.innerWidth >= 1024) {
                 openAllergenDropdown();
             }
